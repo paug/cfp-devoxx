@@ -1,19 +1,19 @@
 # -----------------
 # Main conference details
-CONF.title=Devoxx France 2017
+CONF.title=Android Makers France 2017
 CONF.subtitle=FR
 
 # Equivalent to ConferenceNaming
-shortYearlyName=Devoxx FR 2017
-longYearlyName=Devoxx France 2017
-shortName=Devoxx France
-longName=Devoxx FR 2017 CFP
-longSplittedName_whiteStart=Devox
-longSplittedName_colored=x
-longSplittedName_whiteEnd=FR 2017
-conference.dates=5th-7th April
+shortYearlyName=Android Makers FR 2017
+longYearlyName=Android Makers France 2017
+shortName=Android Makers France
+longName=Android Makers FR 2017 CFP
+longSplittedName_whiteStart=Android Makers
+longSplittedName_colored=FR
+longSplittedName_whiteEnd=2017
+conference.dates=10th-11th April
 # -----------------
-cfp.title=Devoxx FR 2017 CFP
+cfp.title=Android Makers FR 2017 CFP
 login.error=Invalid email or password
 menu.home=Home
 menu.register=Sign-in
@@ -78,14 +78,14 @@ New.proposal2=New proposal - step 2/2
 Edit.proposal=Edit proposal - step 1/2
 Edit.proposal2=Edit proposal - step 2/2
 title=Presentation title
-title.help=Think carefully and try to create a title that is descriptive enough. Most Devoxxians selects a talk at the very last minute only based on its title.
+title.help=Think carefully and try to create a title that is descriptive enough. Most Android Makers attendees selects a talk at the very last minute only based on its title.
 summary=Summary of your presentation, for the attendee
 summary.help=Describe your proposal as it will appear on our website and mobile apps. You can use Markdown syntax.
 lang=Main language
-lang.help=100% of {0} talks are in English
+lang.help=70% of {0} talks are in English and 30% are in French. When planning the event schedule, organizer make sure that there is always at least one english and one french session at everytime-except for the keynote that are in english.
 mainSpeaker=Main speaker
 mainSpeaker2=Multiple Speakers?
-mainSpeaker.help=You can add more speakers once the proposal is created. We offer a full Combi pass for the following slots : Conference, University, Hands-on-Labs, Tools-in-Action. Quickie speakers need to purchase a conference pass!
+mainSpeaker.help=You can add more speakers once the proposal is created.
 otherSpeakers=Other speakers
 talkType=Type of talk
 talkType.help=Each type of talk is described on the <a href="{0}#confType" target="new">FAQ</a>.
@@ -100,7 +100,7 @@ audienceLevel.help=Please, indicate the required audience level for your talk\:\
 
 
 privateMessage=Message for the program committee, motivation for your presentation
-privateMessage.help=Write here any important details about your presentation, that the program committee should know. You can also set here the URL to your slides, or a link to an existing online talk for example on Parleys.com.
+privateMessage.help=Write here any important details about your presentation, that the program committee should know. You can also set here the URL to your slides, or a link to an existing online talk for example on youtube.com.
 sponsorTalk=Is this a sponsor presentation?
 videoLinkMessage=Related video link
 videoLinkMessage.help=Share with the program committee a link to one of your related online videos on YouTube or Vimeo
@@ -125,29 +125,16 @@ preview.warn2=in the main CFP screen.
 next.action=Select next action:
 
 # Proposal type
-key.label=Keynote, 20mn, Thursday and Friday
+key.label=Keynote, 40mn
 key.label.simple=Keynote
-conf.label=Conference, 45mn, Thursday and Friday
+conf.label=Conference, 40mn
 conf.label.simple=Conference
-uni.label=University, 3h, Wednesday
-uni.label.simple=University
-tia.label=Tools in Action, 25mn, Wednesday or Thursday
-tia.label.simple=Tools in Action
-quick.label=Quickie, 15mn, Thursday and Friday, during lunch
-quick.label.simple=Quickie
-bof.label=Bird of a Feather, 1h, Thursday evening only
-bof.label.simple=Bird of a Feather
-lab.label=Hands-on Labs, 3h, Wednesday
-lab.label.simple=Hands-on Lab
-other.label=Other event
-other.label.simple=Other
-start.label=Startup Talk, 25 min, Wednesday to Friday
-start.label.simple=Startup
-ignite.label=Ignite Sessions, 5 min, Wednesday to Thursday early afternoon
-ignite.label.simple=Ignite
-
-hack.label.simple=Hackatons
-code.label.simple=Codestory
+quick.label=Lightning Talk, 15 mn
+quick.label.simple=Lightning talk
+workshop.label=Workshop, under 1h30
+workshop.label.simple=Workshop
+demo.label=Demo, 20 mn
+demo.label.simple=Demo
 
 # Bug report
 Issue.report=Report an issue
@@ -162,62 +149,30 @@ cfp.reminder.proposals=do not forget to submit your Draft
 cfp.program=Program announced :
 cfp.program.date=from {0}
 video.title=Videos
-video.tag=Review Devoxx FR''s videos on
+video.tag=Review Droidcon FR 2015''s videos on
 theme.title=Tracks
-theme.track=List of tracks for Devoxx France 2017:
+theme.track=List of tracks:
 track.title=Title
 track.description=Description
-appel.conf.dates=Devoxx France 2017, 5th-7th April
+appel.conf.dates=Android Makers France 2017, 10th-11th April
 
 # Tracks
 
-track.java.title=Java, JVM, Javas SE/EE
-track.java.desc=Everything aroung Java, the JVM, Java SE, Java EE.
-java.label=Java, JVM, Javas SE/EE
-java.leaderboard=Java, JVM, Javas SE/EE
+track.anddev.title=Android Development
+track.anddev.desc=
+anddev.label=Android Development
+anddev.leaderboard=Android Development
 
-track.mobile.title=Mobile & Internet of Things
-track.mobile.desc=Mobile, Java & Internet of Things
-mobile.label=Mobile, IoT
-mobile.leaderboard=Mobile, IoT
 
-track.web.title=Web, JS, HTML5 & UX
-track.web.desc=Web, JS, user-experience, front-end and Web architecture
-web.label=Web, JS, HTML5 &  UX
-wm.label=Web, JS, HTML5 & UX
-wm.leaderboard=Web, JS, HTML5 & UX
+track.andeverywhere.title=Android Everywhere
+track.andeverywhere.desc=
+andeverywhere.label=Android Everywhere
+andeverywhere.leaderboard=Android Everywhere
 
-track.archisec.title=Architecture, Performance & Security
-track.archisec.desc=Software architecture, performance, encryption and best practices to develop secure software
-archisec.label=Architecture, Performance and Security
-archisec.leaderboard=Architecture, Performance and Security
-
-track.agile_devops.title=DevOps, Agile, Methodology & Tests
-track.agile_devops.desc=Software development methods, TDD, BDD, xDD.
-agile_devops.label=DevOps, Agile, Methodology & Tests
-agTest.label=DevOps, Agile, Methodology & Tests
-agTest.leaderboard=DevOps, Agile, Methodology & Tests
-
-track.cloud.title=Cloud, container & Scaling
-track.cloud.desc=Cloud-computing, containers, resilient architectures.
-cloud.label=Cloud & Scaling
-cldops.label=Cloud & Scaling
-cldops.leaderboard=Cloud & Scaling
-
-track.bigdata.title=Big Data, Machine Learning, I.A & Analytics
-track.bigdata.desc=From real-time analysis to massive prediction and cloud storage
-bigdata.label=Big Data, Machine Learning, IA & Analytics
-bigd.leaderboard=Big Data & Analytics
-
-track.future.title=Future & Robotics
-track.future.desc=Developing for the Internet of Things, Arduino, Raspberry, etc.
-future.label=Future & Robotics
-future.leaderboard=Future & Robotics
-
-track.lang.title=Alternate Languages
-track.lang.desc=Groovy, Scala, Go, Javascript, Clojure, Haskell, Ceylon, etc.
-lang.label=Alternate Languages
-lang.leaderboard=Alternate Languages
+track.uxui.title=UX/UI
+track.uxui.desc=
+uxui.label=UX/UI
+uxui.leaderboard=UX/UI
 
 # confirm import
 confirm.import.title=Create your Speaker''s profile
@@ -425,19 +380,12 @@ sw.company=Company
 sw.talkType=All talks
 sw.details=See details
 
-conf=Conference
-uni=University
-tia=Tools-in-Action
-lab=Hands-on Labs
-quick=Quickie
-bof=BOF (Bird of a Feather)
-hack=Hackaton
 key=Keynote
-other=Other format
+conf=Conference
+quick=Lightning Talk
+workshop=Workshop
+demo=Demo
 all=All
-start=Startup presentation
-ignite=Ignite Sessions
-amd=Après-midi des Décideurs
 
 sw.proposal.speaker=Presented by
 admin.btn.changeState=Change one proposal state
@@ -445,15 +393,12 @@ admin.btn.changeState=Change one proposal state
 sw.talkType.warn=List of talks approved by the program committe and accepted by each speaker
 sw.showDetails=See details
 sw.home=Home
-sw.all.uni=All Universities
+sw.all.keynote=All Keynotes
 sw.all.conf=All Conferences
-sw.all.lab=All Hands-on labs
-sw.all.quick=All Quickies
-sw.all.bof=All BOFs
-sw.all.start=All Startup''s talks
-sw.all.ignite=All Ignite Sessions
-sw.all.tia=All Tools in Action
-sw.speakers=Devoxxians
+sw.all.quick=All Lightning talks
+sw.all.workshop=All Workshops
+sw.all.demo=All Demos
+sw.speakers=Makers
 sw.intro=The agenda is published every day.
 sw.programme=Agenda
 sw.presentations=Talks
@@ -494,11 +439,11 @@ day-confThursday=Thursday
 day-lab=Wednesday
 day-confFriday=Friday
 day-bof=Thursday, 19h30
-day-monday=Monday, 3th April
-day-tuesday=Tuesday, 4th April
-day-wednesday=Wednesday, 5th April
-day-thursday=Thursday, 6th April
-day-friday=Friday, 7th April
+day-monday=Monday, 10th April
+day-tuesday=Tuesday, 11th April
+day-wednesday=Wednesday, 12th April
+day-thursday=Thursday, 13th April
+day-friday=Friday, 14th April
 
 sw.all.confThursday=Conferences on Thursday
 confThursday=Conferences on Thursday
@@ -527,11 +472,11 @@ sw.show.thu=Thursday
 sw.show.thursday=Thursday
 sw.show.fri=Friday
 sw.show.friday=Friday
-sw.show.title.mon=Monday, 3th April 2017
-sw.show.title.tue=Tuesday, 4th April 2017
-sw.show.title.wed=Wednesday, 5th April 2017
-sw.show.title.thu=Thursday, 6th April 2017
-sw.show.title.fri=Friday, 7th April 2017
+sw.show.title.mon=Monday, 10th April 2017
+sw.show.title.tue=Tuesday, 11th April 2017
+sw.show.title.wed=Wednesday, 12th April 2017
+sw.show.title.thu=Thursday, 13th April 2017
+sw.show.title.fri=Friday, 14th April 2017
 
 sw.horaires=Schedule
 sw.breakfast=Welcome and Breakfast
@@ -659,12 +604,8 @@ day-mercredi=Wednesday
 day-vendredi=Friday
 error.email=Invalid email address
 error.invalid=Invalid value
-hack.label=Hackaton
-lg_alter.label=Alternate languages on the JVM
-lgaltern.label=Alternate languages on the JVM
-menu.blog=Site DevoxxFR
-signup.long=Register as a speaker on Devoxx France CFP
-sw.all.hack=Hackatons
+menu.blog=Site AndroidMakersFR
+signup.long=Register as a speaker on Android Makers France CFP
 approved=Speaker approved
 cstory=Session de live coding Code-story
 day-jeudi=Thursday
