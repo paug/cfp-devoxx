@@ -106,66 +106,46 @@ case class ConferenceDescriptor(eventCode: String,
 
 object ConferenceDescriptor {
 
-  /**
+    /**
     * TODO configure here the kind of talks you will propose
     */
   object ConferenceProposalTypes {
+    val KEY = ProposalType(id = "key", label = "key.label")
+
     val CONF = ProposalType(id = "conf", label = "conf.label")
-
-    val UNI = ProposalType(id = "uni", label = "uni.label")
-
-    val TIA = ProposalType(id = "tia", label = "tia.label")
-
-    val LAB = ProposalType(id = "lab", label = "lab.label")
 
     val QUICK = ProposalType(id = "quick", label = "quick.label")
 
-    val BOF = ProposalType(id = "bof", label = "bof.label")
+    val WORKSHOP = ProposalType(id = "workshop", label = "workshop.label")
 
-    val KEY = ProposalType(id = "key", label = "key.label")
+    val DEMO = ProposalType(id = "demo", label = "demo.label")
 
-    val IGNITE = ProposalType(id = "ignite", label = "ignite.label")
-
-    val OTHER = ProposalType(id = "other", label = "other.label")
-
-    val ALL = List(CONF, UNI, TIA, LAB, QUICK, BOF, KEY, IGNITE, OTHER)
+    val ALL = List(KEY, CONF, QUICK, WORKSHOP, DEMO)
 
     def valueOf(id: String): ProposalType = id match {
-      case "conf" => CONF
-      case "uni" => UNI
-      case "tia" => TIA
-      case "lab" => LAB
-      case "quick" => QUICK
-      case "bof" => BOF
       case "key" => KEY
-      case "ignite" => IGNITE
-      case "other" => OTHER
+      case "conf" => CONF
+      case "quick" => QUICK
+      case "workshop" => WORKSHOP
+      case "demo" => DEMO
     }
 
   }
 
   // TODO Configure here the slot, with the number of slots available, if it gives a free ticket to the speaker, some CSS icons
   object ConferenceProposalConfigurations {
+    val KEY = ProposalConfiguration(id = "key", slotsCount = 2, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = false, htmlClass = "icon-microphone",
+      chosablePreferredDay = true)
     val CONF = ProposalConfiguration(id = "conf", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.CONF.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-microphone",
       chosablePreferredDay = true)
-    val UNI = ProposalConfiguration(id = "uni", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.UNI.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-laptop",
+    val QUICK = ProposalConfiguration(id = "quick", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.QUICK.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-fast-forward",
       chosablePreferredDay = true)
-    val TIA = ProposalConfiguration(id = "tia", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.TIA.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-legal",
+    val WORKSHOP = ProposalConfiguration(id = "workshop", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.WORKSHOP.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-laptop",
       chosablePreferredDay = true)
-    val LAB = ProposalConfiguration(id = "lab", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.LAB.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-beaker",
+    val DEMO = ProposalConfiguration(id = "demo", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.DEMO.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-group",
       chosablePreferredDay = true)
-    val QUICK = ProposalConfiguration(id = "quick", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.QUICK.id)), givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-fast-forward",
-      chosablePreferredDay = true)
-    val BOF = ProposalConfiguration(id = "bof", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.BOF.id)), givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-group",
-      chosablePreferredDay = false)
-    val KEY = ProposalConfiguration(id = "key", slotsCount = 7, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = false, htmlClass = "icon-microphone",
-      chosablePreferredDay = true)
-    val IGNITE = ProposalConfiguration(id = "ignite", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.IGNITE.id)), givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-microphone",
-      chosablePreferredDay = false)
-    val OTHER = ProposalConfiguration(id = "other", slotsCount = 5, givesSpeakerFreeEntrance = false, freeEntranceDisplayed = false, htmlClass = "icon-microphone",
-      hiddenInCombo = true, chosablePreferredDay = false)
 
-    val ALL = List(CONF, UNI, TIA, LAB, QUICK, BOF, KEY, IGNITE, OTHER)
+    val ALL = List(KEY, CONF, QUICK, WORKSHOP, DEMO)
 
     def doesItGivesSpeakerFreeEntrance(proposalType: ProposalType): Boolean = {
       ALL.filter(_.id == proposalType.id).exists(_.givesSpeakerFreeEntrance)
@@ -174,32 +154,21 @@ object ConferenceDescriptor {
 
   // TODO Configure here your Conference's tracks.
   object ConferenceTracks {
-    val JAVA = Track("java", "java.label")
-    val MOBILE = Track("mobile", "mobile.label")
-    val WEB = Track("wm", "web.label")
-    val ARCHISEC = Track("archisec", "archisec.label")
-    val CLOUD = Track("cldops", "cloud.label")
-    val AGILE_DEVOPS = Track("agTest", "agile_devops.label")
-    val BIGDATA = Track("bigd", "bigdata.label")
-    val FUTURE = Track("future", "future.label")
-    val LANG = Track("lang", "lang.label")
+    val ANDROID_DEV = Track("anddev", "anddev.label")
+    val ANDROID_EVERYWHERE = Track("andeverywhere", "andeverywhere.label")
+    val UXUI = Track("uxui", "uxui.label")
     val UNKNOWN = Track("unknown", "unknown track")
-    val ALL = List(JAVA, MOBILE, WEB, ARCHISEC, AGILE_DEVOPS, CLOUD, BIGDATA, FUTURE, LANG, UNKNOWN)
+    val ALL = List(ANDROID_DEV, ANDROID_EVERYWHERE, UXUI, UNKNOWN)
   }
 
   // TODO configure the description for each Track
+  // TODO Choose and put assets
   object ConferenceTracksDescription {
-    val JAVA = TrackDesc(ConferenceTracks.JAVA.id, "/assets/dvfr2015/images/icon_javase.png", "track.java.title", "track.java.desc")
-    val MOBILE = TrackDesc(ConferenceTracks.MOBILE.id, "/assets/dvfr2015/images/icon_web.png", "track.mobile.title", "track.mobile.desc")
-    val WEB = TrackDesc(ConferenceTracks.WEB.id, "/assets/dvfr2015/images/icon_web.png", "track.web.title", "track.web.desc")
-    val ARCHISEC = TrackDesc(ConferenceTracks.ARCHISEC.id, "/assets/dvfr2015/images/icon_architecture.png", "track.archisec.title", "track.archisec.desc")
-    val AGILE_DEVOPS = TrackDesc(ConferenceTracks.AGILE_DEVOPS.id, "/assets/dvfr2015/images/icon_startup.png", "track.agile_devops.title", "track.agile_devops.desc")
-    val CLOUD = TrackDesc(ConferenceTracks.CLOUD.id, "/assets/dvfr2015/images/icon_cloud.png", "track.cloud.title", "track.cloud.desc")
-    val BIGDATA = TrackDesc(ConferenceTracks.BIGDATA.id, "/assets/dvfr2015/images/icon_mobile.png", "track.bigdata.title", "track.bigdata.desc")
-    val FUTURE = TrackDesc(ConferenceTracks.FUTURE.id, "/assets/dvfr2015/images/icon_future.png", "track.future.title", "track.future.desc")
-    val LANG = TrackDesc(ConferenceTracks.LANG.id, "/assets/dvfr2015/images/icon_alternative.png", "track.lang.title", "track.lang.desc")
+    val ANDROID_DEV = TrackDesc(ConferenceTracks.ANDROID_DEV.id, "/assets/androidmakersfr2017/images/icon_dev.png", "track.anddev.title", "track.anddev.desc")
+    val ANDROID_EVERYWHERE = TrackDesc(ConferenceTracks.ANDROID_EVERYWHERE.id, "/assets/androidmakersfr2017/images/icon_iot.png", "track.andeverywhere.title", "track.andeverywhere.desc")
+    val UXUI = TrackDesc(ConferenceTracks.UXUI.id, "/assets/androidmakersfr2017/images/icon_uxui.png", "track.uxui.title", "track.uxui.desc")
 
-    val ALL = List(JAVA, MOBILE, WEB, ARCHISEC, AGILE_DEVOPS, CLOUD, BIGDATA, FUTURE, LANG)
+    val ALL = List(ANDROID_DEV, ANDROID_EVERYWHERE, UXUI)
 
     def findTrackDescFor(t: Track): TrackDesc = {
       ALL.find(_.id == t.id).getOrElse(JAVA)
@@ -673,38 +642,38 @@ object ConferenceDescriptor {
 
   // TODO You might want to start here and configure first, your various Conference Elements
   def current() = ConferenceDescriptor(
-    eventCode = "DevoxxFR2017",
+    eventCode = "AndroidMakersFR2017",
     // You will need to update conf/routes files with this code if modified
-    confUrlCode = "devoxxfr2017",
+    confUrlCode = "androidmakersfr2017",
     frLangEnabled = true,
-    fromEmail = Play.current.configuration.getString("mail.from").getOrElse("program@devoxx.fr"),
-    committeeEmail = Play.current.configuration.getString("mail.committee.email").getOrElse("program@devoxx.fr"),
+    fromEmail = Play.current.configuration.getString("mail.from").getOrElse("contact@androidmakers.fr"),
+    committeeEmail = Play.current.configuration.getString("mail.committee.email").getOrElse("cfp@androidmakers.fr"),
     bccEmail = Play.current.configuration.getString("mail.bcc"),
-    bugReportRecipient = Play.current.configuration.getString("mail.bugreport.recipient").getOrElse("nicolas.martignole@devoxx.fr"),
+    bugReportRecipient = Play.current.configuration.getString("mail.bugreport.recipient").getOrElse("contact@androidmakers.fr"),
     conferenceUrls = ConferenceUrls(
-      faq = "http://www.devoxx.fr/faq/",
-      registration = "https://reg.devoxx.fr",
-      confWebsite = "http://www.devoxx.fr/",
-      cfpHostname = Play.current.configuration.getString("cfp.hostname").getOrElse("cfp.devoxx.fr")
+      faq = "http://androidmakers.fr/faq/", // TODO get a faq section or point to an article
+      registration = "https://www.eventbrite.com/e/android-makers-1st-edition-tickets-29579435889",
+      confWebsite = "http://androidmakers.fr/",
+      cfpHostname = Play.current.configuration.getString("cfp.hostname").getOrElse("cfp.androidmakers.fr")
     ),
     timing = ConferenceTiming(
-      datesI18nKey = "5 au 7 avril 2017",
-      speakersPassDuration = 5,
+      datesI18nKey = "10 au 11 avril 2017",
+      speakersPassDuration = 2,
       preferredDayEnabled = true,
-      firstDayFr = "5 avril",
-      firstDayEn = "april 5th",
-      datesFr = "du 5 au 7 avril 2017",
-      datesEn = "from 5th to 7th of April, 2017",
-      cfpOpenedOn = DateTime.parse("2016-11-01T00:00:00+02:00"),
-      cfpClosedOn = DateTime.parse("2017-01-08T23:59:00+02:00"),
-      scheduleAnnouncedOn = DateTime.parse("2017-02-15T00:00:00+02:00"),
+      firstDayFr = "10 avril",
+      firstDayEn = "april 10th",
+      datesFr = "du 10 au 11 avril 2017",
+      datesEn = "from 10th to 11th of April, 2017",
+      cfpOpenedOn = DateTime.parse("2016-12-01T00:00:00+01:00"),
+      cfpClosedOn = DateTime.parse("2017-01-16T23:59:59+01:00"),
+      scheduleAnnouncedOn = DateTime.parse("2017-02-14T00:00:00+01:00"),
       days = dateRange(fromDay, toDay, new Period().withDays(1))
     ),
-    hosterName = "Clever-cloud", hosterWebsite = "http://www.clever-cloud.com/#DevoxxFR",
-    hashTag = "#DevoxxFR",
+    hosterName = "Clever-cloud", hosterWebsite = "http://www.clever-cloud.com/#AndroidMakersFR",
+    hashTag = "#AndroidMakersFR",
     conferenceSponsor = ConferenceSponsor(showSponsorProposalCheckbox = true, sponsorProposalType = ConferenceProposalTypes.CONF)
     , List(Locale.FRENCH)
-    , "Palais des Congrès, Porte Maillot, Paris"
+    , "Salon de l'Aveyron, Paris"
     , 1200 // French developers tends to be a bit verbose... we need extra space :-)
   )
 
