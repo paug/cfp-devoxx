@@ -1,7 +1,7 @@
 #!/bin/bash
 export APP_SECRET="gsglsdgl2edfrsgFGE$W#FDSGdfg4RDFSGFFDGL4glfcghl$RFDSGfdgd3asd"
 export CFP_LANG="en,en-US"
-export CFP_HOSTNAME="cfp.devoxx.us"
+export CFP_HOSTNAME="cfp.androidmakers.fr"
 
 # Mailjet
 export SMTP_HOST="in.mailjet.com"
@@ -11,9 +11,9 @@ export SMTP_MOCK="true"
 export SMTP_SSL="no"
 export SMTP_PORT="587"
 
-export MAIL_COMMITTEE="sja@devoxx.com"
-export MAIL_FROM="program@devoxx.com"
-export MAIL_BUG_REPORT="sja@devoxx.com"
+export MAIL_COMMITTEE="cfp@androidmakers.fr"
+export MAIL_FROM="cfp@androidmakers.fr"
+export MAIL_BUG_REPORT="contact@androidmakers.fr"
 
 export LINKEDIN_CLIEND_ID="77lzme1q1ol7dl"
 export LINKEDIN_SECRET="jSjKS9hecOIjdhmQ"
