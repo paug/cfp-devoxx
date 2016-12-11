@@ -1,5 +1,5 @@
 # Home page
-GET           /favicon.ico                                                      controllers.Assets.at(path="/public/images", file="favicon.ico")
+GET           /favicon.png                                                      controllers.Assets.at(path="/public/images", file="favicon.png")
 GET           /                                                                 controllers.Application.index
 GET           /home                                                             controllers.Application.home
 GET           /homeVisitor                                                      controllers.Application.homeVisitor

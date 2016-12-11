@@ -1,19 +1,19 @@
 # -----------------
 # Main conference details
 CONF.title=Android Makers France 2017
-CONF.subtitle=FR
+CONF.subtitle=France
 
 # Equivalent to ConferenceNaming
 shortYearlyName=Android Makers FR 2017
 longYearlyName=Android Makers France 2017
-shortName=Android Makers France
+shortName=AndroidMakers France
 longName=Android Makers FR 2017 CFP
-longSplittedName_whiteStart=Android Makers
-longSplittedName_colored=FR
+longSplittedName_whiteStart=AndroidMakers
+longSplittedName_colored=France
 longSplittedName_whiteEnd=2017
 conference.dates=10th-11th April
 # -----------------
-cfp.title=Android Makers FR 2017 CFP
+cfp.title=AndroidMakers FR 2017 CFP
 login.error=Invalid email or password
 menu.home=Home
 menu.register=Sign-in
