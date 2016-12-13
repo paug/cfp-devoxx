@@ -110,15 +110,15 @@ object ConferenceDescriptor {
     * TODO configure here the kind of talks you will propose
     */
   object ConferenceProposalTypes {
-    val KEY = ProposalType(id = "key", label = "key.label")
+    val KEY = ProposalType(id = "a_key", label = "key.label")
 
-    val CONF = ProposalType(id = "conf", label = "conf.label")
+    val CONF = ProposalType(id = "b_conf", label = "conf.label")
 
-    val QUICK = ProposalType(id = "quick", label = "quick.label")
+    val QUICK = ProposalType(id = "c_quick", label = "quick.label")
 
-    val WORKSHOP = ProposalType(id = "workshop", label = "workshop.label")
+    val WORKSHOP = ProposalType(id = "d_workshop", label = "workshop.label")
 
-    val DEMO = ProposalType(id = "demo", label = "demo.label")
+    val DEMO = ProposalType(id = "e_demo", label = "demo.label")
 
     val ALL = List(KEY, CONF, QUICK, WORKSHOP, DEMO)
 
