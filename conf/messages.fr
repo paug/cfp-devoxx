@@ -129,14 +129,14 @@ presubmit.reminder=Lorsque vous êtes prêt à soumettre votre proposition, n''o
 # Proposal type
 key.label=Keynote, 40min
 key.label.simple=Keynote
-conf.label=Conference, 40min
-conf.label.simple=Conference
-quick.label=Lightning Talk, 15 min
-quick.label.simple=Lightning talk
+conf.label=40min Talk
+conf.label.simple=40min Talk
+quick.label=20min Talk
+quick.label.simple=20min Talk
 workshop.label=Workshop, 1h30 max
 workshop.label.simple=Workshop
-demo.label=Demo, 20 min
-demo.label.simple=Demo
+demo.label=Makers Area, 20 min
+demo.label.simple=Makers Area
 
 # Bug report
 Issue.report=Notifier l''équipe
