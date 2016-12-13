@@ -131,9 +131,9 @@ conf.label=40mn Talk
 conf.label.simple=40mn Talk
 quick.label=20mn Talk
 quick.label.simple=20mn Talk
-workshop.label=Workshop, under 1h30
+workshop.label=Workshop, up to 3h
 workshop.label.simple=Workshop
-demo.label=Makers Area, 20 mn
+demo.label=Makers Area, demo booth
 demo.label.simple=Makers Area
 
 # Bug report
