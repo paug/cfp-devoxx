@@ -99,7 +99,7 @@ lang=Langue
 lang.help=60% des présentations à {0} sont en anglais et 40% sont en français. Lors de la plannification de l'événement nous nous assurons qu'à un moment donné il y ai toujours une présentation soit en français, soit en anglais (à l'exception des keynotes qui sont elles uniquement en anglais). Si vous êtes francophone, merci de présenter en Français.
 mainSpeaker=Présentateur principal
 mainSpeaker.help=Vous avez la possibilité d''ajouter d''autres présentateurs une fois que la proposition est créé.
-talkType.help=Plus d'informations disponible <a href="http://androidmakers.fr/blog/call-for-paper-type-of-talk-explained" target="new">ici</a>.
+talkType.help=Plus d'informations disponible <a href="http://androidmakers.fr/blog/call-for-paper-type-of-talk-explained-FR" target="new">ici</a>.
  
  
 talkType=Type de présentation
