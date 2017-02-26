@@ -7,8 +7,7 @@
 Cher(e) @toSpeaker.firstName.getOrElse("speaker")
 
 @if(listOfApprovedProposals.size==1){
-Nous avons le plaisir de vous informer que la présentation [@proposal.title] au format
-[@Messages(proposal.talkType.id)] a été approuvée pour @Messages("longYearlyName") !
+Nous avons le plaisir de vous informer que la présentation @listOfApprovedProposals.head.title a été approuvée pour @Messages("longYearlyName") !
 
 Comment valider ou non votre participation ?
 ----------------------------------------------------------------------------------------------------------------------
@@ -30,7 +29,7 @@ Comment poser une question ?
 ----------------------------------------------------------------------------------------------------------------------
 Merci de ne pas répondre à cet email, mais d'utiliser votre interface pour échanger avec le comité.
 
-@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
+@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(listOfApprovedProposals.head.id)
 
 L'équipe de sélection de la conférence @Messages("longYearlyName")
 }
@@ -84,7 +83,7 @@ Dear @toSpeaker.firstName.getOrElse("speaker")
 
 @if(listOfApprovedProposals.size==1){
 We're glad to inform you that your proposal for @Messages("longYearlyName") has been accepted !
-Proposition title : @proposal.title, of type [@Messages(proposal.talkType.id)].
+Proposition title : @listOfApprovedProposals.head.title
 
 Important information
  ---------------------
