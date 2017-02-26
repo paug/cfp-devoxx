@@ -2,7 +2,6 @@
 --------------------------------------------------------------------
   Welcome to @Messages("longYearlyName")
 --------------------------------------------------------------------
-@if(ConferenceDescriptor.current().frLangEnabled) {
 English version below
 
 Bonjour,
@@ -13,8 +12,7 @@ Nous avons le plaisir de vous informer que la présentation [@proposal.title] au
 Comment valider ou non votre participation ?
 ----------------------------------------------------------------------------------------------------------------------
 
-Attention, vous ne disposez que de quelques jours pour accepter les conditions générales et valider votre
-présence à @Messages("longYearlyName") comme présentateur.
+Attention, vous ne disposez que de quelques jours pour accepter les conditions générales et valider votre présence à @Messages("longYearlyName") comme présentateur.
 
 Merci de valider dès maintenant en suivant ce lien dans votre navigateur :
 
@@ -23,7 +21,6 @@ Merci de valider dès maintenant en suivant ce lien dans votre navigateur :
 Vous serez ensuite amené à accepter ou refuser votre(vos) présentation(s).
 
 
-@if(!ConferenceDescriptor.ConferenceProposalConfigurations.doesItGivesSpeakerFreeEntrance(proposal.talkType)) {
 =========
 Attention
 =========
@@ -39,6 +36,10 @@ ainsi qu'au diner des speakers.
 Vous n'avez pas à vous inscrire, votre badge Speaker sera préparé pour vous à l'entrée de la conférence.
 }
 
+=======
+En tant que speaker confirmé(e) vous recevrez ultérieurement un code promotionnel pour bénéficier de votre place offerte.
+
+Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
 
 Comment poser une question ?
 ----------------------------------------------------------------------------------------------------------------------
@@ -49,33 +50,25 @@ Merci de ne pas répondre à cet email, mais d'utiliser votre interface pour éc
 L'équipe de sélection de la conférence @Messages("longYearlyName")
 
 ----------------------------------------------------------------------------------------------------------------------
-}
+
  Hi,
 
  We're glad to inform you that your proposal for @Messages("longYearlyName") has been accepted !
- Proposition title : @proposal.title, of type [@Messages(proposal.talkType.id)].
+Proposition title : @proposal.title, of type [@Messages(proposal.talkType.id)].
 
- Important information
+Important information
  ---------------------
- You must now validate or decline the general terms and conditions, and confirm that you are still ok to do
- this presentation :
+You must now validate or decline the general terms and conditions, and confirm that you are still ok to do this presentation :
 
   @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
 
-@if(!ConferenceDescriptor.ConferenceProposalConfigurations.doesItGivesSpeakerFreeEntrance(proposal.talkType)) {
- This type of talk does not grant a conference pass, so you will need to register as an attendee in order to access the conference area.
 
- See below for registration
+As a confirmed speaker you'll receive a discount code for a free ticket.
 
- @ConferenceDescriptor.current().conferenceUrls.registration
-}
-
- For any question regarding your talk:
- ------------------------------------
- Please, do not respond to this email. Send any comment through the web interface, and our team will do its bests
- to respond quickly.
+For any question regarding your talk:
+------------------------------------
+Please, do not respond to this email. Send any comment through the web interface, and our team will do its bests to respond quickly.
 
   @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
 
  The @Messages("longYearlyName") team
-
