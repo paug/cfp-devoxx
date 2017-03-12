@@ -589,7 +589,7 @@ object ConferenceDescriptor {
         new DateTime(s"${firstDay}T12:15:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")),
         new DateTime(s"${firstDay}T12:30:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")))
       , SlotBuilder(ConferenceSlotBreaks.shortBreak, "monday",
-        new DateTime(s"${firstDay}T13:550:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")),
+        new DateTime(s"${firstDay}T13:55:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")),
         new DateTime(s"${firstDay}T14:10:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")))
       , SlotBuilder(ConferenceSlotBreaks.shortBreak, "monday",
         new DateTime(s"${firstDay}T15:35:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")),
