@@ -123,26 +123,26 @@ object ConferenceDescriptor {
     val ALL = List(KEY, CONF, QUICK, WORKSHOP, DEMO)
 
     def valueOf(id: String): ProposalType = id match {
-      case "key" => KEY
-      case "conf" => CONF
-      case "quick" => QUICK
-      case "workshop" => WORKSHOP
-      case "demo" => DEMO
+      case "a_key" => KEY
+      case "b_conf" => CONF
+      case "c_quick" => QUICK
+      case "d_workshop" => WORKSHOP
+      case "e_demo" => DEMO
     }
 
   }
 
   // TODO Configure here the slot, with the number of slots available, if it gives a free ticket to the speaker, some CSS icons
   object ConferenceProposalConfigurations {
-    val KEY = ProposalConfiguration(id = "key", slotsCount = 3, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = false, htmlClass = "icon-microphone",
+    val KEY = ProposalConfiguration(id = "a_key", slotsCount = 3, givesSpeakerFreeEntrance = true, freeEntranceDisplayed = false, htmlClass = "icon-microphone",
       chosablePreferredDay = true)
-    val CONF = ProposalConfiguration(id = "conf", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.CONF.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-microphone",
+    val CONF = ProposalConfiguration(id = "b_conf", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.CONF.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-microphone",
       chosablePreferredDay = true)
-    val QUICK = ProposalConfiguration(id = "quick", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.QUICK.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-fast-forward",
+    val QUICK = ProposalConfiguration(id = "c_quick", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.QUICK.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-fast-forward",
       chosablePreferredDay = true)
-    val WORKSHOP = ProposalConfiguration(id = "workshop", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.WORKSHOP.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-laptop",
+    val WORKSHOP = ProposalConfiguration(id = "d_workshop", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.WORKSHOP.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-laptop",
       chosablePreferredDay = true)
-    val DEMO = ProposalConfiguration(id = "demo", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.DEMO.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-group",
+    val DEMO = ProposalConfiguration(id = "e_demo", slotsCount = ConferenceSlots.all.count(_.name.equals(ConferenceProposalTypes.DEMO.id)), givesSpeakerFreeEntrance = true, freeEntranceDisplayed = true, htmlClass = "icon-group",
       chosablePreferredDay = true)
 
     val ALL = List(KEY, CONF, QUICK, WORKSHOP, DEMO)
