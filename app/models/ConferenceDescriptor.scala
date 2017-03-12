@@ -459,7 +459,7 @@ object ConferenceDescriptor {
             new DateTime(s"${secondDay}T09:50:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")), r1)
       }
       val conferenceTuesdaySlot2 = ConferenceRooms.allRoomsConf.map {
-        r02 =>
+        r2 =>
           SlotBuilder(ConferenceProposalTypes.CONF.id, "tuesday",
             new DateTime(s"${secondDay}T09:00:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")),
             new DateTime(s"${secondDay}T09:50:00.000+02:00").toDateTime(DateTimeZone.forID("Europe/Paris")), r2)
@@ -613,7 +613,7 @@ object ConferenceDescriptor {
     )
 
     val mondaySchedule: List[Slot] = {
-      mondayBreaks ++ keynoteSlotsMonday ++ conferenceSlotsMonday ++ quickieSlotsMonday ++ workshopSlotsMonday
+      mondayBreaks ++ keynoteSlotsMonday ++ conferenceSlotsMonday ++ quickiesSlotsMonday ++ workshopSlotsMonday
     }
 
     val tuesdaySchedule: List[Slot] = {
