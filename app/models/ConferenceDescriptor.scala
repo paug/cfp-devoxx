@@ -189,6 +189,8 @@ object ConferenceDescriptor {
 
     val allRooms = List(HALL_EXPO, AMPHI_A, AMPHI_B, WORKSHOP)
 
+    val allRoomsAsIdsAndLabels:Seq[(String,String)] = allRooms.map(a=>(a.id,a.name)).sorted
+
     val keynoteRoom = List(AMPHI_A)
 
     val allRoomsConf = List(AMPHI_A, AMPHI_B)
@@ -196,9 +198,6 @@ object ConferenceDescriptor {
     val allRoomsQuickiesMonday = List(AMPHI_B)
 
     val allRoomsWorkshop = List(WORKSHOP)
-  }
-
-    val allRoomsQuickiesFriday = allRoomsQuickiesThu
   }
 
   // TODO if you want to use the Scheduler, you can configure the breaks
