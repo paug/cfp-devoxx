@@ -661,7 +661,7 @@ object ConferenceDescriptor {
       }
     ),
     timing = ConferenceTiming(
-      datesI18nKey = "23 au 24 acril 2018",
+      datesI18nKey = "23 au 24 avril 2018",
       speakersPassDuration = 2,
       preferredDayEnabled = true,
       firstDayFr = "23 avril",
