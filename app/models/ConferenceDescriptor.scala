@@ -164,9 +164,9 @@ object ConferenceDescriptor {
   // TODO configure the description for each Track
   // TODO Choose and put assets
   object ConferenceTracksDescription {
-    val ANDROID_DEV = TrackDesc(ConferenceTracks.ANDROID_DEV.id, "/assets/androidmakersfr2017/images/icon_dev.png", "track.anddev.title", "track.anddev.desc")
-    val ANDROID_EVERYWHERE = TrackDesc(ConferenceTracks.ANDROID_EVERYWHERE.id, "/assets/androidmakersfr2017/images/icon_iot.png", "track.andeverywhere.title", "track.andeverywhere.desc")
-    val UXUI = TrackDesc(ConferenceTracks.UXUI.id, "/assets/androidmakersfr2017/images/icon_uxui.png", "track.uxui.title", "track.uxui.desc")
+    val ANDROID_DEV = TrackDesc(ConferenceTracks.ANDROID_DEV.id, "/assets/androidmakersfr2018/images/icon_dev.png", "track.anddev.title", "track.anddev.desc")
+    val ANDROID_EVERYWHERE = TrackDesc(ConferenceTracks.ANDROID_EVERYWHERE.id, "/assets/androidmakersfr2018/images/icon_iot.png", "track.andeverywhere.title", "track.andeverywhere.desc")
+    val UXUI = TrackDesc(ConferenceTracks.UXUI.id, "/assets/androidmakersfr2018/images/icon_uxui.png", "track.uxui.title", "track.uxui.desc")
 
     val ALL = List(ANDROID_DEV, ANDROID_EVERYWHERE, UXUI)
 
@@ -214,8 +214,8 @@ object ConferenceDescriptor {
   // TODO The idea here is to describe in term of Agenda, for each rooms, the slots. This is required only for the Scheduler
   object ConferenceSlots {
 
-    val firstDay = "2017-04-10"
-    val secondDay = "2017-04-11"
+    val firstDay = "2018-04-10"
+    val secondDay = "2018-04-11"
 
 
     // WORKSHOPS
@@ -634,14 +634,14 @@ object ConferenceDescriptor {
 
   def dateRange(from: DateTime, to: DateTime, step: Period): Iterator[DateTime] = Iterator.iterate(from)(_.plus(step)).takeWhile(!_.isAfter(to))
 
-  val fromDay = new DateTime().withYear(2017).withMonthOfYear(4).withDayOfMonth(10)
-  val toDay = new DateTime().withYear(2017).withMonthOfYear(4).withDayOfMonth(11)
+  val fromDay = new DateTime().withYear(2018).withMonthOfYear(4).withDayOfMonth(23)
+  val toDay = new DateTime().withYear(2018).withMonthOfYear(4).withDayOfMonth(24)
 
   // TODO You might want to start here and configure first, your various Conference Elements
   def current() = ConferenceDescriptor(
-    eventCode = "AndroidMakersFR2017",
+    eventCode = "AndroidMakersFR2018",
     // You will need to update conf/routes files with this code if modified
-    confUrlCode = "androidmakersfr2017",
+    confUrlCode = "androidmakersfr2018",
     frLangEnabled = true,
     fromEmail = Play.current.configuration.getString("mail.from").getOrElse("contact@androidmakers.fr"),
     committeeEmail = Play.current.configuration.getString("mail.committee.email").getOrElse("cfp@androidmakers.fr"),
@@ -661,23 +661,23 @@ object ConferenceDescriptor {
       }
     ),
     timing = ConferenceTiming(
-      datesI18nKey = "10 au 11 avril 2017",
+      datesI18nKey = "23 au 24 acril 2018",
       speakersPassDuration = 2,
       preferredDayEnabled = true,
-      firstDayFr = "10 avril",
-      firstDayEn = "april 10th",
-      datesFr = "du 10 au 11 avril 2017",
-      datesEn = "from 10th to 11th of April, 2017",
-      cfpOpenedOn = DateTime.parse("2016-12-01T00:00:00+01:00"),
-      cfpClosedOn = DateTime.parse("2017-02-16T23:59:59+01:00"),
-      scheduleAnnouncedOn = DateTime.parse("2017-02-14T00:00:00+01:00"),
+      firstDayFr = "23 avril",
+      firstDayEn = "april 23rd",
+      datesFr = "du 23 au 24 avril 2018",
+      datesEn = "from 23rd to 24th of April, 2018",
+      cfpOpenedOn = DateTime.parse("2017-12-01T00:00:00+01:00"),
+      cfpClosedOn = DateTime.parse("2018-02-16T23:59:59+01:00"),
+      scheduleAnnouncedOn = DateTime.parse("2018-02-14T00:00:00+01:00"),
       days = dateRange(fromDay, toDay, new Period().withDays(1))
     ),
     hosterName = "Clever-cloud", hosterWebsite = "http://www.clever-cloud.com/#AndroidMakersFR",
     hashTag = "#AndroidMakersFR",
     conferenceSponsor = ConferenceSponsor(showSponsorProposalCheckbox = true, sponsorProposalType = ConferenceProposalTypes.CONF)
     , List(Locale.FRENCH)
-    , "Salon de l'Aveyron, Paris"
+    , "Le Beffroi, Montrouge"
     , 1200 // French developers tends to be a bit verbose... we need extra space :-)
   )
 

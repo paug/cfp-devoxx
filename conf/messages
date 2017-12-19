@@ -1,19 +1,19 @@
 # -----------------
 # Main conference details
-CONF.title=Android Makers France 2017
+CONF.title=Android Makers France 2018
 CONF.subtitle=France
 
 # Equivalent to ConferenceNaming
-shortYearlyName=Android Makers FR 2017
-longYearlyName=Android Makers France 2017
+shortYearlyName=Android Makers FR 2018
+longYearlyName=Android Makers France 2018
 shortName=AndroidMakers France
-longName=Android Makers FR 2017 CFP
+longName=Android Makers FR 2018 CFP
 longSplittedName_whiteStart=AndroidMakers
 longSplittedName_colored=France
-longSplittedName_whiteEnd=2017
-conference.dates=10th-11th April
+longSplittedName_whiteEnd=2018
+conference.dates=23rd-24th April
 # -----------------
-cfp.title=AndroidMakers FR 2017 CFP
+cfp.title=AndroidMakers FR 2018 CFP
 login.error=Invalid email or password
 menu.home=Home
 menu.register=Sign-in
@@ -170,7 +170,7 @@ theme.title=Tracks
 theme.track=List of tracks:
 track.title=Title
 track.description=Description
-appel.conf.dates=Android Makers France 2017, 10th-11th April
+appel.conf.dates=Android Makers France 2018, 23rd-24th April
 
 # Tracks
 
@@ -489,11 +489,11 @@ sw.show.thu=Thursday
 sw.show.thursday=Thursday
 sw.show.fri=Friday
 sw.show.friday=Friday
-sw.show.title.mon=Monday, 10th April 2017
-sw.show.title.tue=Tuesday, 11th April 2017
-sw.show.title.wed=Wednesday, 12th April 2017
-sw.show.title.thu=Thursday, 13th April 2017
-sw.show.title.fri=Friday, 14th April 2017
+sw.show.title.mon=Monday, 23rd April 2018
+sw.show.title.tue=Tuesday, 24th April 2018
+sw.show.title.wed=Wednesday, 25th April 2018
+sw.show.title.thu=Thursday, 26th April 2018
+sw.show.title.fri=Friday, 27th April 2018
 
 sw.details.wednesday=Wednesday
 sw.details.thursday=Thursday
