@@ -214,8 +214,8 @@ object ConferenceDescriptor {
   // TODO The idea here is to describe in term of Agenda, for each rooms, the slots. This is required only for the Scheduler
   object ConferenceSlots {
 
-    val firstDay = "2018-04-10"
-    val secondDay = "2018-04-11"
+    val firstDay = "2018-04-23"
+    val secondDay = "2018-04-24"
 
 
     // WORKSHOPS
