@@ -145,12 +145,12 @@ msg=Votre message
 
 # Home
 appel.conf=Appel aux conférenciers
-appel.conf.dates=Call for Paper, Android Makers France, du 10 au 11 avril 2017
+appel.conf.dates=Call for Paper, Android Makers France, du 23 au 24 avril 2018
 cfp.opening=Ouverture du CFP
 cfp.closing=Fermeture du CFP
 cfp.closing.date=pensez à accepter ou décliner les sujets approuvés par le comité.
 cfp.program=Annonce du programme :
-cfp.program.date=Fin février, début mars 2017
+cfp.program.date=Fin février, début mars 2018
 video.title=Vidéos des éditions précédentes
 video.tag=Retrouvez toutes les vidéos des éditions précédentes sur le site
 theme.title=Thèmes
@@ -188,7 +188,7 @@ created.text3=Vous pourrez alors vous authentifier et commencer à proposer vos 
 
 # Prepare signup
 signup.title=Inscription orateur
-signup.txt1=Inscrivez-vous pour proposer vos sujets de présentation pour la conférence Android Makers France 2017 :
+signup.txt1=Inscrivez-vous pour proposer vos sujets de présentation pour la conférence Android Makers France 2018 :
 signup.txt2=Un email de validation est envoyé à l''adresse indiquée. Votre profil ne sera actif une fois que votre adresse de courrier électronique sera validée.
 
 # edit profile
@@ -448,9 +448,11 @@ sw.agenda.friday=Vendredi
 sw.show.wed=Mercredi
 sw.show.thu=Jeudi
 sw.show.fri=Vendredi
-sw.show.title.wed=Journée du Mercredi 20 avril 2017
-sw.show.title.thu=Journée du Jeudi 21 avril 2017
-sw.show.title.fri=Journée du Vendredi 22 avril 2017
+sw.show.title.mon=Journée du Lundi 23 avril 2018
+sw.show.title.tue=Journée du Mardi 24 avril 2018
+sw.show.title.wed=Journée du Mercredi 25 avril 2018
+sw.show.title.thu=Journée du Jeudi 26 avril 2018
+sw.show.title.fri=Journée du Vendredi 27 avril 2018
 
 
 sw.horaires=Horaires
@@ -514,11 +516,11 @@ btn.saveAndSend=Sauver et envoyer au comité
 btn.saveDraft=Sauver comme Draft (Brouillon)
 cfp.reminder=Rappel
 cfp.reminder.proposals=pensez à soumettre votre brouillon au comité en cliquant sur "Envoyer"
-cfp.title=Android Makers France 2017
+cfp.title=Android Makers France 2018
 conf.label.simple=Conférence
 CONF.subtitle=FR
-CONF.title=Android Makers France 2017
-conference.dates=10 au 11 avril 2017
+CONF.title=Android Makers France 2018
+conference.dates=23 au 24 avril 2018
 contacted=Speaker contacté
 d1.label=Uniquement des slides
 d2.label=Slides et du code
@@ -542,11 +544,11 @@ code.label.simple=Codestory
 level1.label=Ouvert à tout niveau d''audience, débutant comme expert
 level2.label=Pour une audience intermédiaire, avec une connaissance sur le sujet
 level3.label=Pour un public d''expert ou de sénior sur ce sujet
-longName=Android Makers FR 2017 CFP
+longName=Android Makers FR 2018 CFP
 longSplittedName_colored=FR
-longSplittedName_whiteEnd=2017
+longSplittedName_whiteEnd=2018
 longSplittedName_whiteStart=Android Makers
-longYearlyName=Android Makers France 2017
+longYearlyName=Android Makers France 2018
 mail.access_code.subject=Votre code d''accès présentateur pour {0}
 mail.account_created.subject=Bienvenue sur le CFP pour {0}
 mail.cfp_message_to_speaker.subject=[{1}] {0}
@@ -569,7 +571,7 @@ qualifications.otherproposals=Sujet(s) proposé(s) par le speaker
 quick.label.simple=Quickie
 remove.sponsorFlag=Retirer le flag sponsor de cette présentation
 shortName=Android Makers FR
-shortYearlyName=Android Makers FR 2017
+shortYearlyName=Android Makers FR 2018
 ssj.label=Server Side Java
 start=Startup presentation
 start.label=
