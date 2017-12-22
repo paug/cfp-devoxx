@@ -1,30 +1,31 @@
 @(proposal:models.Proposal)
 
-@if(ConferenceDescriptor.current().frLangEnabled) {
+English version below
+
 Bonjour,
 
 Nous avons le regret de vous informer que votre proposition @proposal.title au format @Messages(proposal.talkType.id) n'a pas été acceptée.
 Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet.
 
-La sélection cette année a encore été difficile avec 913 sujets reçus pour 228 slots.
-Nous communiquerons sur notre site plus d'informations sur la sélection.
+Si vous souhaitez vous inscrire, nous avons pour vous un code promotionnel "cfp-invite" afin de vous faire bénéficier d’un prix réduit. La sélection cette année a été particulièrement difficile et nous vous remercions énormément de votre implication. Nous communiquerons sur notre site plus d'informations sur le programme final.
+
+Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
 
 Merci pour votre proposition,
 
 L'équipe de sélection de la conférence @Messages("longYearlyName")
 
 ----------------------------------------------------------------------------------------------------------------
-}
+
 Hi,
-We're sorry to inform you that your proposal for @Messages("longYearlyName") was refused,  keep in mind that
-we received close to 700+ proposals and the available slots are very limited.
+We're sorry to inform you that your proposal for @Messages("longYearlyName") has been refused.
 
 Proposition title : @proposal.title, @Messages(proposal.talkType.id).
 
-We would like to thank you sincerely for your proposal.
-Hopefully we can still welcome you at @Messages("longYearlyName"), registration details
+The selection has been particularly hard this year, we want to thank you for your commitment.
+Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".
 
-@ConferenceDescriptor.current().conferenceUrls.registration
+Registration details : @ConferenceDescriptor.current().conferenceUrls.registration
 
 Kind regards,
 The @Messages("longYearlyName") team

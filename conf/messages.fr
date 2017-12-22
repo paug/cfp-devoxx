@@ -7,19 +7,19 @@ password=Code d''accès
 CallForPaper=Appel aux conférenciers
 btn.login=Continuer
 menu.register=S''inscrire
-menu.blog=Site DevoxxFR
+menu.blog=Site AndroidMakersFR
 login=S''authentifier
 signup=S''inscrire
-signup.long=S''inscrire en tant qu''orateur pour Devoxx France
- 
+signup.long=S''inscrire en tant qu''orateur pour Android Makers France
+
 index.method1=S''authentifier
 # For single quote, you need to double escape
 # http://stackoverflow.com/questions/12070093/how-to-use-single-quotes-in-i18n-in-playframework2
 index.welcome=Déjà inscrit ? Authentifiez-vous avec votre code d''accès :
- 
+
 index.method2=Authentifiez-vous avec OpenId
 index.signupTitle=S''inscrire comme orateur
-index.signup2=Inscrivez-vous comme orateur à Devoxx France afin de proposer un ou plusieurs sujets :
+index.signup2=Inscrivez-vous comme orateur à Android Makers France afin de proposer un ou plusieurs sujets :
 index.signup3=Inscrivez-vous via l''un de vos réseaux sociaux, en quelques secondes, sans devoir valider votre email et utiliser un code d''accès :
 index.signup.btn=S''inscrire
 index.txt2=Utilisez l''un des services ci-dessous, afin de ne pas avoir à mémoriser un code d''accès. Si votre profil n''existe pas, il sera automatiquement créé.
@@ -29,7 +29,7 @@ twitter=Votre pseudo Twitter
 blog=Votre blog ou votre site internet
 forget.password=Code d''accès oublié ?
 home.txt2=Inscrivez-vous via l''un de vos réseaux sociaux, en quelques secondes, sans devoir valider votre email et mémoriser encore un code d''accès.
- 
+
 # Messages de play
 # --- Constraints
 constraint.required=Obligatoire
@@ -38,12 +38,12 @@ constraint.max=Valeur max. : {0}
 constraint.minLength=Longeur minimum : {0}
 constraint.maxLength=Longeur max: {0}
 constraint.email=Adresse email
- 
+
 # --- Formats
 format.date=Date (''{0}'')
 format.numeric=Numérique
 format.real=Real
- 
+
 # --- Errors
 error.invalid=Valeur invalide
 error.required=Champ obligatoire
@@ -58,14 +58,14 @@ error.minLength=Longeur minimum {0}
 error.maxLength=Longeur max {0}
 error.email=Adresse de courrier électronique valide
 error.pattern=Doit respecter {0}
- 
- 
+
+
 email.alreadyexists=Cette adresse email est déjà enregistrée dans notre base.
 forget.password.confirm=Un courrier électronique a été envoyé à l''adresse spécifiée.
 register.withopenid=Inscrivez-vous avec votre profil social
-cfp.closed=Le CFP de Devoxx France est fermé.
+cfp.closed=Le CFP de Android Makers France est fermé.
 avatarUrl=URL de votre photo
- 
+
 # CFP Home page
 your.profile=Votre profil
 your.submission=Vos soumissions
@@ -74,49 +74,52 @@ profile.gravatar=Téléchargez et éditez directement votre photo sur
 profile.gravatar2=pour votre adresse email
 edit.profile=Editer votre profil
 edit.name=Editer votre nom
- 
+
 url.photo=URL de votre photo
 blog.website=Blog ou site internet
 new.proposal=Nouvelle proposition
- 
+
 # github login
 github.importprofile.error=Désolé, nous ne pouvons importer votre profil depuis github. Veuillez modifier votre configuration github.
 github.importprofile.error.emailnotfound=L e-mail n''a pu être récupéré.
 github.importprofile.error.namenotfound=Votre nom n''a pu être récupéré.
 github.importprofile.error.advice=Vous pouvez modifier votre configuration sur https://github.com/settings/profile
- 
+
 # CFP New
 New.proposal=Nouvelle proposition de sujet, étape 1/2
 New.proposal2=Nouvelle proposition de sujet, étape 2/2
 Edit.proposal=Editer une proposition, étape 1/2
 Edit.proposal2=Editer une proposition, étape 2/2
- 
+
 title=Titre de la présentation
 title.help=Proposez un titre simple, clair, qui résume ce que le participant va apprendre. Beaucoup de conférenciers sélectionnent une conférence au dernier moment, en se basant sur le titre.
 summary=Résumé de votre présentation pour le participant
 summary.help=Décrivez votre proposition, telle que le conférencier la lira. Vous pouvez utiliser la syntaxe <a href="http://daringfireball.net/projects/markdown/syntax/" target="_blank">Markdown</a>.
 lang=Langue
-lang.help=75% des présentations à Devoxx France doivent être en Français, 25% en Anglais. Si vous êtes francophone, merci de présenter en Français.
+lang.help=60% des présentations à {0} sont en anglais et 40% sont en français. Lors de la plannification de l'événement nous nous assurons qu'à un moment donné il y ai toujours une présentation soit en français, soit en anglais (à l'exception des keynotes qui sont elles uniquement en anglais). Si vous êtes francophone, merci de présenter en Français.
 mainSpeaker=Présentateur principal
-mainSpeaker.help=Vous avez la possibilité d''ajouter d''autres présentateurs une fois que la proposition est créé. Nous offrons une entrée 3 jours à Devoxx France uniquement pour les formats de présentation suivants : Conference, University, Hands-on-Labs et Tools-in-Action.
-talkType.help=Chaque type de conférence est détaillé sur la page <a href="http://www.devoxx.fr/faq" target="new">FAQ</a> du site Devoxx France.
- 
- 
+mainSpeaker.help=Vous avez la possibilité d''ajouter d''autres présentateurs une fois que la proposition est créé.
+talkType.help=Plus d'informations disponibles <a href="http://androidmakers.fr/blog/call-for-paper-type-of-talk-explained-FR" target="new">ici</a>.
+
+
 talkType=Type de présentation
 audienceLevel=Niveau de la présentation
 privateMessage=Message pour le comité de sélection
 privateMessage.help=Précisez ici toutes les informations importantes sur votre présentation, que seul le comité de sélection verra. Détaillez votre plan de présentation, l''ensemble des éléments qui doivent nous faire choisir votre proposition de sujet. Vous pouvez inclure l''URL vers vos diapositives si vous le souhaitez.
 sponsorTalk=Merci de cocher cette case s''il s''agit d''une présentation "exposant/sponsor"
-sponsorTalk.help=Les sponsors Gold et Platinium peuvent soumettre une proposition de sujet au format Conférence, qui sera automatiquement acceptée. Ne cochez pas cette case si votre société est sponsor alors que vous souhaitez simplement proposer un sujet.
+sponsorTalk.help=Les sponsors Silver et Platinium peuvent soumettre une proposition de sujet au format Conférence, qui sera automatiquement acceptée. Ne cochez pas cette case si votre société est sponsor alors que vous souhaitez simplement proposer un sujet.
 sponsorTalk.help.title=Talk sponsor
 sponsor.name.plz=Merci d''indiquer le nom de votre société dans le champ "Message privé pour le comité"
 sponsorTalk.checkbox=Présentation sponsor/exposant
+accomodation.help.title=Accomodation & Transport
+accomodation.help=If your company supports your travel, send us a message, and we'll be happy to add them as one of our speaker sponsor on our website.
+
 helpAndTips=Aide et conseils
 moreSpeakerLater=Vous aurez la possibilité d''ajouter un ou plusieurs speakers plus tard.
 btn.save=Sauver l''édition
 btn.home=Retour à l''accueil sans sauver
 btn.save2=Sauvegarder votre proposition
-not.saved=Vérifiez le résumé à destination du participant à Devoxx France, puis cliquez sur "Sauvegarder la proposition" pour continuer.
+not.saved=Vérifiez le résumé à destination du participant à Android Makers France, puis cliquez sur "Sauvegarder la proposition" pour continuer.
 validate.summary2=ou sinon utilisez
 validate.summary3=Retour à la page précédente
 validate.summary4=de votre navigateur pour corriger votre texte de résumé.
@@ -127,31 +130,30 @@ preview.warn2=dans le tableau de la page d''accueil.
 presubmit.reminder=Lorsque vous êtes prêt à soumettre votre proposition, n''oubliez pas de cliquer sur l''enveloppe orange sur l''écran principal (
 
 # Proposal type
-key.label=Keynote, 20mn, jeudi et vendredi matin
-conf.label=Conference, 45mn, jeudi et vendredi
-uni.label=University, 3h, mercredi uniquement
-tia.label=Tools in Action, 30mn, mercredi/jeudi
-quick.label=Quickie, 15mn, jeudi et vendredi midi
-amd.label=Après-midi des Décideurs, 30mn, jeudi après-midi
-bof.label=Bird of a Feather, 1h, jeudi soir uniquement
-other.label=Autre type de présentation
-lab.label=Hands-on Lab, 3h, mercredi uniquement
-hack.label=Hackaton (événement spécial)
-ignite.label=Conférence Ignite, 5mn, jeudi et vendredi de 13h à 14h
- 
+key.label=Keynote, 40min
+key.label.simple=Keynote
+conf.label=40min Talk
+conf.label.simple=40min Talk
+quick.label=20min Talk
+quick.label.simple=20min Talk
+workshop.label=Workshop, 3h max
+workshop.label.simple=Workshop
+demo.label=Makers Area, stand de demo
+demo.label.simple=Makers Area
+
 # Bug report
 Issue.report=Notifier l''équipe
 btn.send=Envoyer
 msg=Votre message
- 
+
 # Home
 appel.conf=Appel aux conférenciers
-appel.conf.dates=Call for Paper, Devoxx France 2017, 5 au 7 avril 2017
+appel.conf.dates=Call for Paper, Android Makers France, du 23 au 24 avril 2018
 cfp.opening=Ouverture du CFP
 cfp.closing=Fermeture du CFP
 cfp.closing.date=pensez à accepter ou décliner les sujets approuvés par le comité.
 cfp.program=Annonce du programme :
-cfp.program.date=à partir de la mi-février 2017
+cfp.program.date=Fin février, début mars 2018
 video.title=Vidéos des éditions précédentes
 video.tag=Retrouvez toutes les vidéos des éditions précédentes sur le site
 theme.title=Thèmes
@@ -160,73 +162,43 @@ theme.track=Les différentes tracks pour proposer un sujet :
 track.title=Titre
 track.description=Description
 
-track.java.title=Java, JVM, Javas SE/EE
-track.java.desc=Tout sur Java, la JVM, Java SE, Java EE.
-java.label=Java, JVM, Javas SE/EE
-java.leaderboard=Java, JVM, Javas SE/EE
+track.anddev.title=Développement Android
+track.anddev.desc=
+anddev.label=Développement Android
+anddev.leaderboard=Développement Android
 
-track.mobile.title=Mobile et Internet of Things
-track.mobile.desc=Mobile, Java et l’internet des objets, la domotique et l’embarqué.
-mobile.label=Mobile, IoT
-mobile.leaderboard=Mobile, IoT
+track.andeverywhere.title=Android Everywhere
+track.andeverywhere.desc=
+andeverywhere.label=Android Everywhere
+andeverywhere.leaderboard=Android Everywhere
 
-track.web.title=Web, JS, HTML5 et UX
-track.web.desc=Web, JS, user-experience, front-end et architecture Webs.
-web.label=Web, JS, HTML5 et UX
-wm.leaderboard=Web, JS, HTML5 et UX
-
-track.cloud.title=Cloud, Container et Scalabilité
-track.cloud.desc=Cloud-computing, Container, Virtualisation, Architectures résilientes
-cloud.label=Cloud, Container et Scalabilité
-cldops.leaderboard=Cloud, Container et Scalabilité
-
-track.archisec.title=Architecture, Performance & Securité
-track.archisec.desc=Architecture, performance, encryption et meilleures pratiques pour développer un logiciel sécurisé.
-archisec.label=Architecture, Performance et Securité
-archisec.leaderboard=Architecture, Performance et Securité
-
-track.agile_devops.title=DevOps, Agilité, Méthodologie & Tests
-track.agile_devops.desc=Méthodes et pratiques de développement / déploiement logiciel, TDD, BDD, xDD.
-agile_devops.label=DevOps, Agilité, Méthodologie & Tests
-agTest.leaderboard=DevOps, Agilité, Méthodologie & Tests
-
-track.bigdata.title=BigData, Machine-learning, Intelligence artificielle et Analytics
-track.bigdata.desc=Stocker, analyser les données et revoir la gestion de la data.
-bigd.label=BigData, ML, IA
-bigd.leaderboard=BigData, ML, IA
-
-track.future.title=Future, Robotique
-track.future.desc=La robotique et l''informatique de demain
-future.label=Future, Robotique
-future.leaderboard=Future, Robotique
-
-track.lang.title=Langages alternatifs
-track.lang.desc=Tous les langages alternatifs à Java
-lang.label=Langages alternatifs
-lang.leaderboard=Langages alternatifs
+track.uxui.title=UX/UI
+track.uxui.desc=
+uxui.label=UX/UI
+uxui.leaderboard=UX/UI
 
 # Confirm import
-confirm.import.title=Créer votre profil de présentateur Devoxx France
+confirm.import.title=Créer votre profil de présentateur Android Makers France
 confirm.import.save=Enregistrer et continuer
 avatarUrl.isEmpty=L''URL de votre photo est vide, nous utiliserons votre
 avatarUrl.defined=Votre photo (largeur recommandée 120px)
- 
+
 # Sign-up
 created.title=Demande d''inscription enregistrée
 created.text1=Nous allons vous envoyer un courrier électronique de validation dans quelques minutes.
 created.text2=Validez votre adresse pour terminer votre enregistrement, votre code d''accès vous sera donné lorsque vous validerez votre email.
-created.text3=Vous pourrez alors vous authentifier et commencer à proposer vos sujets pour Devoxx France.
- 
+created.text3=Vous pourrez alors vous authentifier et commencer à proposer vos sujets pour Android Makers France.
+
 # Prepare signup
 signup.title=Inscription orateur
-signup.txt1=Inscrivez-vous pour proposer vos sujets de présentation pour la conférence Devoxx France 2017 :
+signup.txt1=Inscrivez-vous pour proposer vos sujets de présentation pour la conférence Android Makers France 2018 :
 signup.txt2=Un email de validation est envoyé à l''adresse indiquée. Votre profil ne sera actif une fois que votre adresse de courrier électronique sera validée.
- 
+
 # edit profile
 editProfile.title=Votre profil
 editProfile.help=Prenez le temps de compléter votre profil. Ce contenu sera ensuite publié sur le site si vous êtes sélectionné comme orateur, ainsi que dans le programme de la conférence :
 editProfile.save=Enregistrer
- 
+
 # Home
 table.pres.title=Titre
 table.pres.state=Etat
@@ -239,7 +211,7 @@ table.pres.delete=Mettre à la poubelle
 table.pres.action=Actions
 table.pres.doSubmit=Soumettre
 table.pres.doDelete=Effacer
- 
+
 total.draft={0} propositions
 total.draft.sing={0} proposition
 total.archived.sing={0} archivé
@@ -253,7 +225,7 @@ talk.deleted=Proposition de sujet effacée.
 talk.deleted2=Annuler l''effacement de la proposition
 talk.draft=Status de la proposition passé à Draft
 talk.submitted=Votre proposition de sujet a été envoyée
- 
+
 # other speakers
 other.speakers=Gestion des présentateurs
 btn.enregistrer=Enregistrer
@@ -271,19 +243,15 @@ freepass=Oui
 no.freepass=Non
 speakers.updated=Liste des présentateurs mises à jour
 noOther.speaker=---- Pas d''autre présentateur ----
- 
+
 # short talk
-conf=Conference
-uni=University
-tia=Tools-in-Action
-lab=Hands-on Labs
-quick=Quickie
-bof=BOF (Bird of a Feather)
-hack=Hackaton
 key=Keynote
+conf=Conference
+quick=Lightning Talk
+workshop=Workshop
+demo=Démo
 all=All
-amd=Après-midi des Décideurs
- 
+
 tbl.submitted=Envoyé
 profile.imported=Profil importé
 profile.imported.txt=Votre profil a été importé avec succès. Vous pouvez modifier à tout moment votre bio, vos informations personnelles ou l''adresse de votre blog.
@@ -291,16 +259,16 @@ profile.continue=Continuer
 profile.username=Votre identifiant
 profile.password=Votre code d''accès
 profile.password.help=Nous ne souhaitons pas stocker l''un de vos mots-de-passe, et nous préférons en générer un pour vous. Nous vous encourageons à utiliser l''accès OpenId via Github ou Google.
- 
+
 msgSpeaker=Votre message
 freepass.forIdiots=L''entrée est offerte uniquement si votre présentation est sélectionnée par le comité.
- 
+
 nav.homeSpeaker=Accueil
 editWebuser.title=Votre profil
- 
+
 cfp.isOpen=Le CFP est ouvert
-cfp.open.enter=Proposer un sujet pour Devoxx France
- 
+cfp.open.enter=Proposer un sujet pour Android Makers France
+
 #CFP admin
 admin.proposals.th.title=Titre
 admin.proposals.th.track=Track
@@ -324,7 +292,7 @@ admin.cfp.msg=Message de l''événement
 admin.cfp.totalEvents=Total événements
 previous.page=Page précédente
 next.page=Page suivante
- 
+
 admin.proposal=Proposition de sujet
 admin.proposals.th.lang=Langue
 admin.proposals.th.abstract=Texte pour le programme, vu par le conférencier
@@ -342,18 +310,18 @@ admin.btn.sendMessage=Envoyer votre message
 admin.sp.internal=Discussions internes et privées
 admin.sp.deleteMyVote=Annuler mon vote
 admin.btn.allvotes=Tous les votes
- 
+
 speaker.other.error=Vous n''avez pas la possibilité de changer les speakers lorsque vous n''êtes pas l''un des 2 speakers principaux.
 admin.draft.warning=Attention
 admin.draft.warning2=Cette proposition n''est pas à l''état SUBMITTED. Vous ne pouvez pas voter.
 admin.draft.warning3=Etat actuel de cette proposition :
- 
+
 newProposal.maxLength=Maximum 1200 caractères. Possibilité d''utiliser Markdown
 preview.txt=Aperçu de votre présentation dans le programme papier
 tags.renderComment.postedBy=Posté par {0} - {1}
 admin.btn.sponsor=Voir comme un sponsor
 leaderboard.compute=Calcul des stats en cours...
- 
+
 admin.sp.accepted=Accepté
 admin.sp.approved=Approuvé
 admin.sp.refused=Refusé
@@ -361,32 +329,32 @@ admin.sp.rejected=Rejeté
 admin.sp.accepted.txt=Ce sujet a été Accepté par le speaker.
 admin.sp.approved.txt=Ce sujet a été Approuvé par le comité de sélection.
 btn.abstention=Voter 0 pour passer au suivant
- 
+
 cfp.isClosed=Le CFP est fermé
 cfp.isClosed.expl=Le CFP est actuellement fermé.
 cfp.closed.enter=S''authentifier
 tbl.cfp.closed=CFP fermé
 cfp.closed.restrictions=Le CFP est fermé. Vous pouvez éditer votre proposition. Cependant, merci de ne pas la modifier complètement par rapport à la version originale, sans quoi nous l''annulerons systématiquement.
- 
+
 forget.password.title=Code d''accès oublié ?
 forget.password.txt=Envoyez-moi un email de réinitialisation
 forget.password.notfound=Cet email n''existe pas, vous n''êtes pas enregistré.
- 
+
 new.accesscode.title=Nouveau code d''accès
 new.accesscode=Votre nouveau code d''accès est :
- 
+
 admin.btn.otherReviewer=Comparer mes votes
 btn.showVotes=Voir les votes
 comment.proposal=Fil de discussion
- 
+
 saved1=Proposition enregistrée. Pensez à soumettre le sujet en cliquant sur l''enveloppe orange !
 saved2=Proposition éditée et enregistrée.
- 
-approve.title=Devoxx France, Termes et Conditions du Présentateur
-accept.chk=J''accepte les conditions de Devoxx France
-acceptTerm.pleaseRead=Merci de prendre le temps de lire et d''accepter les termes et conditions pour présenter à Devoxx France :
-accept.term.checked=Merci de cocher cette case si vous acceptez les conditions de Devoxx France
- 
+
+approve.title=Android Makers France, Termes et Conditions du Présentateur
+accept.chk=J''accepte les conditions de Android Makers France
+acceptTerm.pleaseRead=Merci de prendre le temps de lire et d''accepter les termes et conditions pour présenter à Android Makers France :
+accept.term.checked=Merci de cocher cette case si vous acceptez les conditions de Android Makers France
+
 acceptedProposals.title=Liste de vos soumissions approuvées/refusées
 ar.approved=Soumissions approuvées
 ar.rejected=Soumissions refusées
@@ -401,7 +369,7 @@ ar.proposalNotFound=Proposition de sujet non trouvée
 ar.choiceRecorded=Votre choix ({1}) pour la proposition {0} a bien été enregistré.
 ar.checkMyProposals=Accepter ou décliner les soumissions approuvées par le comité.
 ar.goBackHome=Retour à l''accueil
- 
+
 sw.proposal.title=Titre
 sw.proposal.talkType=Type de presentation
 sw.proposal.summary=Résumé
@@ -418,13 +386,12 @@ admin.btn.changeState=Changer le status d''un Talk
 sw.talkType.warn=Liste des sujets approuvés par le comité et confirmés par le présentateur
 sw.showDetails=Voir le sujet
 sw.home=Accueil programme
-sw.all.uni=Toutes les universités
+sw.all.keynote=Toutes les keynotes
 sw.all.conf=Toutes les conférences
-sw.all.lab=Tous les hand''s on labs
-sw.all.quick=Tous les quickies
-sw.all.bof=Toutes les BOFs
-sw.all.tia=Tous les tools in Action
-sw.speakers=Présentateurs
+sw.all.quick=Tous les lightning talks
+sw.all.workshop=Tous les workshops
+sw.all.demo=Toutes les démonstrations
+sw.speakers=Makers
 sw.intro=Le programme ainsi que l''agenda sont mis à jour régulièrement.
 sw.programme=Programme
 sw.presentations=Présentations
@@ -434,7 +401,7 @@ sw.proposal.presentedWith=Présenté avec
 admin.btn.webuser=Webusers
 editSpeakerName=Editer le nom et le prénom du speaker
 admin.btn.createNewspeaker=Créer un nouveau speaker
- 
+
 newSpeaker.title=Créer un nouveau speaker
 avatarUrl2=URL vers une photo du speaker (linkedin, google+)
 name=Prénom et nom de famille
@@ -472,8 +439,6 @@ confThursday=Conférences le Jeudi
 sw.otherEvents=Evénements spéciaux
 sw.allEvents=Voir tous les événements
 sw.all.key=Les Keynotes
-sw.all.cstory=Code-Story 2017
-cstory=Sessions de live coding Code-Story
 sw.all.amd=Présentations de l''Après-midi des Décideurs
 sw.agenda=Agenda
 sw.agenda.txt=Horaires par journée
@@ -486,11 +451,13 @@ sw.agenda.friday=Vendredi
 sw.show.wed=Mercredi
 sw.show.thu=Jeudi
 sw.show.fri=Vendredi
-sw.show.title.wed=Journée du Mercredi 20 avril 2017
-sw.show.title.thu=Journée du Jeudi 21 avril 2017
-sw.show.title.fri=Journée du Vendredi 22 avril 2017
- 
- 
+sw.show.title.mon=Journée du Lundi 23 avril 2018
+sw.show.title.tue=Journée du Mardi 24 avril 2018
+sw.show.title.wed=Journée du Mercredi 25 avril 2018
+sw.show.title.thu=Journée du Jeudi 26 avril 2018
+sw.show.title.fri=Journée du Vendredi 27 avril 2018
+
+
 sw.horaires=Horaires
 sw.breakfast=Accueil et petit-déjeuner
 sw.mainEvents=Evénements principaux
@@ -506,8 +473,6 @@ sw.cocktail=Soirée Meet and Greet dans l''espace d''exposition jusqu''à 22h30
 sw.showAllDay=Voir l''agenda de toute la journée
 not.published=L''agenda pour ce type de conférence n''est pas encore publié.
 
-acceptedTerms.msg=Vous avez accepté les Termes et Conditions de Devoxx, merci !
-
 sw.details.mon=Détail du lundi
 sw.details.monday=Détail du lundi
 sw.details.tue=Détail du mardi
@@ -519,6 +484,11 @@ sw.details.thursday=Détail du jeudi
 sw.details.fri=Détail du vendredi
 sw.details.friday=Détail du vendredi
 
+
+day-thu=Jeudi
+day-fri=Vendredi
+day-wed=Mercredi
+acceptedTerms.msg=Vous avez accepté les Termes et Conditions de Android Makers, merci !
 
 antispam=Pour prouver que vous n''êtes pas un robot mais un humain, combien font 38+4 ?
 bugReport.sent=Votre message a été envoyé à l''équipe, merci !
@@ -533,7 +503,7 @@ day-fri=Vendredi
 day-friday=Vendredi
 day-wed=Mercredi
 day-wednesday=Mercredi
- 
+
 showAgendaByRoom=Agenda par salle
 Abs=Abs
 admin.btn.tracklead=Track leader
@@ -549,11 +519,11 @@ btn.saveAndSend=Sauver et envoyer au comité
 btn.saveDraft=Sauver comme Draft (Brouillon)
 cfp.reminder=Rappel
 cfp.reminder.proposals=pensez à soumettre votre brouillon au comité en cliquant sur "Envoyer"
-cfp.title=Devoxx France 2017
+cfp.title=Android Makers France 2018
 conf.label.simple=Conférence
 CONF.subtitle=FR
-CONF.title=Devoxx France 2017
-conference.dates=20 au 22 avril 2017
+CONF.title=Android Makers France 2018
+conference.dates=23 au 24 avril 2018
 contacted=Speaker contacté
 d1.label=Uniquement des slides
 d2.label=Slides et du code
@@ -577,11 +547,11 @@ code.label.simple=Codestory
 level1.label=Ouvert à tout niveau d''audience, débutant comme expert
 level2.label=Pour une audience intermédiaire, avec une connaissance sur le sujet
 level3.label=Pour un public d''expert ou de sénior sur ce sujet
-longName=Devoxx FR 2017 CFP
-longSplittedName_colored=x
-longSplittedName_whiteEnd=FR 2017
-longSplittedName_whiteStart=Devox
-longYearlyName=Devoxx France 2017
+longName=Android Makers FR 2018 CFP
+longSplittedName_colored=FR
+longSplittedName_whiteEnd=2018
+longSplittedName_whiteStart=Android Makers
+longYearlyName=Android Makers France 2018
 mail.access_code.subject=Votre code d''accès présentateur pour {0}
 mail.account_created.subject=Bienvenue sur le CFP pour {0}
 mail.cfp_message_to_speaker.subject=[{1}] {0}
@@ -603,16 +573,14 @@ qualifications.label=Qualifications du présentateur
 qualifications.otherproposals=Sujet(s) proposé(s) par le speaker
 quick.label.simple=Quickie
 remove.sponsorFlag=Retirer le flag sponsor de cette présentation
-shortName=Devoxx FR
-shortYearlyName=Devoxx FR 2017
+shortName=Android Makers FR
+shortYearlyName=Android Makers FR 2018
 ssj.label=Server Side Java
 start=Startup presentation
 start.label=
 start.label.simple=
 sw.hackatons=Hackatons
 table.pres.trash=Effacer cette proposition
-tia.label.simple=Tools in Action
-uni.label.simple=University
 unknown=Inconnu
 wishlist.cancelEdit=Retourner à votre liste de requêtes
 wishlist.createRequest=Créer une requête
@@ -839,3 +807,4 @@ invalid.phoneNumber=Numéro de téléphone non valide
 invalid.phone.txt=Votre numéro de téléphone n''est pas valide ou n''est pas autorisé par notre plate-forme. Contactez l''équipe pour que nous puissions autoriser le pays de votre numéro de portable, ou corrigez le numéro.
 
 admin.btn.devoxxians=Tous les Devoxxians
+cfpadmin.filterOn=Filtrer :

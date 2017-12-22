@@ -450,7 +450,7 @@ object ElasticSearch {
         |   "queries": [
         |                { "match": { "name":"${query.format.getOrElse("%")}"}},
         |                { "match": { "day":"${query.day.getOrElse("%")}"}},
-        |                { "match": { "from":"${query.after.getOrElse("2017-01-01T00:15:00.000Z")}"}},
+        |                { "match": { "from":"${query.after.getOrElse("2018-01-01T00:15:00.000Z")}"}},
         |                { "match": { "room":"${query.room.getOrElse("%")}"}},
         |                { "match": { "title": { "query":"${query.topic.getOrElse("%")}","boost":2 }}},
         |                { "match": { "summary": {"query":"${query.topic.getOrElse("%")}","boost":3 }}},

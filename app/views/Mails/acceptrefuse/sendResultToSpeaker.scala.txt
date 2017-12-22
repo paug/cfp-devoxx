@@ -1,6 +1,5 @@
 @(toSpeaker:Speaker, listOfApprovedProposals:Set[Proposal], listOfRefusedProposals:Set[Proposal])
 
-@if(ConferenceDescriptor.current().frLangEnabled) {
 ------------------------------------------------------------------------------------
  English version below
 ------------------------------------------------------------------------------------
@@ -8,23 +7,31 @@
 Cher(e) @toSpeaker.firstName.getOrElse("speaker")
 
 @if(listOfApprovedProposals.size==1){
-Nous avons le plaisir de vous annoncer qu'une proposition a été retenue pour @Messages("longYearlyName") !
-Proposition acceptée: @listOfApprovedProposals.head.title
-Afin de pouvoir effectuer la programmation et confirmer votre venue, merci d'accepter les termes et
-conditions de @Messages("longName"). Vous pourrez ensuite indiquer si vous acceptez ou non de présenter ce sujet.
+Nous avons le plaisir de vous informer que la présentation @listOfApprovedProposals.head.title a été approuvée pour @Messages("longYearlyName") !
+
+Comment valider ou non votre participation ?
+----------------------------------------------------------------------------------------------------------------------
+
+Attention, vous ne disposez que de quelques jours pour accepter les conditions générales et valider votre présence à @Messages("longYearlyName") comme présentateur.
+
+Merci de valider dès maintenant en suivant ce lien dans votre navigateur :
 
  @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
 
-@if(listOfRefusedProposals.size==1){
-Votre deuxième proposition n'a pas été retenue, cependant nous vous remercions pour le sujet proposé.
-}
-@if(listOfRefusedProposals.size>1){
-Cependant, @listOfRefusedProposals.size propositions n'ont pas été retenues, mais nous tenons à vous remercier pour les sujets proposés.
-}
+Vous serez ensuite amené à accepter ou refuser votre(vos) présentation(s).
+
+
+En tant que speaker confirmé(e) vous recevrez ultérieurement un code promotionnel pour bénéficier de votre place offerte.
+
+Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
+
 Comment poser une question ?
-----------------------------
+----------------------------------------------------------------------------------------------------------------------
 Merci de ne pas répondre à cet email, mais d'utiliser votre interface pour échanger avec le comité.
+
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(listOfApprovedProposals.head.id)
+
+L'équipe de sélection de la conférence @Messages("longYearlyName")
 }
 
 @if(listOfApprovedProposals.size>1){
@@ -41,10 +48,14 @@ Une proposition n'a pas été retenue, cependant nous vous remercions pour le su
 @if(listOfRefusedProposals.size>1){
 @listOfRefusedProposals.size de vos propositions n'ont pas été retenues, mais nous tenons à vous remercier pour les sujets proposés.
 }
-Afin de pouvoir effectuer la programmation et confirmer votre venue, merci d'accepter les termes et conditions
-de @Messages("longName"). Vous pourrez ensuite indiquer si vous acceptez ou non de présenter ce sujet.
+Afin de pouvoir effectuer la programmation et confirmer votre venue, merci d'accepter les termes et conditions de @Messages("longName"). Vous pourrez ensuite indiquer si vous acceptez ou non de présenter ce sujet.
 
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
+
+
+En tant que speaker confirmé(e) vous recevrez ultérieurement un code promotionnel pour bénéficier de votre place offerte.
+
+Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
 
 Comment poser une question ?
 ----------------------------
@@ -54,26 +65,34 @@ Merci de ne pas répondre à cet email, mais d'utiliser votre interface pour éc
 
 @if(listOfApprovedProposals.size==0){
 Nous sommes au regret de vous informer qu'aucune de vos propositions n'a été sélectionnée cette année pour @Messages("longYearlyName").
-Le comité de sélection a reçu un très grand nombre de sujets. Après une sélection précise, sur plus de 670 propositions de sujets
-pour 154 conférences, et pour équilibrer les sujets, nous n'avons pas retenu votre(vos) sujet(s).
+Nous vous remercions cependant pour le temps que vous avez consacré à préparer vos sujets.
+
+Si vous souhaitez vous inscrire, nous avons pour vous un code promotionnel "cfp-invite" afin de vous faire bénéficier d’un prix réduit. La sélection cette année a été particulièrement difficile et nous vous remercions énormément de votre implication. Nous communiquerons sur notre site plus d'informations sur le programme final.
+
+Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
+
 Au nom de toute l'équipe, nous tenons à vous remercier, et nous vous donnons rendez-vous le @ConferenceDescriptor.current().timing.firstDayFr à @Messages("longName").
+
 }
 
 L'équipe de sélection de la conférence @Messages("longName")
 
 ------------------------------------------------------------------------------------------------------------------
-}
+
 Dear @toSpeaker.firstName.getOrElse("speaker")
 
 @if(listOfApprovedProposals.size==1){
-We're glad to inform you that your proposal for @Messages("longYearlyName") has been approved!
- - @listOfApprovedProposals.head.title
+We're glad to inform you that your proposal for @Messages("longYearlyName") has been accepted !
+Proposition title : @listOfApprovedProposals.head.title
 
-What's next?
-------------
-For us to now program your talks, you must accept or decline the general terms and conditions of
-@Messages("longName"). You will then be able to confirm that you are still ok to present your session :
+Important information
+ ---------------------
+You must now validate or decline the general terms and conditions, and confirm that you are still ok to do this presentation :
+
   @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
+
+
+As a confirmed speaker you'll receive a discount code for a free ticket.
 
 @if(listOfRefusedProposals.size==1){
 Your other proposal was not approved, however we thank you for this proposal.
@@ -106,6 +125,9 @@ For us to now program your talks, you must accept or decline the general terms a
 
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
 
+
+As a confirmed speaker you'll receive a discount code for a free ticket.
+
 For any question regarding your talks
 -------------------------------------
 Please, do not answer this email. Instead send any comment through the web interface, and our team will do its bests to respond quickly.
@@ -114,10 +136,8 @@ Please, do not answer this email. Instead send any comment through the web inter
 
 @if(listOfApprovedProposals.size==0){
 We're sorry to inform you that none of your proposals has been accepted for @Messages("longYearlyName").
-The program committee has received more than 670 proposals for 154 slots. As you can imagine, the selection of speakers
-was a quite uneasy task, considering that we received a lot of very interesting applications for the conference.
-We would like to thank you for your time and we look forward to see you on @ConferenceDescriptor.current().timing.firstDayEn, at @Messages("longName").
-Please, do not forget Devoxx UK in London, the CFP is also available at https://cfp.devoxx.com
+The selection has been particularly hard this year, we want to thank you for your commitment.
+Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".
 }
 
 The @Messages("longName") program committee.

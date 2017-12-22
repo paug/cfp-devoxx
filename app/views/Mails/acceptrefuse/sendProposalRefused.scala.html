@@ -1,30 +1,10 @@
 @(proposal:models.Proposal)
 
-@if(ConferenceDescriptor.current().frLangEnabled) {
-    <strong>English version below</strong>
-
-    <p>Bonjour,</p>
-    <p>Nous avons le regret de vous informer que votre proposition <strong>@proposal.title</strong> au format
-    <strong>@Messages(proposal.talkType.id)</strong> n'a pas été sélectionnée.</p>
-    <p>Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet.</p>
-    <p>Si vous souhaitez vous inscrire, la conférence étant presque complète, vous pouvez le faire sur le site :
-       <a href="@ConferenceDescriptor.current().conferenceUrls.registration">@ConferenceDescriptor.current().conferenceUrls.registration</a>.
-        En cas de souci d'inscription, n'hésitez pas à contacter l'équipe d'organisation Devoxx France via notre site
-        afin de vous aider et de vous tenir au courant de places remises en vente.</p>
-    <p>La sélection cette année a encore été difficile avec plus de 913 sujets pour 228 slots.</p>
-    <p></p>
-    <p>Merci pour votre proposition,</p>
-    <p>L'équipe de sélection de la conférence @Messages("longYearlyName")</p>
-    <hr>
-}
-<p>Dear Devoxxian,</p>
-<p>We're sorry to inform you that your proposal "<strong>@proposal.title</strong>" for @Messages("longYearlyName") was <strong>refused</strong>.</p>
-<p>Do keep in mind that we received close to 913 proposals and the available slots are very limited!</p>
+<p>Dear Maker,</p>
+<p>We're sorry to inform you that your proposal "<strong>@proposal.title</strong>" for @Messages("longYearlyName") has been refused.</p>
 <p></p>
-<p>Proposal : <strong>@proposal.title</strong> [<strong>@Messages(proposal.talkType.id)</strong>]</p>
-<p></p>
-<p>We would like to thank you sincerely for your proposal and shown interest.</p>
-<p>Hopefully we can still welcome you at @Messages("longYearlyName").</p>
+ <p>The selection has been particularly hard this year, we want to thank you for your commitment.</p>
+  <p>Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".</p>
 <p>Registration details <a href="@ConferenceDescriptor.current().conferenceUrls.registration">@ConferenceDescriptor.current().conferenceUrls.registration</a>.</p>
 <br>
 <br>

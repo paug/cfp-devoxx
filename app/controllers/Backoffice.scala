@@ -210,7 +210,7 @@ object Backoffice extends SecureCFPController {
   def sanityCheckSchedule() = SecuredAction(IsMemberOf("admin")) {
     implicit request: SecuredRequest[play.api.mvc.AnyContent] =>
       val allPublishedProposals = ScheduleConfiguration.loadAllPublishedSlots().filter(_.proposal.isDefined)
-      val publishedTalksExceptBOF = allPublishedProposals.filterNot(_.proposal.get.talkType == ConferenceDescriptor.ConferenceProposalTypes.BOF)
+      val publishedTalksExceptBOF = allPublishedProposals
 
       val declined = publishedTalksExceptBOF.filter(_.proposal.get.state == ProposalState.DECLINED)
       val approved = publishedTalksExceptBOF.filter(_.proposal.get.state == ProposalState.APPROVED)
