@@ -1,6 +1,7 @@
 @(proposal:models.Proposal, email:String)
 
-@if(ConferenceDescriptor.current().frLangEnabled) {
+English version below
+
 Bonjour,
 
 Nous avons le regret de vous informer que votre proposition @proposal.title au format @Messages(proposal.talkType.id) n'a pas été acceptée.
@@ -8,8 +9,6 @@ Nous avons le regret de vous informer que votre proposition @proposal.title au f
 Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet.
 Si vous souhaitez vous inscrire, la conférence étant complète, nous avons mis en place un système d'inscription limité à deux places maximum
 sur le site de la conférence Devoxx France 2018 :
-
-https://reg.devoxx.fr/speakers/welcome/@proposal.id/@email
 
 Si par ailleurs vous avez eu la chance d'avoir un autre sujet sélectionné et que ce sujet vous donne un badge speaker :
 ne partagez pas ce lien svp.
@@ -21,18 +20,16 @@ Merci pour votre proposition,
 L'équipe de sélection de la conférence @Messages("longYearlyName")
 
 ----------------------------------------------------------------------------------------------------------------
-}
+
 Hi,
-We're sorry to inform you that your proposal for @Messages("longYearlyName") was refused,  keep in mind that
-we received close to 945 proposals and the available slots are very limited.
+We're sorry to inform you that your proposal for @Messages("longYearlyName") has been refused.
 
 Proposition title : @proposal.title, @Messages(proposal.talkType.id).
 
+The selection has been particularly hard this year, we want to thank you for your commitment.
+Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".
 
-We would like to thank you sincerely for your proposal.
-Hopefully we can still welcome you at @Messages("longYearlyName"), registration details
-You can still register using a dedicated page for you here :
-https://reg.devoxx.fr/speakers/welcome/@proposal.id/@email
+Registration details : @ConferenceDescriptor.current().conferenceUrls.registration
 
 Kind regards,
 The @Messages("longYearlyName") team

@@ -1,31 +1,11 @@
 @(proposal:models.Proposal, email:String)
 
-@if(ConferenceDescriptor.current().frLangEnabled) {
-    <strong>English version below</strong>
-
-    <p>Bonjour,</p>
-    <p>Nous avons le regret de vous informer que votre proposition <strong>@proposal.title</strong> au format
-    <strong>@Messages(proposal.talkType.id)</strong> n'a pas été sélectionnée.</p>
-    <p>Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet.</p>
-    <p>Si vous souhaitez vous inscrire, la conférence étant complète, nous avons mis en place un système d'inscription limité à deux places maximum
-        sur le site de la conférence Devoxx France 2018 : <a href="https://reg.devoxx.fr/speakers/welcome/@proposal.id/@email">https://reg.devoxx.fr/speakers/welcome/@proposal.id/@email</a></p>
-    <p>Si par ailleurs vous avez eu la chance d'avoir un autre sujet sélectionné et que ce sujet vous donne un badge speaker : ne partagez pas ce lien svp. Il est lié à votre
-        présentation et il ne permet pas l'inscription d'autres personnes.</p>
-    <p>La sélection cette année a encore été difficile avec plus de 945 sujets pour 234 slots.</p>
-    <p></p>
-    <p>Merci pour votre proposition,</p>
-    <p>L'équipe de sélection de la conférence @Messages("longYearlyName")</p>
-    <hr>
-}
-<p>Dear Devoxxian,</p>
-<p>We're sorry to inform you that your proposal "<strong>@proposal.title</strong>" for @Messages("longYearlyName") was <strong>refused</strong>.</p>
-<p>Do keep in mind that we received close to 945 proposals and the available slots are very limited!</p>
+<p>Dear Maker,</p>
+<p>We're sorry to inform you that your proposal "<strong>@proposal.title</strong>" for @Messages("longYearlyName") has been refused.</p>
 <p></p>
-<p>Proposal : <strong>@proposal.title</strong> [<strong>@Messages(proposal.talkType.id)</strong>]</p>
-<p></p>
-<p>We would like to thank you sincerely for your proposal and shown interest.</p>
-<p>Hopefully we can still welcome you at @Messages("longYearlyName") we set-up a special backdoor for refused proposals, so that you can register :</p>
-<p>Registration details <a href="https://reg.devoxx.fr/speakers/welcome/@proposal.id/@proposal.talkType.id">https://reg.devoxx.fr/speakers/welcome/@proposal.id/@proposal.talkType.id</a>.</p>
+ <p>The selection has been particularly hard this year, we want to thank you for your commitment.</p>
+  <p>Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".</p>
+<p>Registration details <a href="@ConferenceDescriptor.current().conferenceUrls.registration">@ConferenceDescriptor.current().conferenceUrls.registration</a>.</p>
 <br>
 <br>
 <p>Kind regards,</p>

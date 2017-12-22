@@ -40,13 +40,13 @@
 
             <div class="col-md-5 col-xs-12">
                 <h3><i class="icon-youtube-play"></i> @Messages("video.title")</h3>
-                <h5><i class="icon-youtube-sign"></i> @Messages("video.tag") <a href="https://www.youtube.com/channel/UCsVPQfo5RZErDL41LoWvk0A" target="new">YouTube channel</a> </h5>
+                <h5><i class="icon-youtube-sign"></i> @Messages("video.tag") <a href="https://www.youtube.com/channel/UCkatLlah5weIpN23LqMgdTg" target="new">YouTube channel</a> </h5>
             </div>
 
             <div class="clearfix">
             </div>
 
-            <div class="col-md-5 col-sm-12 col-xs-12 col-lg-12">
+            <div class="col-sm-12 col-xs-12">
                 <div class="panel panel-default">
                 <div class="panel-heading">
                     @if(ConferenceDescriptor.isCFPOpen){
@@ -57,7 +57,7 @@
                 </div>
                 <div class="panel-body">
                     @if(ConferenceDescriptor.isCFPOpen){
-                        <a href="@routes.Application.home()" class="btn btn-primary">@Messages("cfp.open.enter")</a>
+                        <a href="@routes.Application.home()" class="btn btn-primary" style="white-space: normal">@Messages("cfp.open.enter")</a>
                     }else{
                         <p>@Messages("cfp.isClosed.expl")</p>
                         <a href="@routes.Application.home()" class="btn btn-primary">@Messages("cfp.closed.enter")</a>

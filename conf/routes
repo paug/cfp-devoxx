@@ -1,5 +1,5 @@
 # Home page
-GET           /favicon.ico                                                      controllers.Assets.at(path="/public/images", file="favicon.ico")
+GET           /favicon.png                                                      controllers.Assets.at(path="/public/images", file="favicon.png")
 GET           /                                                                 controllers.Application.index
 GET           /home                                                             controllers.Application.home
 GET           /homeVisitor                                                      controllers.Application.homeVisitor
@@ -214,17 +214,17 @@ GET           /cloudtags                                                        
 # Keep the .html in each URL if you want to save your program (with wget for instance)
 # Each year I do a backup with wget wget --no-clobber --convert-links -r -p -E -e robots=off http://localhost:9000/2014
 
-GET           /2018/speakers.html                                               controllers.Publisher.showAllSpeakers()
-GET           /2018/speaker/:cleanName                                          controllers.Publisher.showSpeakerByName(cleanName:String)
-GET           /2018/talks/:talkType                                             controllers.Publisher.showByTalkType(talkType:String)
-GET           /2018/tag/:tagId                                                  controllers.Publisher.showByTag(tagId:String)
-GET           /2018/talk/:proposalId                                            controllers.Publisher.showDetailsForProposal(proposalId:String, proposalTitle:String="")
-GET           /2018/talk/:proposalId/:proposalTitle                             controllers.Publisher.showDetailsForProposal(proposalId:String, proposalTitle:String)
-GET           /2018/talks                                                       controllers.Publisher.homePublisher()
-GET           /2018/index.html                                                  controllers.Publisher.homePublisher()
-GET           /2018/agenda/:confType/:day                                       controllers.Publisher.showAgendaByConfType(confType:String, slotId:Option[String], day:String)
-GET           /2018/byday/:day                                                  controllers.Publisher.showByDay(day:String)
-GET           /2018/search                                                      controllers.Publisher.search(q:Option[String] ?=None,p:Option[Int] ?=None)
+GET           /2019/speakers.html                                               controllers.Publisher.showAllSpeakers()
+GET           /2019/speaker/:cleanName                                          controllers.Publisher.showSpeakerByName(cleanName:String)
+GET           /2019/talks/:talkType                                             controllers.Publisher.showByTalkType(talkType:String)
+GET           /2019/tag/:tagId                                                  controllers.Publisher.showByTag(tagId:String)
+GET           /2019/talk/:proposalId                                            controllers.Publisher.showDetailsForProposal(proposalId:String, proposalTitle:String="")
+GET           /2019/talk/:proposalId/:proposalTitle                             controllers.Publisher.showDetailsForProposal(proposalId:String, proposalTitle:String)
+GET           /2019/talks                                                       controllers.Publisher.homePublisher()
+GET           /2019/index.html                                                  controllers.Publisher.homePublisher()
+GET           /2019/agenda/:confType/:day                                       controllers.Publisher.showAgendaByConfType(confType:String, slotId:Option[String], day:String)
+GET           /2019/byday/:day                                                  controllers.Publisher.showByDay(day:String)
+GET           /2019/search                                                      controllers.Publisher.search(q:Option[String] ?=None,p:Option[Int] ?=None)
 
 # Archive folder
 # 1) download all web pages with wget
