@@ -111,6 +111,9 @@ sponsorTalk.help=Les sponsors Silver et Platinium peuvent soumettre une proposit
 sponsorTalk.help.title=Talk sponsor
 sponsor.name.plz=Merci d''indiquer le nom de votre société dans le champ "Message privé pour le comité"
 sponsorTalk.checkbox=Présentation sponsor/exposant
+accomodation.help.title=Accomodation & Transport
+accomodation.help=If your company supports your travel, send us a message, and we'll be happy to add them as one of our speaker sponsor on our website.
+
 helpAndTips=Aide et conseils
 moreSpeakerLater=Vous aurez la possibilité d''ajouter un ou plusieurs speakers plus tard.
 btn.save=Sauver l''édition
