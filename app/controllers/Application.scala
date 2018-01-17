@@ -59,6 +59,10 @@ object Application extends Controller {
       Ok(html.Application.index())
   }
 
+  def faq = Action {
+    implicit request =>
+      Ok(html.Application.faq())
+  }
   def bugReport = Action {
     implicit request =>
       Ok(html.Application.bugReport(Issue.bugReportForm))

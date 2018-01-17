@@ -1,6 +1,7 @@
 # Home page
 GET           /favicon.png                                                      controllers.Assets.at(path="/public/images", file="favicon.png")
 GET           /                                                                 controllers.Application.index
+GET           /faq                                                              controllers.Application.faq
 GET           /home                                                             controllers.Application.home
 GET           /homeVisitor                                                      controllers.Application.homeVisitor
 

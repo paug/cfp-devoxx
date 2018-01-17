@@ -1,0 +1,39 @@
+@()(implicit lang: Lang, flash: Flash, req:RequestHeader)
+@import library.FormatDate
+
+@main(Messages("cfp.title")){
+<div class="container">
+    <div class="bs-docs-section clearfix">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page-header">
+                    <h2><i class="icon-help"></i> FAQ<br></div>
+            </div>
+            <div class="col-xs-12">
+                <h3>@Messages("faq.q1")</h3>
+                <p>@Html(Messages("faq.a1"))</p>
+            </div>
+            <div class="col-xs-12">
+                <h3>@Messages("faq.q2")</h3>
+                <p>@Html(Messages("faq.a2"))</p>
+            </div>
+            <div class="col-xs-12">
+                <h3>@Messages("faq.q3")</h3>
+                <p>@Html(Messages("faq.a3"))</p>
+            </div>
+            <div class="col-xs-12">
+                <h3>@Messages("faq.q4")</h3>
+                <p>@Html(Messages("faq.a4"))</p>
+            </div>
+            <div class="col-xs-12">
+                <h3>@Messages("faq.q5")</h3>
+                <p>@Html(Messages("faq.a5"))</p>
+            </div>
+            <div class="col-xs-12">
+                <h3>@Messages("faq.q6")</h3>
+                <p>@Html(Messages("faq.a6"))</p>
+            </div>
+        </div>
+    </div>
+</div>
+}
