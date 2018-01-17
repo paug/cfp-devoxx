@@ -26,6 +26,11 @@
                         </div>
                     </div>
                 }
+            <div class="col-xs-12">
+                <h3><i class="fa fa-android" aria-hidden="true"></i> Welcome !</h3>
+                <p>@Messages("cfp.welcome")</p>
+                <p>@Html(Messages("cfp.welcome2"))</p>
+            </div>
             <div class="col-md-5 col-xs-12">
                 <h3><i class="icon-calendar"></i> Agenda</h3>
                 <p><strong>@Messages("cfp.opening") :</strong>  @FormatDate.jodaFullDateFormat(ConferenceDescriptor.current().timing.cfpOpenedOn, lang)</p>
@@ -98,24 +103,6 @@
                      <div class="clearfix">
             </div>
             }
-
-
-            <div class="col-md-12 col-sm-12">
-                <h3><i class="icon-book"></i> @Messages("theme.title")</h3>
-                <p>@Messages("theme.track")</p>
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        @for(track <- ConferenceDescriptor.ConferenceTracksDescription.ALL) {
-                            <tr>
-                                <td>@Messages(track.i18nTitleProp)</td>
-                                <td>@Messages(track.i18nDescProp)</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-
-            </div>
-
 
         </div>
     </div>

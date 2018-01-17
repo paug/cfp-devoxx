@@ -172,7 +172,10 @@ theme.title=Tracks
 theme.track=List of tracks:
 track.title=Title
 track.description=Description
-appel.conf.dates=Android Makers France 2018, 23rd-24th April 2019
+
+appel.conf.dates=Android Makers France 2019, 23rd-24th April 2019
+cfp.welcome=Welcome to the Android Makers 2019 Call for Papers. Signin below to submit your proposals. All Android related topics are welcome! From hardware/low level topics to UX/UI design and human challenges. Take a look at the videos from last year to get some inspiration or just click submit! We can't wait to hear about your proposals!
+cfp.welcome2=If you have any question, the FAQ is here to help. Or you can always send us an email at <a href="mailto:contact@androidmakers.fr">contact@androidmakers.fr</a>
 
 # Tracks
 
