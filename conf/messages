@@ -173,6 +173,7 @@ theme.track=List of tracks:
 track.title=Title
 track.description=Description
 appel.conf.dates=Android Makers France 2018, 23rd-24th April
+cfp.welcome.title=Welcome!
 cfp.welcome=<p>Welcome to the Android Makers 2018 Call for Papers. Signin below to submit your proposals. All Android related topics are welcome!</p> <p>From hardware/low level topics to UX/UI design and human challenges. Take a look at the <a href="https://www.youtube.com/channel/UCkatLlah5weIpN23LqMgdTg" target=new>videos from last year</a> to get some inspiration or just click submit!</p><p> We can&#39;t wait to hear about your proposals!</p><p>If you have any question, the <a href="https://cfp.androidmakers.fr/faq" >FAQ</a> is here to help. Or you can always send us an email at <a href="mailto:contact@androidmakers.fr">contact@androidmakers.fr</a></p>
 
 # Tracks

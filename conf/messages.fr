@@ -74,6 +74,8 @@ profile.gravatar=Téléchargez et éditez directement votre photo sur
 profile.gravatar2=pour votre adresse email
 edit.profile=Editer votre profil
 edit.name=Editer votre nom
+cfp.welcome.title=Bienvenue !
+cfp.welcome=<p>Bienvenue sur le site du CFP. Prêt à devenir speaker et à contribuer à la communauté Android européenne ? Cliquez le bouton ci-dessous pour vous inscrire et proposer un talk !</p><p>Les talks peuvent être très techniques, orientés design UX/UI ou même autour des challenges humain et organisationnels du dévelopement Android. Pas de tabou sur les sujets tant que ça parle d&#39;Android !</p>Jettez un coup d&#39;oeil aux <a href="https://www.youtube.com/channel/UCkatLlah5weIpN23LqMgdTg" target=new>vidéos de l&#39;an dernier</a> pour chercher l&#39;inspiration ou dirigez vous directement vers le formulaire d&#39;envoi !</p><p>Il nous tarde de vous écouter !</p><p>Pour toute question, la <a href="https://cfp.androidmakers.fr/faq" >FAQ</a> est disponible. Ou contactez nous sur <a href="mailto:contact@androidmakers.fr">contact@androidmakers.fr</a>. A bientôt !</p>
 
 url.photo=URL de votre photo
 blog.website=Blog ou site internet
@@ -808,3 +810,21 @@ invalid.phone.txt=Votre numéro de téléphone n''est pas valide ou n''est pas a
 
 admin.btn.devoxxians=Tous les Devoxxians
 cfpadmin.filterOn=Filtrer :
+
+faq.q1=Combien de temps doit durer mon talk?
+faq.a1=Ca dépend ! Il y a plusieurs types de talks: talk 40 minutes, talk 20 minutes, keynote 40 minutes et aussi workshops (max 3 hours). Choisissez le format le plus adapté à votre sujet. Les workshops permettent d&#39;interragir avec l&#39;audience sur des éléments plus appliqués. Si vous hésitez, laissez nous un commentaire dans le formulaire d&#39;envoi et on en discute !
+
+faq.q2=Quelle est la date limite pour déposer une proposition ?
+faq.a2=18 février 2018. Le comité de sélection annoncera les talks selectionnés peu de temps après.
+
+faq.q3=Sur quoi sont jugés les talks ?
+faq.a3=<p>Yay, pas facile de répondre à cette question ! Le comité est constitué de 7 dévelopeurs Android passionnés. Les critères de sélection comprennent aussi bien le sujet que le contenu. Les sujets qui intéressent une audience large sont intéressants. Mais l&#39;originalité a aussi sa place ! Le contenu doit être adapté à l&#39;audience de l&#39;évenement. Votre experience en tant que speaker est importante aussi. Votre capacité à transmettre vos connaissances et votre passion est primordiale. </p><p>Pour améliorer vos chances, n&#39;oubliez pas de linker vers vos slides ou vos vidéos pour que le comité se fasse une idée plus précise de votre talk.</p>
+
+faq.q4=Mais en vrai, comment je choisis mon sujet ?
+faq.a4=<p>Android Makers est une conférence pour les dévelopeurs. Forcément, on aime beaucoup toutes les technos Android <i class="icon-heart" style="color: #A4C639"></i> ! Ca va des talks ultra techniques comme de l&#39;analyse de bytecode kotlin, jusqu&#39;à la définition d&#39;interfaces et d&#39;experiences utilisateur au poil en passant par le hacking d&#39;objets connectés avec Android IOT ! Si vous maintenez une librairie au top, ou un framework, ou un système de build, que vous soyiez simple utilisateur ou même utilisateur potentiel, venez nous en parler.</p>Tout ce qui se rapporte à la productivité est aussi bienvenu. Par exemple, architecture, devops, intégration continue, etc... Notre objectif est que la communauté produise de superbes apps *et aussi* du superbe code ! <p>Enfin, n&#39;oublions pas que derrière chaque dev Android se cache une personne sensible avec un coeur et des envies. Nous sommes preneurs de retours d&#39;experiences sur la manière dont vous gérez le dev dans votre organisation, que vous soyez freelance indépendant ou une énorme équipe de dev sur plusieurs continents.</p>Globalement, si il y a un sujet qui vous tient à voeur et qui vous a permis de progresser dans votre experience de dev Android, il y a de fortes chance que ça intéresse les participants et le comité aussi. Venez nous en parler !</p>
+
+faq.q5=Faut-il que j'achète un ticket?
+faq.a5=Si vous êtes accepté, vous n&#39;aurez pas à acheter de ticket. Mais nous conseillons quand même de réerver votre place au cas où votre talk ne soit pas retenu. Vous pourrez la transférer à un ami si vous n'en avez finalement pas besoin.
+
+faq.q6=Est-ce que vous prenez en charge mon transport ?
+faq.a6=<p>Encore une fois, ça dépend. Nous avons un budget très très limité pour permettre à un maximum de participants de nous rejoindre et il ne nous permettra pas de payer le transport pour tous nos speakers. Nous comprenons néanmoins que ce soit un problème pour certains d&#39;entre vous et nous allons essayer de faire notre maximum. Aussi, si vous pensez avoir besoin d&#39;aide pour venir, laissez nous un commentaire en même temps que vous envoyez votre talk. Nous examinerons les possibilités au cas par cas.</p><p>Dans le cas ou votre entreprise prend en charge vos frais, nous lui donnerons de la visibilité sur l&#39;event. Dans tous les cas, dites nous dès que possible.</p>
