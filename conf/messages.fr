@@ -855,7 +855,7 @@ publisher.proposal.roomHidden=La salle sera affectée entre 24 et 72h avant la c
 cfpadmin.filterOn=Filtrer :
 
 faq.q1=Combien de temps doit durer mon talk?
-faq.a1=Ca dépend ! Il y a plusieurs types de talks: talk 40 minutes, talk 20 minutes, keynote 40 minutes et aussi workshops (max 3 hours). Choisissez le format le plus adapté à votre sujet. Les workshops permettent d&#39;interragir avec l&#39;audience sur des éléments plus appliqués. Si vous hésitez, laissez nous un commentaire dans le formulaire d&#39;envoi et on en discute !
+faq.a1=Ca dépend ! Il y a plusieurs types de talks: talk 40 minutes, talk 20 minutes, keynote 40 minutes et aussi workshops (3 heures max). Choisissez le format le plus adapté à votre sujet. Les workshops permettent d&#39;interragir avec l&#39;audience sur des éléments plus appliqués. Si vous hésitez, laissez nous un commentaire dans le formulaire d&#39;envoi et on en discute !
 
 faq.q2=Quelle est la date limite pour déposer une proposition ?
 faq.a2=18 février 2018. Le comité de sélection annoncera les talks selectionnés peu de temps après.
