@@ -284,7 +284,7 @@ nav.homeSpeaker=Home
 editWebuser.title=Edit your firstname and lastname
 
 cfp.isOpen=Le CFP is now closed... but...
-cfp.open.hint=...you can still submit your demos for the Makers Area !
+cfp.open.hint=...you can still submit your demos for the Makers Area!
 cfp.open.enter=Submit a demo
 
 admin.proposals.th.title=Title
