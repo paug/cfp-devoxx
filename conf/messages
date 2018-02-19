@@ -286,8 +286,9 @@ freepass.forIdiots=Free pass included if, and only if, your talk is selected by 
 nav.homeSpeaker=Home
 editWebuser.title=Edit your firstname and lastname
 
-cfp.isOpen=CFP is open
-cfp.open.enter=Create your speaker''s profile or sign-in
+cfp.isOpen=Le CFP is now closed... but...
+cfp.open.hint=...you can still submit your demos for the Makers Area !
+cfp.open.enter=Submit a demo
 
 admin.proposals.th.title=Title
 admin.proposals.th.track=Track
