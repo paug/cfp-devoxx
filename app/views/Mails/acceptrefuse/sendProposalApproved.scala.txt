@@ -1,73 +1,73 @@
 @(proposal:models.Proposal)
 --------------------------------------------------------------------
-  Welcome to @Messages("longYearlyName")
+@Messages("longYearlyName") - Your submission has been accepted!
 --------------------------------------------------------------------
-English version below
+FRENCH (ENGLISH VERSION FOLLOWS)
 
 Bonjour,
 
-Nous avons le plaisir de vous informer que la présentation [@proposal.title] au format
-[@Messages(proposal.talkType.id)] a été approuvée pour @Messages("longYearlyName") !
+Votre présentation [@proposal.title] au format [@Messages(proposal.talkType.id)] a été approuvée pour @Messages("longYearlyName") !
 
-Comment valider ou non votre participation ?
+Toutes nos félicitations !
+
+Découvrez dès à présent comment valider votre présence :
 ----------------------------------------------------------------------------------------------------------------------
+Il vous suffit de cliquer sur ce lien ou de le copier-coller dans votre navigateur :
+@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
 
-Attention, vous ne disposez que de quelques jours pour accepter les conditions générales et valider votre présence à @Messages("longYearlyName") comme présentateur.
-
-Merci de valider dès maintenant en suivant ce lien dans votre navigateur :
-
- @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
-
-Vous serez ensuite amené à accepter ou refuser votre(vos) présentation(s).
-
-
-=========
-Attention
-=========
-Ce format de présentation à @Messages("longYearlyName") ne donne pas de badge speaker.
-Vous devez acheter une place à la conférence pour participer, si vous ne disposez pas par ailleurs d'un ticket.
-Si vous ne pouvez pas obtenir de place, nous ne pourrons malheureusement pas vous accueillir.
-Inscription en ligne sur le site :  @ConferenceDescriptor.current().conferenceUrls.registration
+Vous devrez tout d'abord accepter les conditions générales. Attention ! Vous ne disposez que de quelques jours !
 
 Votre badge speaker :
 =====================
-Ce type de présentation donne droit à un badge speaker, et vous permettra d'accéder à l'ensemble de la conférence,
-ainsi qu'au diner des speakers.
-Vous n'avez pas à vous inscrire, votre badge Speaker sera préparé pour vous à l'entrée de la conférence.
+Ce type de présentation donne accès à un badge speaker qui vous permettra d'accéder à l'ensemble de la conférence ainsi qu'au diner des speakers. Pas d'inquiétude, vous n'avez rien à faire. Votre badge sera fourni à l'entrée de la conférence.
 
-=======
-En tant que speaker confirmé(e) vous recevrez ultérieurement un code promotionnel pour bénéficier de votre place offerte.
+Dernière chose :
+================
+En tant que speaker confirmé(e) vous recevrez très bientôt un code promotionnel pour bénéficier d'une place offerte. Encore félicitations !
 
-Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
-
-Comment poser une question ?
+Des questions ?
 ----------------------------------------------------------------------------------------------------------------------
-Merci de ne pas répondre à cet email, mais d'utiliser votre interface pour échanger avec le comité.
-
+Merci de ne pas répondre à cet e-mail, mais d'utiliser plutôt votre interface d'échange avec le comité :
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
 
-L'équipe de sélection de la conférence @Messages("longYearlyName")
+Nous sommes heureux de vous avoir à nos côtés et vous souhaitons tout le meilleur pour l'édition à venir.
 
+À très bientôt !
+
+L'équipe de sélection
 ----------------------------------------------------------------------------------------------------------------------
+ENGLISH VERSION
 
- Hi,
+Hello,
 
- We're glad to inform you that your proposal for @Messages("longYearlyName") has been accepted !
-Proposition title : @proposal.title, of type [@Messages(proposal.talkType.id)].
+Your proposal [@proposal.title] for @Messages("longYearlyName") has been accepted!
 
-Important information
- ---------------------
-You must now validate or decline the general terms and conditions, and confirm that you are still ok to do this presentation :
+Congratulations!
 
-  @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
+Proposition title: @proposal.title, of type [@Messages(proposal.talkType.id)].
 
+Here's how to validate your attendance:
+----------------------------------------------------------------------------------------------------------------------
+Click on this link or copy-paste it in your browser of choice:
+@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
 
-As a confirmed speaker you'll receive a discount code for a free ticket.
+You'll first need to accept our terms and conditions. Careful! You only have a few days to do so!
 
-For any question regarding your talk:
-------------------------------------
-Please, do not respond to this email. Send any comment through the web interface, and our team will do its bests to respond quickly.
+About your speaker badge:
+=========================
+Your submission allows you to have a speaker badge which will give you access to the conference as a whole and to the speaker diner. No need to do anything from your side, your badge will be given to you right at the entrance at the beginning of day 1.
 
-  @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
+What else?
+=======
+As a confirmed speaker, you will receive very soon a discount code giving you access to a free entrance. Congrats again!
 
- The @Messages("longYearlyName") team
+Questions?
+----------------------------------------------------------------------------------------------------------------------
+Please do not respond to this email but rather use the web interface:
+@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
+
+We're happy to have you with us and wish you all the best for the edition to come.
+
+See you very soon!
+
+The @Messages("longYearlyName") team

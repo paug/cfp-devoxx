@@ -1,31 +1,40 @@
 @(proposal:models.Proposal)
-
-English version below
+--------------------------------------------------------------------
+About your submission for @Messages("longYearlyName")
+--------------------------------------------------------------------
+FRENCH (ENGLISH VERSION FOLLOWS)
 
 Bonjour,
 
-Nous avons le regret de vous informer que votre proposition @proposal.title au format @Messages(proposal.talkType.id) n'a pas été acceptée.
-Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet.
+Après plusieurs jours de sélection intense, nous avons le regret de vous informer que votre proposition de talk n'a pas été acceptée.
 
-Si vous souhaitez vous inscrire, nous avons pour vous un code promotionnel "cfp-invite" afin de vous faire bénéficier d’un prix réduit. La sélection cette année a été particulièrement difficile et nous vous remercions énormément de votre implication. Nous communiquerons sur notre site plus d'informations sur le programme final.
+Pour rappel : @proposal.title au format @Messages(proposal.talkType.id).
 
-Si vous souhaitez participer à d’autres conférences française, nous vous recommandons de participer au CFP du Devfest de Lille (https://cfp.gdglille.org/) qui est encore ouvert et dont l’événement aura lieu le 9 juin prochain.
+Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec le code promotionnel XXXXX. Vous bénéficierez d’un ticket réduit au prix early bird. RDV sur @ConferenceDescriptor.current().conferenceUrls.registration
 
-Merci pour votre proposition,
+Plus d'informations sur le programme final très bientôt.
 
-L'équipe de sélection de la conférence @Messages("longYearlyName")
+Encore merci pour votre confiance et votre implication.
+
+À bientôt !
+
+L'équipe de sélection
 
 ----------------------------------------------------------------------------------------------------------------
+ENGLISH VERSION
 
 Hi,
-We're sorry to inform you that your proposal for @Messages("longYearlyName") has been refused.
 
-Proposition title : @proposal.title, @Messages(proposal.talkType.id).
+After several days reviewing your submission for @Messages("longYearlyName"), we're sorry to tell you that you didn't make the cut.
 
-The selection has been particularly hard this year, we want to thank you for your commitment.
-Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".
+Proposition title: @proposal.title, @Messages(proposal.talkType.id).
 
-Registration details : @ConferenceDescriptor.current().conferenceUrls.registration
+We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, here is a discount code for you to use: XXXXX. No hard feelings! Registration details: @ConferenceDescriptor.current().conferenceUrls.registration
 
-Kind regards,
+More info on the final schedule very soon.
+
+Thanks again for your trust and dedication.
+
+See you soon!
+
 The @Messages("longYearlyName") team
