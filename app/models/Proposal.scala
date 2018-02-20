@@ -28,7 +28,7 @@ object ProposalType {
 
   val UNKNOWN = ProposalType(id = "unknown", label = "unknown.label")
 
-  val all = ConferenceDescriptor.ConferenceProposalTypes.ALL
+  val all = ConferenceDescriptor.ConferenceProposalTypes.ALL.filter(_==ConferenceDescriptor.ConferenceProposalTypes.DEMO)
   val allAsId = all.map(a => (a.id, a.label)).sorted
 
   def allForCombos = {
