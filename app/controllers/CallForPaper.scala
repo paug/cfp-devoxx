@@ -133,7 +133,7 @@ object CallForPaper extends SecureCFPController {
   def newProposal() = SecuredAction {
     implicit request =>
       val uuid = request.webuser.uuid
-      Ok(views.html.CallForPaper.newProposal(Proposal.proposalForm)).withSession(request.session + ("token" -> Crypto.sign(uuid)))
+      Ok(views.html.CallForPaper.newProposal(Proposal.proposalForm, true)).withSession(request.session + ("token" -> Crypto.sign(uuid)))
   }
 
   // Load a proposal
