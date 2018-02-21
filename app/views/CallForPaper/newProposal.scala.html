@@ -1,4 +1,4 @@
-@(newProposal:Form[models.Proposal])(implicit flash: Flash, lang: Lang, req:RequestHeader)
+@(newProposal:Form[models.Proposal], isNew: Boolean = false)(implicit flash: Flash, lang: Lang, req:RequestHeader)
 
 @main("New proposal") {
 <link rel="stylesheet" href="/assets/js/select2-3.4.5/select2.css"/>
@@ -44,7 +44,7 @@
                 }else{
                      <input type="hidden" name="lang" value="en">
                 }
-                @tags.selectI18N(field = newProposal("talkType"), options=ProposalType.allForCombos,  '_default->"--- Please select ---", 'class->"form-control")
+                @tags.selectI18N(field = newProposal("talkType"), options=ProposalType.allForCombos.filter(!isNew || _._1==ConferenceDescriptor.ConferenceProposalTypes.DEMO.id),  '_default->"--- Please select ---", 'class->"form-control")
 
                 @tags.selectI18N(field = newProposal("track"), options=Track.allAsIdsAndLabels.filterNot(_._1==Track.UNKNOWN.id),'_default->"--- Please select ---",  'class->"form-control")
                 @tags.selectI18N(field = newProposal("audienceLevel"), options=ProposalType.audienceLevels,'_default->"--- Please select ---",  'class->"form-control")
