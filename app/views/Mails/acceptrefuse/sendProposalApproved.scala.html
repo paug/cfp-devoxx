@@ -1,18 +1,68 @@
 @(proposal:models.Proposal)
+<h2>(English follows)</h2>
+<h2>@Messages("longYearlyName") - Votre présentation a été acceptée!</h2>
 
-<h3>Welcome to @Messages("longYearlyName")</h3>
-<p>Hi,</p>
-<p>We're glad to inform you that your proposal for @Messages("longYearlyName") has been <strong>accepted</strong></p>
-<p>Proposal <strong>@proposal.title</strong>, of type <strong>@Messages(proposal.talkType.id)</strong>].</p>
-<hr>
-<h3>What's next?</h3>
-<p>You must now validate or decline the general terms and conditions, and confirm that you are still available to do this presentation :</p>
-<a href="@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()">@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()</a>
+<p>Bonjour,</p>
 
-<p>As a confirmed speaker you'll receive a discount code for a free ticket.</p>
+<p>Votre présentation [@proposal.title] au format [@Messages(proposal.talkType.id)] a été approuvée pour @Messages("longYearlyName") !</p>
 
-<h3>For any question regarding your talk</h3>
-<p>Please, do not respond to this email. Send any comment through the web interface, and our team will do its bests to respond quickly.</p>
-<a href="@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)">@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)</a>
-<br>
+<p>Toutes nos félicitations !</p>
+
+<p>Découvrez dès à présent comment valider votre présence :</p>
+
+<p>Il vous suffit de cliquer sur ce lien ou de le copier-coller dans votre navigateur :
+    <a href="@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()">@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()</a></p>
+
+<p>Vous devrez tout d'abord accepter les conditions générales. Attention ! Vous ne disposez que de quelques jours !</p>
+
+<h3>Votre badge speaker :</h3>
+
+<p>Ce type de présentation donne accès à un badge speaker qui vous permettra d'accéder à l'ensemble de la conférence ainsi qu'au diner des speakers. Pas d'inquiétude, vous n'avez rien à faire. Votre badge sera fourni à l'entrée de la conférence.</p>
+
+<h3>Des questions ?</h3>
+
+<p>Merci de ne pas répondre à cet e-mail, mais d'utiliser plutôt <a href="@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)">votre interface d'échange avec le comité</a>.
+    </p>
+
+<p>Nous sommes heureux de vous avoir à nos côtés et vous souhaitons tout le meilleur pour l'édition à venir.</p>
+
+<p>À très bientôt !</p>
+
+<p>L'équipe de sélection</p>
+---------------------------------------------------------------------------------------------------------------------
+<h2>(English version)</h2>
+
+    <h2>@Messages("longYearlyName") - Your submission has been accepted!</h2>
+
+<p>Hello,</p>
+
+<p>Your proposal [@proposal.title] for @Messages("longYearlyName") has been accepted!</p>
+
+<p>Congratulations!</p>
+
+<p>Proposition title: @proposal.title, of type [@Messages(proposal.talkType.id)].</p>
+
+<h3>Here's how to validate your attendance:</h3>
+
+<p>Click on this link or copy-paste it in your browser of choice:
+<a href="@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()">@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()</a><p>
+
+<p>You'll first need to accept our terms and conditions. Careful! You only have a few days to do so!</p>
+
+<h3>About your speaker badge:</h3>
+
+<p>Your submission allows you to have a speaker badge which will give you access to the conference as a whole and to the speaker diner. No need to do anything from your side, your badge will be given to you right at the entrance at the beginning of day 1.</p>
+
+<h3>What else?</h3>
+<p>As a confirmed speaker, you will receive very soon a discount code giving you access to a free entrance. Congrats again!</p>
+
+<h3>Questions?</h3>
+
+<p>Please do not respond to this email but rather use the web interface:
+    @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)</p>
+
+<p>We're happy to have you with us and wish you all the best for the edition to come.</p>
+
+<p>See you very soon!</p>
+
 <p>The @Messages("longYearlyName") team</p>

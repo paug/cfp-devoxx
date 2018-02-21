@@ -1,13 +1,38 @@
 @(proposal:models.Proposal)
+<h2>(English follows)</h2>
+<h2>Votre présentation pour @Messages("longYearlyName")</h2>
 
-<p>Dear Maker,</p>
-<p>We're sorry to inform you that your proposal "<strong>@proposal.title</strong>" for @Messages("longYearlyName") has been refused.</p>
-<p></p>
- <p>The selection has been particularly hard this year, we want to thank you for your commitment.</p>
-  <p>Has we would still be glad to see you taking part of the event, here is a discount code for you to buy your conference ticket: "cfp-invite".</p>
-<p>Registration details <a href="@ConferenceDescriptor.current().conferenceUrls.registration">@ConferenceDescriptor.current().conferenceUrls.registration</a>.</p>
-<br>
-<br>
-<p>Kind regards,</p>
+<p>Bonjour,</p>
+
+<p>Après plusieurs jours de sélection intense, nous avons le regret de vous informer que votre proposition de talk n'a pas été acceptée.</p>
+
+<p>Pour rappel : @proposal.title au format @Messages(proposal.talkType.id).</p>
+
+<p>Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec le code promotionnel XXXXX. Vous bénéficierez d’un ticket réduit au prix early bird. RDV sur @ConferenceDescriptor.current().conferenceUrls.registration</p>
+
+<p>Plus d'informations sur le programme final très bientôt.</p>
+
+<p>Encore merci pour votre confiance et votre implication.</p>
+
+<p>À bientôt !</p>
+
+<p>L'équipe de sélection</p>
+
+<h2>English version</h2>
+<h2>Your submission for @Messages("longYearlyName")</h2>
+
+<p>Hi,</p>
+
+<p>After several days reviewing your submission for @Messages("longYearlyName"), we're sorry to tell you that you didn't make the cut.</p>
+
+<p>Proposition title: @proposal.title, @Messages(proposal.talkType.id).</p>
+
+<p>We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, here is a discount code for you to use: XXXXX. No hard feelings! Registration details: @ConferenceDescriptor.current().conferenceUrls.registration</p>
+
+<p>More info on the final schedule very soon.</p>
+
+<p>Thanks again for your trust and dedication.</p>
+
+<p>See you soon!</p>
+
 <p>The @Messages("longYearlyName") team</p>
-<p></p>
