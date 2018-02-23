@@ -10,7 +10,7 @@ Après plusieurs jours de sélection intense, nous avons le regret de vous infor
 
 Pour rappel : @proposal.title au format @Messages(proposal.talkType.id).
 
-Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec le code promotionnel XXXXX. Vous bénéficierez d’un ticket réduit au prix early bird. RDV sur @ConferenceDescriptor.current().conferenceUrls.registration
+Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec le code promotionnel CFP_AM_2018. Vous bénéficierez d’un ticket réduit au prix early bird. RDV sur @ConferenceDescriptor.current().conferenceUrls.registration
 
 Plus d'informations sur le programme final très bientôt.
 
@@ -29,7 +29,7 @@ After several days reviewing your submission for @Messages("longYearlyName"), we
 
 Proposition title: @proposal.title, @Messages(proposal.talkType.id).
 
-We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, here is a discount code for you to use: XXXXX. No hard feelings! Registration details: @ConferenceDescriptor.current().conferenceUrls.registration
+We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, here is a discount code for you to use: CFP_AM_2018. No hard feelings! Registration details: @ConferenceDescriptor.current().conferenceUrls.registration
 
 More info on the final schedule very soon.
 
