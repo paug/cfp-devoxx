@@ -1,4 +1,4 @@
-@(proposal:models.Proposal, email:String)
+@(proposal:models.Proposal)
 --------------------------------------------------------------------
 @Messages("longYearlyName") - Your submission has been accepted!
 --------------------------------------------------------------------
