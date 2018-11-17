@@ -51,7 +51,7 @@ qualifications2=Speaker''s qualifications
 digest=Select your email notifications for new proposals (digest)
 qualifications.label=Qualifications
 index.signupTitle=Sign-up as a speaker
-index.signup2=Sign-up as speaker for {0} and propose one or more subjects.
+index.signup2=Sign-up as speaker for {0} and submit one or more subjects.
 index.signup3=Sign-up with one of your social profile in 5 seconds. No password needed.
 index.signup.btn=Sign-up
 email.alreadyexists=This email is already registered in our database.
@@ -166,7 +166,7 @@ cfp.reminder.proposals=do not forget to submit your Draft
 cfp.program=Program announced :
 cfp.program.date=mid-March
 video.title=Videos
-video.tag=Review Android Makers FR 2017''s videos on
+video.tag=Review Android Makers FR 2018''s videos on
 theme.title=Tracks
 
 theme.track=List of tracks:
@@ -175,7 +175,7 @@ track.description=Description
 
 appel.conf.dates=Android Makers France 2019, 23rd-24th April 2019
 cfp.welcome.title=Welcome!
-cfp.welcome=<p>Welcome to the Android Makers 2019 Call for Papers. Signin below to submit your proposals. All Android related topics are welcome!</p> <p>From hardware/low level topics to UX/UI design and human challenges. Take a look at the <a href="https://www.youtube.com/channel/UCkatLlah5weIpN23LqMgdTg" target=new>videos from last year</a> to get some inspiration or just click submit!</p><p> We can&#39;t wait to hear about your proposals!</p><p>If you have any question, the <a href="https://cfp.androidmakers.fr/faq" >FAQ</a> is here to help. Or you can always send us an email at <a href="mailto:contact@androidmakers.fr">contact@androidmakers.fr</a></p>
+cfp.welcome=<p>Welcome to the Android Makers 2019 Call for Papers. Signin below to submit your proposals. All Android related topics are welcome!</p> <p>From hardware/low level topics to UX/UI design and human challenges. Take a look at the <a href="https://www.youtube.com/channel/UCkatLlah5weIpN23LqMgdTg" target=new>videos from last year</a> to get some inspiration or just click submit!</p><p> We can&#39;t wait to hear about your proposals!</p><p>If you have any question, the <a href="/faq" >FAQ</a> is here to help. Or you can always send us an email at <a href="mailto:contact@androidmakers.fr">contact@androidmakers.fr</a></p>
 
 # Tracks
 
@@ -356,7 +356,7 @@ btn.abstention=Vote 0 for this talk
 remove.sponsorFlag=Remove the sponsor''s flag on this talk
 
 cfp.isClosed=The CFP is closed
-cfp.isClosed.expl=CFP is closed and does not accept submission.
+cfp.isClosed.expl=The CFP is closed and does not accept submissions.
 cfp.closed.enter=Sign-in
 tbl.cfp.closed=CFP closed
 cfp.closed.restrictions=CFP is closed. You can edit your proposal, but please, do not change it completely once it has been submitted. A proposal that differs from the original version will be refused.

@@ -648,7 +648,7 @@ object ConferenceDescriptor {
     bccEmail = Play.current.configuration.getString("mail.bcc"),
     bugReportRecipient = Play.current.configuration.getString("mail.bugreport.recipient").getOrElse("contact@androidmakers.fr"),
     conferenceUrls = ConferenceUrls(
-      faq = "http://androidmakers.fr/faq/", // TODO get a faq section or point to an article
+      faq = "http://androidmakers.fr/faq/",
       registration = "https://www.eventbrite.com/e/android-makers-1st-edition-tickets-29579435889", //TODO update URL
       confWebsite = "http://androidmakers.fr/",
       cfpHostname = {
