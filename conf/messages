@@ -204,7 +204,7 @@ avatarUrl.defined=Your photo (recommended width 150px)
 created.title=Success!
 created.text1=We just sent you an email so that you can validate your email address.
 created.text2=Your access code is generated and is displayed once you validate your email.
-created.text3=You will then be able to log-in and start to use the {0} CFP web site.
+created.text3=You will then be able to log-in and start to use the {0} web site.
 
 # prepareSignup
 signup.title=Speaker''s registration
