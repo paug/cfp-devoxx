@@ -151,6 +151,7 @@ case class Proposal(id: String,
                     userGroup: Option[Boolean],
                     wishlisted: Option[Boolean] = None,
                     videoLink: Option[String] = None,
+                    officeHours: Boolean = false,
                     tags: Option[Seq[Tag]]) {
 
   def escapedTitle: String = title match {
@@ -317,6 +318,7 @@ object Proposal {
       userGroup,
       wishlisted = None, //deprecated, kept for backward compatibility
       videoLink,
+      false,
       tags
     )
   }

@@ -108,6 +108,9 @@ otherSpeakers=Other speakers
 talkType=Type of talk
 talkType.help=Each type of talk is described on the <a href="https://cfp.androidmakers.fr/faq" target="new">FAQ</a>.
 videoLink=Related video link
+officeHours=Office Hours
+officeHours.help=One office hour session lasts one hour and is an opportunity for attendees and speakers to interact with you 1:1. By default we will use the same subject as your talk but feel free to specify if you want to do an office hour about something else.
+officeHours.optIn=I want to participate in an Office Hours session.
 
 audienceLevel=Audience level
 audienceLevel.help=Please, indicate the required audience level for your talk

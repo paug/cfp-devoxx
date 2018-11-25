@@ -679,7 +679,7 @@ object ConferenceDescriptor {
     ),
     hosterName = "Clever-cloud", hosterWebsite = "http://www.clever-cloud.com/#AndroidMakersFR",
     hashTag = "#AndroidMakersFR",
-    conferenceSponsor = ConferenceSponsor(showSponsorProposalCheckbox = true, sponsorProposalType = ConferenceProposalTypes.CONF)
+    conferenceSponsor = ConferenceSponsor(showSponsorProposalCheckbox = false, sponsorProposalType = ConferenceProposalTypes.CONF)
     , List(Locale.FRENCH)
     , "Le Beffroi, Montrouge"
     , 1200 // French developers tends to be a bit verbose... we need extra space :-)

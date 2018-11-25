@@ -118,6 +118,16 @@
                 </div>
             </div>
 
+        <div class="row cfp-row">
+            <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
+                <h4>@Messages("officeHours")</h4>
+                <p>@Messages("officeHours.help")</p>
+            </div>
+            <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12">
+                @tags.checkboxI18N(newProposal("officeHours"), 'text -> "officeHours.optIn")
+            </div>
+        </div>
+
             <div class="row cfp-row">
                 <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
                     <h4>@Messages("audienceLevel")</h4>
