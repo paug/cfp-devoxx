@@ -75,6 +75,10 @@
                                 <th class="proposalCol">@Messages("admin.sp.privateMessage")</th>
                                 <td>@Html(proposal.privateMessageAsHtml)</td>
                             </tr>
+                            <tr>
+                                <th class="proposalCol">@Messages("admin.sp.officeHours")</th>
+                                <td>@Html(proposal.officeHours + "")</td>
+                            </tr>
                             @if(proposal.sponsorTalk) {
                                 <tr>
                                     <th class="proposalCol">@Messages("admin.sp.sponsorTalk")</th>

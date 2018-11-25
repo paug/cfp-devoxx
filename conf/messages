@@ -329,6 +329,7 @@ admin.sp.mainSpeaker=Main speaker
 admin.sp.secSpeaker=Secondary speaker
 admin.sp.otherSpeaker=Other speaker(s)
 admin.sp.privateMessage=Private message for committee
+admin.sp.officeHours=OfficeHours
 admin.sp.sponsorTalk=Talk sponsor
 admin.sp.sponsorTalk.label=This is a sponsor talk
 admin.sp.evaluate=Evaluate this proposal
@@ -842,6 +843,7 @@ admin.cfp.empty.track=There is no new submitted proposals in track {0} for the t
 
 proposalLang_fr=Proposal in French
 proposalLang_en=Proposal in English
+proposalLang_ei=Either French or English
 
 # Wishlist labels
 wl_accepted=Speaker accepted
