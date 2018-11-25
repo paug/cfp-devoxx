@@ -265,6 +265,7 @@ object Proposal {
     "demoLevel" -> optional(text),
     "userGroup" -> optional(boolean), // This is Golden Ticket yes/no
     "videoLink" -> optional(text),
+    "officeHours" -> boolean,
     "tags" -> optional(seq(
       mapping(
         "id" -> optional(text),
@@ -298,6 +299,7 @@ object Proposal {
                           demoLevel: Option[String],
                           userGroup: Option[Boolean],
                           videoLink: Option[String] = None,
+                          officeHours: Boolean,
                           tags: Option[Seq[Tag]] = None): Proposal = {
     Proposal(
       id.getOrElse(generateId()),
@@ -318,7 +320,7 @@ object Proposal {
       userGroup,
       wishlisted = None, //deprecated, kept for backward compatibility
       videoLink,
-      false,
+      officeHours,
       tags
     )
   }
@@ -330,7 +332,7 @@ object Proposal {
   }
 
   def unapplyProposalForm(p: Proposal): Option[(Option[String], String, String, Option[String], List[String], String, String, String, String,
-    Boolean, String, Option[String], Option[Boolean], Option[String], Option[Seq[Tag]])] = {
+    Boolean, String, Option[String], Option[Boolean], Option[String], Boolean, Option[Seq[Tag]])] = {
     Option((
       Option(p.id),
       p.lang,
@@ -346,6 +348,7 @@ object Proposal {
       p.demoLevel,
       p.userGroup,
       p.videoLink,
+      p.officeHours,
       p.tags))
   }
 
