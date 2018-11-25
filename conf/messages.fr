@@ -98,7 +98,10 @@ title.help=Proposez un titre simple, clair, qui résume ce que le participant va
 summary=Résumé de votre présentation pour le participant
 summary.help=Décrivez votre proposition, telle que le conférencier la lira. Vous pouvez utiliser la syntaxe <a href="http://daringfireball.net/projects/markdown/syntax/" target="_blank">Markdown</a>.
 lang=Langue
-lang.help=60% des présentations à {0} sont en anglais et 40% sont en français. Lors de la plannification de l'événement nous nous assurons qu'à un moment donné il y ai toujours une présentation soit en français, soit en anglais (à l'exception des keynotes qui sont elles uniquement en anglais). Si vous êtes francophone, merci de présenter en Français.
+lang.help=Environ 70% des présentations sont en anglais et 30% en français. Lors de la plannification de l'événement nous nous assurons qu'à un moment donné il y ait toujours une présentation soit en français, soit en anglais (à l'exception des keynotes qui sont uniquement en anglais). Si vous vous sentez à l'aise dans les deux langues, merci de choisir &#39;Anglais ou Français&#39;.
+lang.english=Anglais
+lang.french=Français
+lang.both=Anglais ou Français
 mainSpeaker=Présentateur principal
 mainSpeaker.help=Vous avez la possibilité d''ajouter d''autres présentateurs une fois que la proposition est créé.
 talkType.help=Plus d'informations disponibles <a href="http://androidmakers.fr/blog/call-for-paper-type-of-talk-explained-FR" target="new">ici</a>.
@@ -142,6 +145,8 @@ workshop.label=Workshop, 3h max
 workshop.label.simple=Workshop
 demo.label=Makers Area, stand de demo
 demo.label.simple=Makers Area
+either.label=20min ou 40min Talk
+either.label.simple=20min ou 40min Talk
 
 # Bug report
 Issue.report=Notifier l''équipe
@@ -272,9 +277,8 @@ freepass.forIdiots=L''entrée est offerte uniquement si votre présentation est 
 nav.homeSpeaker=Accueil
 editWebuser.title=Votre profil
 
-cfp.isOpen=Le CFP est fermé... mais...
-cfp.open.hint=...il est encore temps de proposer vos démos pour la Makers Area !
-cfp.open.enter=Proposer une démo
+cfp.isOpen=Le CFP est ouvert
+cfp.open.enter=Proposer un sujet pour Android Makers France
 
 #CFP admin
 admin.proposals.th.title=Titre

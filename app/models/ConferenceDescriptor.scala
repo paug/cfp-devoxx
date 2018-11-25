@@ -117,11 +117,14 @@ object ConferenceDescriptor {
 
     val QUICK = ProposalType(id = "c_quick", label = "quick.label")
 
+    val EITHER = ProposalType(id = "d_either", label = "either.label")
+
     val WORKSHOP = ProposalType(id = "d_workshop", label = "workshop.label")
 
     val DEMO = ProposalType(id = "e_demo", label = "demo.label")
 
-    val ALL = List(KEY, CONF, QUICK, WORKSHOP, DEMO)
+
+    val ALL = List(CONF, QUICK, EITHER, DEMO)
 
     def valueOf(id: String): ProposalType = id match {
       case "a_key" => KEY
@@ -129,6 +132,7 @@ object ConferenceDescriptor {
       case "c_quick" => QUICK
       case "d_workshop" => WORKSHOP
       case "e_demo" => DEMO
+      case "d_either" => EITHER
     }
 
   }

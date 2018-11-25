@@ -92,13 +92,15 @@ New.proposal2=New proposal - step 2/2
 Edit.proposal=Edit proposal - step 1/2
 Edit.proposal2=Edit proposal - step 2/2
 title=Presentation title
-title.help=Think carefully and try to create a title that is descriptive enough. Most Android Makers attendees selects a talk at the very last minute only based on its title.
+title.help=Think carefully and try to create a title that is descriptive enough. Most Android Makers attendees select a talk at the very last minute only based on its title.
 summary=Summary of your presentation, for the attendee
 summary.help=Describe your proposal as it will appear on our website and mobile apps. You can use Markdown syntax.
 lang=Main language
 phoneNumber=cell phone number
-lang.help=100% of {0} talks are in English
-lang.help= about 70% of {0} talks are in English and 30% are in French. When planning the event schedule, organizer make sure that there is always at least one english and one french session at everytime-except for the keynote that are in english.
+lang.help=About 70% of the talks are in English and 30% are in French. When planing the event schedule, we try to make sure that there is always at least one english and one french session at every moment-except for the keynote that are in english. If you feel comfortable with both languages, please select &#39;English or French&#39;.
+lang.english=English
+lang.french=French
+lang.both=English or French
 mainSpeaker=Main speaker
 mainSpeaker2=Multiple Speakers?
 mainSpeaker.help=You can add more speakers once the proposal is created.
@@ -152,6 +154,8 @@ workshop.label=Workshop, up to 3h
 workshop.label.simple=Workshop
 demo.label=Makers Area, demo booth
 demo.label.simple=Makers Area
+either.label=20mn or 40mn Talk
+either.label.simple=20mn or 40 Talk
 
 # Bug report
 Issue.report=Report an issue
@@ -286,9 +290,8 @@ freepass.forIdiots=Free pass included if, and only if, your talk is selected by 
 nav.homeSpeaker=Home
 editWebuser.title=Edit your firstname and lastname
 
-cfp.isOpen=Le CFP is now closed... but...
-cfp.open.hint=...you can still submit your demos for the Makers Area!
-cfp.open.enter=Submit a demo
+cfp.isOpen=CFP is open
+cfp.open.enter=Create your speaker''s profile or sign-in
 
 admin.proposals.th.title=Title
 admin.proposals.th.track=Track

@@ -61,7 +61,6 @@
                 </div>
                 <div class="panel-body">
                     @if(ConferenceDescriptor.isCFPOpen){
-                    <p>@Messages("cfp.open.hint")</p>
                         <a href="@routes.Application.home()" class="btn btn-primary" style="white-space: normal">@Messages("cfp.open.enter")</a>
                     }else{
                         <p>@Messages("cfp.isClosed.expl")</p>

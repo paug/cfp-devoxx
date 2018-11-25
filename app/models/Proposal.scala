@@ -29,7 +29,7 @@ object ProposalType {
 
   val UNKNOWN = ProposalType(id = "unknown", label = "unknown.label")
 
-  val all = ConferenceDescriptor.ConferenceProposalTypes.ALL.filter(_==ConferenceDescriptor.ConferenceProposalTypes.DEMO)
+  val all = ConferenceDescriptor.ConferenceProposalTypes.ALL
   val allAsId = all.map(a => (a.id, a.label)).sorted
 
   def allForCombos = {
@@ -188,7 +188,7 @@ object Proposal {
 
   implicit val proposalFormat = Json.format[Proposal]
 
-  val langs = Seq(("en", "English"), ("fr", "Français"))
+  val langs = Seq(("en", Messages("lang.english")), ("fr", Messages("lang.french")), ("ei", Messages("lang.both")))
 
   val audienceLevels = Seq(("novice", "Novice"), ("intermediate", "Intermediate"), ("expert", "Expert"))
 
