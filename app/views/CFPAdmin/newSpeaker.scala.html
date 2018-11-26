@@ -40,6 +40,11 @@
             @helper.inputText(speakerForm("twitter2"), 'placeholder -> "@nickname")
             @helper.inputText(speakerForm("blog2"), 'size -> 50, 'placeholder -> "http://www.yourblog.com/")
             @helper.inputText(speakerForm("lang2"), 'size->20, 'placeholder -> "en")
+            @helper.inputText(speakerForm("medium2"), 'size -> 50, 'placeholder -> "https://medium.com/@username")
+            @helper.inputText(speakerForm("linkedin2"), 'size -> 50, 'placeholder -> "https://www.linkedin.com/in/username")
+            @helper.inputText(speakerForm("dribbble2"), 'size -> 50, 'placeholder -> "https://dribbble.com/username")
+            @helper.inputText(speakerForm("gde2"), 'size -> 50, 'placeholder -> "http://www.yourblog.com/")
+            @helper.inputText(speakerForm("gdg2"), 'size -> 50, 'placeholder -> "http://www.yourblog.com/")
             @helper.checkbox(speakerForm("acceptTermsConditions"))
             <button class="btn btn-success" type="submit">@Messages("editProfile.save")</button>
         }

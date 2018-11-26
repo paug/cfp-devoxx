@@ -25,8 +25,14 @@ index.signup.btn=S''inscrire
 index.txt2=Utilisez l''un des services ci-dessous, afin de ne pas avoir à mémoriser un code d''accès. Si votre profil n''existe pas, il sera automatiquement créé.
 company=Votre société
 bio=Présentez-vous en quelques lignes
-twitter=Votre pseudo Twitter
-blog=Votre blog ou votre site internet
+twitter=Pseudo Twitter
+blog=Blog ou votre site web
+medium=Page Medium
+linkedin=Page LinkedIn
+dribbble=Page Dribbble
+gde=Page Google Developer Expert page (si nécessaire)
+gdg=Page Google Developer Group page (si nécessaire)
+
 forget.password=Code d''accès oublié ?
 home.txt2=Inscrivez-vous via l''un de vos réseaux sociaux, en quelques secondes, sans devoir valider votre email et mémoriser encore un code d''accès.
 

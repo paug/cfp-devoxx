@@ -51,6 +51,11 @@ case class Speaker(uuid: String
                    , firstName: Option[String]
                    , qualifications: Option[String]
                    , phoneNumber: Option[String]
+                   , gde: Option[String]
+                   , gdg: Option[String]
+                   , medium: Option[String]
+                   , linkedin: Option[String]
+                   , dribbble: Option[String]
                   ) {
 
   def cleanName: String = {
@@ -118,14 +123,64 @@ object Speaker {
 
   implicit val speakerFormat = Json.format[Speaker]
 
-  def createSpeaker(webuserUUID: String, email: String, name: String, bio: String, lang: Option[String], twitter: Option[String],
-                    avatarUrl: Option[String], company: Option[String], blog: Option[String], firstName: String,
-                    qualifications: String, phoneNumber: Option[String]): Speaker = {
-    Speaker(webuserUUID, email.trim().toLowerCase, Option(name), bio, lang, twitter, avatarUrl, company, blog, Some(firstName), Option(qualifications), phoneNumber)
+  def createSpeaker(webuserUUID: String,
+                    email: String,
+                    name: String,
+                    bio: String,
+                    lang: Option[String],
+                    twitter: Option[String],
+                    avatarUrl: Option[String],
+                    company: Option[String],
+                    blog: Option[String],
+                    firstName: String,
+                    qualifications: String,
+                    phoneNumber: Option[String],
+                    gde: Option[String],
+                    gdg: Option[String],
+                    medium: Option[String],
+                    linkedin: Option[String],
+                    dribbble: Option[String]
+                   ): Speaker = {
+    Speaker(
+      uuid = webuserUUID,
+      email = email.trim().toLowerCase,
+      name = Option(name),
+      bio = bio,
+      lang = lang,
+      twitter = twitter,
+      avatarUrl = avatarUrl,
+      company = company,
+      blog = blog,
+      firstName = Some(firstName),
+      qualifications = Option(qualifications),
+      phoneNumber = phoneNumber,
+      gde = gde,
+      gdg = gdg,
+      medium = medium,
+      linkedin = linkedin,
+      dribbble = dribbble
+    )
   }
 
-  def createOrEditSpeaker(uuid: Option[String], email: String, name: String, bio: String, lang: Option[String], twitter: Option[String],
-                          avatarUrl: Option[String], company: Option[String], blog: Option[String], firstName: String, acceptTerms: Boolean, qualifications: String): Speaker = {
+  def createOrEditSpeaker(
+                           uuid: Option[String],
+                           email: String,
+                           name: String,
+                           bio: String,
+                           lang: Option[String],
+                           twitter: Option[String],
+                           avatarUrl: Option[String],
+                           company: Option[String],
+                           blog: Option[String],
+                           firstName: String,
+                           acceptTerms: Boolean,
+                           qualifications: String,
+                           gde: Option[String],
+                           gdg: Option[String],
+                           medium: Option[String],
+                           linkedin: Option[String],
+                           dribbble: Option[String]
+                         ): Speaker = {
     uuid match {
       case None =>
         val newUUID = Webuser.generateUUID(email)
@@ -134,24 +189,130 @@ object Speaker {
         } else {
           refuseTerms(newUUID)
         }
-        Speaker(newUUID, email.trim().toLowerCase, Option(name), bio, lang, twitter, avatarUrl, company, blog, Option(firstName), Option(qualifications), None)
+        Speaker(
+          uuid = newUUID,
+          email = email.trim().toLowerCase,
+          name = Option(name),
+          bio = bio,
+          lang = lang,
+          twitter = twitter,
+          avatarUrl = avatarUrl,
+          company = company,
+          blog = blog,
+          firstName = Option(firstName),
+          qualifications = Option(qualifications),
+          phoneNumber = None,
+          gde = gde,
+          gdg = gdg,
+          medium = medium,
+          linkedin = linkedin,
+          dribbble = dribbble)
       case Some(validUuid) =>
         if (acceptTerms) {
           doAcceptTerms(validUuid)
         } else {
           refuseTerms(validUuid)
         }
-        Speaker(validUuid, email.trim().toLowerCase, Option(name), bio, lang, twitter, avatarUrl, company, blog, Option(firstName), Option(qualifications), None)
+        Speaker(
+          uuid = validUuid,
+          email = email.trim().toLowerCase,
+          name = Option(name),
+          bio = bio,
+          lang = lang,
+          twitter = twitter,
+          avatarUrl = avatarUrl,
+          company = company,
+          blog = blog,
+          firstName = Option(firstName),
+          qualifications = Option(qualifications),
+          phoneNumber = None,
+          gde = gde,
+          gdg = gdg,
+          medium = medium,
+          linkedin = linkedin,
+          dribbble = dribbble)
     }
 
   }
 
-  def unapplyForm(s: Speaker): Option[(String, String, String, String, Option[String], Option[String], Option[String], Option[String], Option[String], String, String, Option[String])] = {
-    Some("xxx", s.email, s.name.getOrElse(""), s.bio, s.lang, s.twitter, s.avatarUrl, s.company, s.blog, s.firstName.getOrElse(""), s.qualifications.getOrElse("No experience"), s.phoneNumber)
+  def unapplyForm(s: Speaker): Option[(
+    String,
+    String,
+    String,
+    String,
+    Option[String],
+    Option[String],
+    Option[String],
+    Option[String],
+    Option[String],
+    String,
+    String,
+    Option[String],
+    Option[String],
+    Option[String],
+    Option[String],
+    Option[String],
+    Option[String]
+    )] = {
+    Some(
+      "xxx",
+      s.email,
+      s.name.getOrElse(""),
+      s.bio,
+      s.lang,
+      s.twitter,
+      s.avatarUrl,
+      s.company,
+      s.blog,
+      s.firstName.getOrElse(""),
+      s.qualifications.getOrElse("No experience"),
+      s.phoneNumber,
+      s.gde,
+      s.gdg,
+      s.medium,
+      s.linkedin,
+      s.dribbble
+    )
   }
 
-  def unapplyFormEdit(s: Speaker): Option[(Option[String], String, String, String, Option[String], Option[String], Option[String], Option[String], Option[String], String, Boolean, String)] = {
-    Some(Option(s.uuid), s.email, s.name.getOrElse(""), s.bio, s.lang, s.twitter, s.avatarUrl, s.company, s.blog, s.firstName.getOrElse(""), !needsToAccept(s.uuid), s.qualifications.getOrElse("No experience"))
+  def unapplyFormEdit(s: Speaker): Option[(
+    Option[String],
+      String,
+      String,
+      String,
+      Option[String],
+      Option[String],
+      Option[String],
+      Option[String],
+      Option[String],
+      String,
+      Boolean,
+      String,
+      Option[String],
+      Option[String],
+      Option[String],
+      Option[String],
+      Option[String]
+    )] = {
+    Some(
+      Option(s.uuid),
+      s.email,
+      s.name.getOrElse(""),
+      s.bio,
+      s.lang,
+      s.twitter,
+      s.avatarUrl,
+      s.company,
+      s.blog,
+      s.firstName.getOrElse(""),
+      !needsToAccept(s.uuid),
+      s.qualifications.getOrElse("No experience"),
+      s.gde,
+      s.gdg,
+      s.medium,
+      s.linkedin,
+      s.dribbble
+    )
   }
 
   def save(speaker: Speaker) = Redis.pool.withClient {
