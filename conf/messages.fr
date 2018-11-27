@@ -109,7 +109,7 @@ title.help=Proposez un titre simple, clair, qui résume ce que le participant va
 summary=Résumé de votre présentation pour le participant
 summary.help=Décrivez votre proposition, telle que le conférencier la lira. Vous pouvez utiliser la syntaxe <a href="http://daringfireball.net/projects/markdown/syntax/" target="_blank">Markdown</a>.
 lang=Langue
-lang.help=Environ 70% des présentations sont en anglais et 30% en français. Lors de la plannification de l'événement nous nous assurons qu'à un moment donné il y ait toujours une présentation soit en français, soit en anglais (à l'exception des keynotes qui sont uniquement en anglais). Si vous vous sentez à l'aise dans les deux langues, merci de choisir &#39;Anglais ou Français&#39;.
+lang.help=Environ 70% des présentations sont en anglais et 30% en français. Lors de la plannification de l''événement nous nous assurons qu''à un moment donné il y ait toujours une présentation soit en français, soit en anglais (à l''exception des keynotes qui sont uniquement en anglais). Si vous vous sentez à l''aise dans les deux langues, merci de choisir &#39;Anglais ou Français&#39;.
 lang.english=Anglais
 lang.french=Français
 lang.both=Anglais ou Français
@@ -686,7 +686,7 @@ please.check.approved=Merci de vérifier la liste des sujets approuvés par le c
 # renderProposals
 renderProposal.archived={0} propositions de sujets archivés de précédentes éditions.
 renderProposal.archived.single=Une proposition de sujet archivée.
-renderProposal.noTalks=Ce speaker n'a pas d''autres propositions actuellement
+renderProposal.noTalks=Ce speaker n''a pas d''autres propositions actuellement
 
 mail.goldenticket.subject=Golden Ticket pour {0}
 error.loginRequired=Accès restreint, merci de vous authentifier
@@ -829,12 +829,12 @@ cfp.maxProposals.reached=Attention, vous ne pouvez pas soumettre plus de {0} suj
 videoLinkMessage=Lien vers une vidéo
 videoLinkMessage.help=Vous pouvez partager un lien vers une vidéo où vous avez été orateur ou une vidéo en rapport avec votre proposition de sujet. Indiquez l''URL complète YouTube ou autre.
 videoLink=Vidéo relative à votre proposition 
-tag.title=Merci de sélectionner au moins 3 Tags pour décrire votre proposition de sujet
+tag.title=
 tag.help.title=A propos des Tags
-tag.help.txt=Vous avez la possibilité de sélectionner entre 3 et 5 mots clés (tag) pour décrire votre proposition. Il n''est pas possible de créer ses propres tags. Ces tags seront utilisés pour le programme du conférencier. Les tags sont en Anglais uniquement. Commencez à saisir les premières lettres, puis sélectionnez ensuite le tag voulu.
+tag.help.txt=Vous avez la possibilité de sélectionner jusqu'à 5 mots clés (tag) pour décrire votre proposition. Il n''est pas possible de créer ses propres tags. Ces tags seront utilisés pour le programme du conférencier. Les tags sont en Anglais uniquement. Commencez à saisir les premières lettres, puis sélectionnez ensuite le tag voulu.
 officeHours=Office Hours
-officeHours.help=Un créneau d'Office Hours dure une heure et est l'opportunité pour les participants d'échanger et de poser des questions directement. Le programme sera annoncé en même temps que les talks. Par défaut, on vous attribuera le même sujet que votre talk mais n'hésitez pas à nous dire si vous souhaitez animer un créneau sur un autre sujet.
-officeHours.optIn=Je souhaite animer un créneau d'Office Hours.
+officeHours.help=Un créneau d''Office Hours dure une heure et est l''opportunité pour les participants d''échanger et de poser des questions directement. Le programme sera annoncé en même temps que les talks. Par défaut, on vous attribuera le même sujet que votre talk mais n''hésitez pas à nous dire si vous souhaitez animer un créneau sur un autre sujet.
+officeHours.optIn=Je suis ouver à animer un créneau d''Office Hours.
 
 tag.edit=Editer un Tag
 tag.new=Nouvea Tag
