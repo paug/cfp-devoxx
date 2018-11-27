@@ -167,7 +167,6 @@
                         <p>@Messages("tag.help.txt")</p>
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <label for="tag1">@Messages("tag.title")</label><br>
 
                         @views.html.bootstrap3.input(newProposal("tags[0].value"),
                             placeholder = Messages("tag.placeholder1"))
@@ -184,6 +183,7 @@
                         @views.html.bootstrap3.input(newProposal("tags[4].value"),
                             placeholder = Messages("tag.placeholder5"))
 
+                        <label for="tag1">@Messages("tag.hint")</label><br>
                     </div>
                 </div>
             }

@@ -582,6 +582,7 @@ tag.saved=Tag saved
 tag.removed=Tag "{0}" removed
 tag.imported=Tags imported
 tag.title=
+tag.hint=You can select the ''misc'' tag if nothing else fits
 tag.placeholder1=Primary tag
 tag.placeholder2=Secondary tag
 tag.placeholder3=Related tag
