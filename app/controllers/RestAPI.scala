@@ -111,7 +111,7 @@ object RestAPI extends Controller {
         case _ =>
           val jsonObject = Json.obj("content" -> "All conferences", "links" -> conferences.map(_.link))
 
-          Ok(jsonObject).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("conferences").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("conferences").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -165,7 +165,7 @@ object RestAPI extends Controller {
 
               )
               Ok(jsonObject).withHeaders(ETAG -> eTag,
-                "Links" -> ("<" + routes.RestAPI.profile("conference").absoluteURL() + ">; rel=\"profile\""))
+                "Links" -> ("<" + routes.RestAPI.profile("conference").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
           }
       }.getOrElse(NotFound("Conference not found"))
   }
@@ -210,7 +210,7 @@ object RestAPI extends Controller {
           val jsonObject = Json.toJson(updatedSpeakers)
 
           Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag,
-            "Links" -> ("<" + routes.RestAPI.profile("list-of-speakers").absoluteURL() + ">; rel=\"profile\"")
+            "Links" -> ("<" + routes.RestAPI.profile("list-of-speakers").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\"")
           )
       }
   }
@@ -274,7 +274,7 @@ object RestAPI extends Controller {
                 )
 
               val jsonObject = Json.toJson(updatedSpeaker)
-              Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("speaker").absoluteURL() + ">; rel=\"profile\""))
+              Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("speaker").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
           }
       }.getOrElse(NotFound("Speaker not found"))
   }
@@ -374,7 +374,7 @@ object RestAPI extends Controller {
           val jsonObject = Json.toJson(finalJson)
 
           Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag,
-            "Links" -> ("<" + routes.RestAPI.profile("list-of-approved-talks").absoluteURL() + ">; rel=\"profile\"")
+            "Links" -> ("<" + routes.RestAPI.profile("list-of-approved-talks").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\"")
           )
       }
   }
@@ -417,7 +417,7 @@ object RestAPI extends Controller {
         case Some(someEtag) if someEtag == newEtag => NotModified
         case _ =>
           val jsonObject = Json.toJson(mapOfSchedules)
-          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedules").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedules").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -487,7 +487,7 @@ object RestAPI extends Controller {
               "slots" -> Json.toJson(toReturn)
             )
           )
-          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedule").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedule").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -557,7 +557,7 @@ object RestAPI extends Controller {
               "slots" -> Json.toJson(toReturn)
             )
           )
-          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedule").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedule").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -587,7 +587,7 @@ object RestAPI extends Controller {
             )
           )
 
-          Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("proposalType").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("proposalType").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -618,7 +618,7 @@ object RestAPI extends Controller {
             )
           )
 
-          Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("track").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).as(JSON).withHeaders(ETAG -> eTag, "Links" -> ("<" + routes.RestAPI.profile("track").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -652,7 +652,7 @@ object RestAPI extends Controller {
           Ok(jsonObject).as(JSON).withHeaders(
             ETAG -> eTag,
             "Access-Control-Allow-Origin" -> "*",
-            "Links" -> ("<" + routes.RestAPI.profile("room").absoluteURL() + ">; rel=\"profile\""))
+            "Links" -> ("<" + routes.RestAPI.profile("room").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -724,7 +724,7 @@ object RestAPI extends Controller {
               "slots" -> Json.toJson(toReturn)
             )
           )
-          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedule").absoluteURL() + ">; rel=\"profile\""))
+          Ok(jsonObject).as(JSON).withHeaders(ETAG -> newEtag, "Links" -> ("<" + routes.RestAPI.profile("schedule").absoluteURL(ConferenceDescriptor.isHTTPSEnabled) + ">; rel=\"profile\""))
       }
   }
 
@@ -920,7 +920,7 @@ object Link {
 
   implicit val linkFormat = Json.format[Link]
 
-  implicit def call2String(c: Call)(implicit requestHeader: RequestHeader): String = c.absoluteURL()
+  implicit def call2String(c: Call)(implicit requestHeader: RequestHeader): String = c.absoluteURL(ConferenceDescriptor.isHTTPSEnabled)
 }
 
 case class Conference(eventCode: String, label: String, locale: List[String], localisation: String, link: Link)

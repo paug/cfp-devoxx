@@ -11,7 +11,7 @@
 
         <h4>Sample:</h4>
     <code>
- curl -H "Accept: application/json" <a href="@routes.RestAPI.showTracks(Conference.currentConference.eventCode).absoluteURL()">@routes.RestAPI.showTracks(Conference.currentConference.eventCode).absoluteURL()</a>
+ curl -H "Accept: application/json" <a href="@routes.RestAPI.showTracks(Conference.currentConference.eventCode).absoluteURL()">@routes.RestAPI.showTracks(Conference.currentConference.eventCode).absoluteURL(ConferenceDescriptor.isHTTPSEnabled)</a>
       </code>
 
         <h4>Result:</h4>

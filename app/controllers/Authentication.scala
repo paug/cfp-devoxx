@@ -69,7 +69,7 @@ object Authentication extends Controller {
         errorForm => BadRequest(views.html.Authentication.forgetPassword(errorForm)),
         validEmail => {
           if (Webuser.isEmailRegistered(validEmail)) {
-            val resetURL = routes.Authentication.resetPassword(Crypto.sign(validEmail.toLowerCase.trim), new String(Base64.encodeBase64(validEmail.toLowerCase.trim.getBytes("UTF-8")), "UTF-8")).absoluteURL()
+            val resetURL = routes.Authentication.resetPassword(Crypto.sign(validEmail.toLowerCase.trim), new String(Base64.encodeBase64(validEmail.toLowerCase.trim.getBytes("UTF-8")), "UTF-8")).absoluteURL(ConferenceDescriptor.isHTTPSEnabled)
             TransactionalEmails.sendResetPasswordLink(validEmail, resetURL)
             Redirect(routes.Application.index()).flashing("success" -> Messages("forget.password.confirm"))
           } else {
@@ -130,7 +130,7 @@ object Authentication extends Controller {
     implicit request =>
       Play.current.configuration.getString("github.client_id").map {
         clientId: String =>
-          val redirectUri = routes.Authentication.callbackGithub(visitor).absoluteURL()
+          val redirectUri = routes.Authentication.callbackGithub(visitor).absoluteURL(ConferenceDescriptor.isHTTPSEnabled)
           val gitUrl = "https://github.com/login/oauth/authorize?scope=user:email&client_id=" + clientId + "&state=" + Crypto.sign("ok") + "&redirect_uri=" + redirectUri
           Redirect(gitUrl)
       }.getOrElse {
@@ -298,7 +298,7 @@ object Authentication extends Controller {
         invalidForm => BadRequest(views.html.Authentication.prepareSignup(invalidForm)),
         validForm => {
           Webuser.saveNewWebuserEmailNotValidated(validForm)
-          TransactionalEmails.sendValidateYourEmail(validForm.email, routes.Authentication.validateYourEmailForSpeaker(Crypto.sign(validForm.email.toLowerCase.trim), new String(Base64.encodeBase64(validForm.email.toLowerCase.trim.getBytes("UTF-8")), "UTF-8")).absoluteURL())
+          TransactionalEmails.sendValidateYourEmail(validForm.email, routes.Authentication.validateYourEmailForSpeaker(Crypto.sign(validForm.email.toLowerCase.trim), new String(Base64.encodeBase64(validForm.email.toLowerCase.trim.getBytes("UTF-8")), "UTF-8")).absoluteURL(ConferenceDescriptor.isHTTPSEnabled))
           Ok(views.html.Authentication.created(validForm.email))
         }
       )
@@ -310,7 +310,7 @@ object Authentication extends Controller {
         invalidForm => BadRequest(views.html.Authentication.prepareSignupVisitor(invalidForm)),
         validForm => {
           Webuser.saveNewWebuserEmailNotValidated(validForm)
-          TransactionalEmails.sendValidateYourEmail(validForm.email, routes.Authentication.validateYourEmailForVisitor(Crypto.sign(validForm.email.toLowerCase.trim), new String(Base64.encodeBase64(validForm.email.toLowerCase.trim.getBytes("UTF-8")), "UTF-8")).absoluteURL())
+          TransactionalEmails.sendValidateYourEmail(validForm.email, routes.Authentication.validateYourEmailForVisitor(Crypto.sign(validForm.email.toLowerCase.trim), new String(Base64.encodeBase64(validForm.email.toLowerCase.trim.getBytes("UTF-8")), "UTF-8")).absoluteURL(ConferenceDescriptor.isHTTPSEnabled))
           Ok(views.html.Authentication.created(validForm.email))
         }
       )
@@ -426,7 +426,7 @@ object Authentication extends Controller {
     implicit request =>
       Play.current.configuration.getString("linkedin.client_id").map {
         clientId: String =>
-          val redirectUri = routes.Authentication.callbackLinkedin().absoluteURL()
+          val redirectUri = routes.Authentication.callbackLinkedin().absoluteURL(ConferenceDescriptor.isHTTPSEnabled)
           val state = new BigInteger(130, new SecureRandom()).toString(32)
           val gitUrl = "https://www.linkedin.com/uas/oauth2/authorization?client_id=" + clientId + "&scope=r_basicprofile%20r_emailaddress&state=" + Crypto.sign(state) + "&redirect_uri=" + redirectUri + "&response_type=code"
           Redirect(gitUrl).withSession("state" -> state)
@@ -448,7 +448,7 @@ object Authentication extends Controller {
           auth.map {
             case (clientId, clientSecret) =>
               val url = "https://www.linkedin.com/uas/oauth2/accessToken"
-              val redirect_uri = routes.Authentication.callbackLinkedin().absoluteURL()
+              val redirect_uri = routes.Authentication.callbackLinkedin().absoluteURL(ConferenceDescriptor.isHTTPSEnabled)
               val wsCall = WS.url(url).withHeaders("Accept" -> "application/json", "Content-Type" -> "application/x-www-form-urlencoded")
                 .post(Map("client_id" -> Seq(clientId), "client_secret" -> Seq(clientSecret), "code" -> Seq(code), "grant_type" -> Seq("authorization_code"), "redirect_uri" -> Seq(redirect_uri)))
               wsCall.map {
@@ -524,7 +524,7 @@ object Authentication extends Controller {
     implicit request =>
       Play.current.configuration.getString("google.client_id").map {
         clientId: String =>
-          val redirectUri = routes.Authentication.callbackGoogle().absoluteURL()
+          val redirectUri = routes.Authentication.callbackGoogle().absoluteURL(ConferenceDescriptor.isHTTPSEnabled)
           val state = new BigInteger(130, new SecureRandom()).toString(32)
           val gitUrl = "https://accounts.google.com/o/oauth2/auth?client_id=" + clientId + "&scope=openid%20email%20profile&state=" + Crypto.sign(state) + "&redirect_uri=" + redirectUri + "&response_type=code"
           Redirect(gitUrl).withSession("state" -> state)
@@ -548,7 +548,7 @@ object Authentication extends Controller {
           auth.map {
             case (clientId, clientSecret) =>
               val url = "https://accounts.google.com/o/oauth2/token"
-              val redirect_uri = routes.Authentication.callbackGoogle().absoluteURL()
+              val redirect_uri = routes.Authentication.callbackGoogle().absoluteURL(true)
               val wsCall = WS.url(url).withHeaders("Accept" -> "application/json", "User-Agent" -> ("CFP " + ConferenceDescriptor.current().conferenceUrls.cfpHostname)).post(Map("client_id" -> Seq(clientId), "client_secret" -> Seq(clientSecret), "code" -> Seq(code), "grant_type" -> Seq("authorization_code"), "redirect_uri" -> Seq(redirect_uri)))
               wsCall.map {
                 result =>

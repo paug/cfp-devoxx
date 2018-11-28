@@ -298,6 +298,6 @@ object MobileVotingV1 extends SecureCFPController {
 
   def categories() = UserAgentActionAndAllowOrigin {
     implicit request =>
-      MovedPermanently(routes.RestAPI.showTracks(Conference.currentConference.eventCode).absoluteURL())
+      MovedPermanently(routes.RestAPI.showTracks(Conference.currentConference.eventCode).absoluteURL(ConferenceDescriptor.isHTTPSEnabled))
   }
 }
