@@ -32,6 +32,11 @@
             @helper.inputText(formWebuser("company"))
             @helper.inputText(formWebuser("twitter"), 'placeholder -> "@nickname")
             @helper.inputText(formWebuser("blog"), 'size -> 50, 'placeholder -> "http://www.yourblog.com/")
+            @helper.inputText(formWebuser("medium"), 'size -> 50, 'placeholder -> "https://medium.com/@username")
+            @helper.inputText(formWebuser("linkedin"), 'size -> 50, 'placeholder -> "https://www.linkedin.com/in/username")
+            @helper.inputText(formWebuser("dribbble"), 'size -> 50, 'placeholder -> "https://dribbble.com/username")
+            @helper.inputText(formWebuser("gde"), 'size -> 50, 'placeholder -> "https://developers.google.com/experts/people/username")
+            @helper.inputText(formWebuser("gdg"), 'size -> 50, 'placeholder -> "meetup or website")
             @helper.textarea(formWebuser("qualifications"), 'cols -> 80, 'rows -> 3, 'placeholder -> "No experience")
 
             @if(formWebuser("email").value!=""){
