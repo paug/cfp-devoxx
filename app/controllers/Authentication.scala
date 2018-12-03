@@ -186,7 +186,8 @@ object Authentication extends Controller {
     "twitter" -> optional(text),
     "blog" -> optional(text),
     "avatarUrl" -> optional(text),
-    "qualifications" -> nonEmptyText(maxLength = 750)
+    "qualifications" -> nonEmptyText(maxLength = 750),
+    "linkedin" -> optional(text)
   ))
 
   val newWebuserForm: Form[Webuser] = Form(
@@ -278,7 +279,7 @@ object Authentication extends Controller {
                       Ok(views.html.Authentication.confirmImportVisitor(newWebuserForm.fill(newWebuser)))
 
                     } else {
-                      val defaultValues = (emailS, firstName, lastName, StringUtils.abbreviate(bioS, 750), company, None, blog, avatarUrl, "No experience")
+                      val defaultValues = (emailS, firstName, lastName, StringUtils.abbreviate(bioS, 750), company, None, blog, avatarUrl, "No experience", None)
 
                       Ok(views.html.Authentication.confirmImport(importSpeakerForm.fill(defaultValues)))
                     }
@@ -369,6 +370,7 @@ object Authentication extends Controller {
           val blog = validFormData._7
           val avatarUrl = validFormData._8
           val qualifications = validFormData._9
+          val linkedIn = validFormData._10
 
           val validWebuser = if (Webuser.isEmailRegistered(email)) {
             // An existing webuser might have been created with a different play.secret key
@@ -398,7 +400,7 @@ object Authentication extends Controller {
             None,
             None,
             None,
-            None,
+            linkedIn,
             None
           )
           Speaker.save(newSpeaker)
@@ -479,7 +481,7 @@ object Authentication extends Controller {
       request.session.get("linkedin_token").map {
         access_token =>
           //for Linkedin profile
-          val url = "https://api.linkedin.com/v1/people/~:(id,first-name,last-name,email-address,picture-url,summary)?format=json&oauth2_access_token=" + access_token
+          val url = "https://api.linkedin.com/v1/people/~:(id,first-name,last-name,email-address,picture-url,summary,public-profile-url)?format=json&oauth2_access_token=" + access_token
 
           val futureResult = WS.url(url).withHeaders(
             "User-agent" -> ("CFP " + ConferenceDescriptor.current().conferenceUrls.cfpHostname),
@@ -496,6 +498,7 @@ object Authentication extends Controller {
                   val lastName = json.\("lastName").asOpt[String]
                   val photo = json.\("pictureUrl").asOpt[String]
                   val summary = json.\("summary").asOpt[String]
+                  val linkedin = json.\("public-profile-url").asOpt[String]
 
                   // Try to lookup the speaker
                   Webuser.findByEmail(email).map {
@@ -503,7 +506,7 @@ object Authentication extends Controller {
                       val cookie = createCookie(w)
                       Redirect(routes.CallForPaper.homeForSpeaker()).flashing("warning" -> Messages("cfp.reminder.proposals")).withSession("uuid" -> w.uuid).withCookies(cookie)
                   }.getOrElse {
-                    val defaultValues = (email, firstName.getOrElse("?"), lastName.getOrElse("?"), summary.getOrElse("?"), None, None, None, photo, "No experience")
+                    val defaultValues = (email, firstName.getOrElse("?"), lastName.getOrElse("?"), summary.getOrElse("?"), None, None, None, photo, "No experience", linkedin)
                     Ok(views.html.Authentication.confirmImport(importSpeakerForm.fill(defaultValues)))
                   }
 
@@ -602,7 +605,7 @@ object Authentication extends Controller {
                       val cookie = createCookie(w)
                       Redirect(routes.CallForPaper.homeForSpeaker()).flashing("warning" -> Messages("cfp.reminder.proposals")).withSession("uuid" -> w.uuid).withCookies(cookie)
                   }.getOrElse {
-                    val defaultValues = (email, firstName.getOrElse("?"), lastName.getOrElse("?"), "", None, None, blog, photo, "No experience")
+                    val defaultValues = (email, firstName.getOrElse("?"), lastName.getOrElse("?"), "", None, None, blog, photo, "No experience", None)
                     Ok(views.html.Authentication.confirmImport(importSpeakerForm.fill(defaultValues)))
                   }
                 case other =>
