@@ -877,10 +877,10 @@ publisher.proposal.roomHidden=La salle sera affectée entre 24 et 72h avant la c
 cfpadmin.filterOn=Filtrer :
 
 faq.q1=Combien de temps doit durer mon talk?
-faq.a1=Les talks durent 20min ou 40min. Choisissez le format le plus adapté à votre sujet. Si vous hésitez, laissez nous un commentaire dans le formulaire d&#39;envoi et on en discute !
+faq.a1=Les talks durent 20min ou 40min. Il est aussi possible de faire des workshops de 1h à 3h autour d'un sujet donné. Choisissez le format le plus adapté à votre sujet. Si vous hésitez, laissez nous un commentaire dans le formulaire d&#39;envoi et on en discute !
 
 faq.q2=Quelle est la date limite pour déposer une proposition ?
-faq.a2=18 février 2018. Le comité de sélection annoncera les talks selectionnés peu de temps après.
+faq.a2=21 Janvier 2019. Le comité de sélection annoncera les talks selectionnés peu de temps après.
 
 faq.q3=Sur quoi sont jugés les talks ?
 faq.a3=<p>Yay, pas facile de répondre à cette question ! Le comité est constitué de 7 dévelopeurs Android passionnés. Les critères de sélection comprennent aussi bien le sujet que le contenu. Les sujets qui intéressent une audience large sont intéressants. Mais l&#39;originalité a aussi sa place ! Le contenu doit être adapté à l&#39;audience de l&#39;évenement. Votre experience en tant que speaker est importante aussi. Votre capacité à transmettre vos connaissances et votre passion est primordiale. </p><p>Pour améliorer vos chances, n&#39;oubliez pas de linker vers vos slides ou vos vidéos pour que le comité se fasse une idée plus précise de votre talk.</p>
