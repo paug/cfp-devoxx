@@ -111,7 +111,8 @@ object CallForPaper extends SecureCFPController {
     "gdg" -> optional(text),
     "medium" -> optional(text),
     "linkedin" -> optional(text),
-    "dribbble" -> optional(text)
+    "dribbble" -> optional(text),
+    "github" -> optional(text)
   )(Speaker.createSpeaker)(Speaker.unapplyForm))
 
 

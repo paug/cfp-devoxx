@@ -49,7 +49,8 @@ object CFPAdmin extends SecureCFPController {
     "gdg2" -> optional(text),
     "medium2" -> optional(text),
     "linkedin2" -> optional(text),
-    "dribbble2" -> optional(text)
+    "dribbble2" -> optional(text),
+    "github2" -> optional(text)
   )(Speaker.createOrEditSpeaker)(Speaker.unapplyFormEdit))
 
   def index(page: Int,

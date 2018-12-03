@@ -355,7 +355,8 @@ class ArchivedProposalSpecs extends PlaySpecification {
       Option("beginner"),
       userGroup = None,
       videoLink = Some("http://www.youtube.fr"),
-      tags = None
+      tags = None,
+      officeHours = false
     )
 
     Proposal.save(speakerUUID, someProposal, ProposalState.DRAFT)
@@ -369,7 +370,25 @@ class ArchivedProposalSpecs extends PlaySpecification {
     val webuser = Webuser.createSpeaker(email, "John", "UnitTest")
     Webuser.saveAndValidateWebuser(webuser)
     val uuid = webuser.uuid
-    val speaker = Speaker.createSpeaker(uuid, email, "j", "bio", None, Some("Twitter"), None, Some("company"), Some("blog"), "john", "newbie", Some("3314722102030"))
+    val speaker = Speaker.createSpeaker(uuid,
+      email,
+      "j",
+      "bio",
+      None,
+      Some("Twitter"),
+      None,
+      Some("company"),
+      Some("blog"),
+      "john",
+      "newbie",
+      Some("3314722102030"),
+      None,
+      None,
+      None,
+      None,
+      None,
+      None
+    )
     Speaker.save(speaker)
     uuid
   }

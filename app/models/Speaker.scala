@@ -56,6 +56,7 @@ case class Speaker(uuid: String
                    , medium: Option[String]
                    , linkedin: Option[String]
                    , dribbble: Option[String]
+                   , github: Option[String]
                   ) {
 
   def cleanName: String = {
@@ -139,7 +140,8 @@ object Speaker {
                     gdg: Option[String],
                     medium: Option[String],
                     linkedin: Option[String],
-                    dribbble: Option[String]
+                    dribbble: Option[String],
+                    github: Option[String]
                    ): Speaker = {
     Speaker(
       uuid = webuserUUID,
@@ -158,7 +160,8 @@ object Speaker {
       gdg = gdg,
       medium = medium,
       linkedin = linkedin,
-      dribbble = dribbble
+      dribbble = dribbble,
+      github = github
     )
   }
 
@@ -179,7 +182,8 @@ object Speaker {
                            gdg: Option[String],
                            medium: Option[String],
                            linkedin: Option[String],
-                           dribbble: Option[String]
+                           dribbble: Option[String],
+                           github: Option[String]
                          ): Speaker = {
     uuid match {
       case None =>
@@ -206,7 +210,8 @@ object Speaker {
           gdg = gdg,
           medium = medium,
           linkedin = linkedin,
-          dribbble = dribbble)
+          dribbble = dribbble,
+          github = github)
       case Some(validUuid) =>
         if (acceptTerms) {
           doAcceptTerms(validUuid)
@@ -230,7 +235,8 @@ object Speaker {
           gdg = gdg,
           medium = medium,
           linkedin = linkedin,
-          dribbble = dribbble)
+          dribbble = dribbble,
+          github = github)
     }
 
   }
@@ -247,6 +253,7 @@ object Speaker {
     Option[String],
     String,
     String,
+    Option[String],
     Option[String],
     Option[String],
     Option[String],
@@ -271,7 +278,8 @@ object Speaker {
       s.gdg,
       s.medium,
       s.linkedin,
-      s.dribbble
+      s.dribbble,
+      s.github
     )
   }
 
@@ -288,6 +296,7 @@ object Speaker {
       String,
       Boolean,
       String,
+      Option[String],
       Option[String],
       Option[String],
       Option[String],
@@ -311,7 +320,8 @@ object Speaker {
       s.gdg,
       s.medium,
       s.linkedin,
-      s.dribbble
+      s.dribbble,
+      s.github
     )
   }
 
