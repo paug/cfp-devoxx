@@ -27,53 +27,24 @@
                     </tbody>
                 </table>
 
-                <table class="table table-bordered">
-
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <th>@Messages("proposal.buyPass", ConferenceDescriptor.current().timing.speakersPassDuration)</th>
-                        </tr>
-                    </thead>
+                <table class="table table-bordered" style="width: 50%;">
                     <tbody>
                     <tr>
                         <td>
                             @currentUser
-                        </td>
-                        <td>
-                        @if(ProposalConfiguration.doesProposalTypeGiveSpeakerFreeEntrance(proposal.talkType)) {
-                            <span class="label label-success">@Messages("freepass")</span>
-                        } else {
-                            <span class="label label-warning">@Messages("no.freepass")</span>
-                        }
                         </td>
                     </tr>
                     <tr>
                         <td>
                             @helper.select(field=speakerForm("secondarySpeaker"), options=Webuser.allSecondarySpeakersAsOption.filterNot(_._1==currentUser),  'class->"form-control")
                         </td>
-                        <td>
-                          @if(ProposalConfiguration.doesProposalTypeGiveSpeakerFreeEntrance(proposal.talkType)) {
-                            <span class="label label-success">@Messages("freepass")</span>
-                          } else {
-                            <span class="label label-warning">@Messages("no.freepass")</span>
-                          }
-                        </td>
                     </tr>
                     <tr>
                         <td>
                             @helper.select(field=speakerForm("otherSpeakers"), options=Webuser.allSecondarySpeakersAsOption.filterNot(_._1==currentUser),  'class->"form-control-cfp", 'multiple->"true" )
                         </td>
-                        <td>
-                            <span class="label label-warning">@Messages("no.freepass")</span>
-                        </td>
                     </tr>
                 </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2"><small>@Messages("freepass.forIdiots")</small></td>
-                        </tr>
-                    </tfoot>
             </table>
 
             @if(flash.get("error").isDefined) {
