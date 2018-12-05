@@ -115,7 +115,7 @@ lang.french=Français
 lang.both=Anglais ou Français
 mainSpeaker=Présentateur principal
 mainSpeaker.help=Vous avez la possibilité d''ajouter d''autres présentateurs une fois que la proposition est créé.
-talkType.help=Plus d'informations disponibles <a href="http://androidmakers.fr/blog/call-for-paper-type-of-talk-explained-FR" target="new">ici</a>.
+talkType.help=Plus d''informations disponibles <a href="http://androidmakers.fr/blog/call-for-paper-type-of-talk-explained-FR" target="new">ici</a>.
 
 
 talkType=Type de présentation
