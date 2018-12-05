@@ -374,7 +374,7 @@ admin.btn.otherReviewer=Comparer mes votes
 btn.showVotes=Voir les votes
 comment.proposal=Fil de discussion
 
-saved1=Proposition enregistrée. Pensez à soumettre le sujet en cliquant sur l''enveloppe orange !
+saved1=Proposition enregistrée. Pensez à soumettre le sujet en cliquant sur "Soumettre"
 saved2=Proposition éditée et enregistrée.
 
 approve.title=Android Makers France, Termes et Conditions du Présentateur
