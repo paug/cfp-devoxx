@@ -834,8 +834,8 @@ tag.hint=Le tag ''misc'' peut être utilisé si rien d'autre ne correspond
 tag.help.title=A propos des Tags
 tag.help.txt=Vous avez la possibilité de sélectionner jusqu'à 5 mots clés (tag) pour décrire votre proposition. Il n''est pas possible de créer ses propres tags. Ces tags seront utilisés pour le programme du conférencier. Les tags sont en Anglais uniquement. Commencez à saisir les premières lettres, puis sélectionnez ensuite le tag voulu.
 officeHours=Office Hours
-officeHours.help=Un créneau d''Office Hours dure une heure et est l''opportunité pour les participants d''échanger et de poser des questions directement. Le programme sera annoncé en même temps que les talks. Par défaut, on vous attribuera le même sujet que votre talk mais n''hésitez pas à nous dire si vous souhaitez animer un créneau sur un autre sujet.
-officeHours.optIn=Je suis ouver à animer un créneau d''Office Hours.
+officeHours.help=Dites nous si vous aimeriez animer un créneau (une heure max) des offices hours. Les offices hours c''est l''opportunité pour les participants d''échanger et de poser des questions directement à un expert (aka vous) sur un sujet précis. Par défaut, on vous attribuera le même sujet que votre talk mais n''hésitez pas à nous dire si vous souhaitez animer un créneau sur un autre sujet.
+officeHours.optIn=J''aimerais animer un créneau d''Office Hours.
 
 tag.edit=Editer un Tag
 tag.new=Nouvea Tag
