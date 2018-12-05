@@ -158,6 +158,10 @@ demo.label=Makers Area, stand de demo
 demo.label.simple=Makers Area
 either.label=20min ou 40min Talk
 either.label.simple=20min ou 40min Talk
+b_conf=40min Talk
+c_quick=20min Talk
+d_workshop=Workshop, 3h max
+d_either=20min ou 40min Talk
 
 # Bug report
 Issue.report=Notifier l''équipe

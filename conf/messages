@@ -170,6 +170,10 @@ demo.label=Makers Area, demo booth
 demo.label.simple=Makers Area
 either.label=20mn or 40mn Talk
 either.label.simple=20mn or 40 Talk
+b_conf=40min Talk
+c_quick=20min Talk
+d_workshop=Workshop, up to 3h
+d_either=20mn or 40mn Talk
 
 # Bug report
 Issue.report=Report an issue

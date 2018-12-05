@@ -108,19 +108,8 @@
                 </div>
             </div>
 
-            @if(false) {
-                <div class="row cfp-row" style="visibility: collap">
-                    <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
-                        <h4>@Messages("track")</h4>
-                        <p>@Messages("track.help")</p>
-                    </div>
-                    <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12">
-                    @tags.selectI18N(field = newProposal("track"), options = Track.allAsIdsAndLabels.filterNot(_._1 == Track.UNKNOWN.id), '_default -> "--- Please select ---", 'class -> "form-control")
-                    </div>
-                </div>
-            } else {
-                <input type="hidden" name="lang" value="anddev">
-            }
+
+             <input type="hidden" name="track" value="anddev">
 
         <div class="row cfp-row">
             <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
