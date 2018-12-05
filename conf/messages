@@ -117,7 +117,7 @@ mainSpeaker2=Multiple Speakers?
 mainSpeaker.help=You can add more speakers once the proposal is created.
 otherSpeakers=Other speakers
 talkType=Type of talk
-talkType.help=Each type of talk is described on the <a href="https://cfp.androidmakers.fr/faq" target="new">FAQ</a>.
+talkType.help=Each type of talk is described on the <a href="/faq" target="new">FAQ</a>.
 videoLink=Related video link
 officeHours=Office Hours
 officeHours.help=One office hour session lasts one hour and is an opportunity for attendees and speakers to interact with you 1:1. By default we will use the same subject as your talk but feel free to specify if you want to do an office hour about something else.
