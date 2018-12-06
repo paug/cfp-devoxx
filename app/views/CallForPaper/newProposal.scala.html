@@ -241,7 +241,7 @@
                 });
 
                 $.ajax({
-                    url: "http://localhost:9000/cfp/proposal/tags/autocomplete",
+                    url: "/cfp/proposal/tags/autocomplete",
                     success: function(e){
                         $("#myTags").tagit({
                             availableTags: e,
