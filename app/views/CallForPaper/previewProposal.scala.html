@@ -34,6 +34,7 @@
             <input type="hidden" name="tags[2].value" value="@newProposal("tags[2].value").value">
             <input type="hidden" name="tags[3].value" value="@newProposal("tags[3].value").value">
             <input type="hidden" name="tags[4].value" value="@newProposal("tags[4].value").value">
+            <input type="hidden" name="tags2" value="@newProposal("tags2").value">
             <input type="hidden" name="id" value="@newProposal("id").value">
             <div class="alert alert-info"><i class="icon-warning-sign"></i> @Messages("not.saved")</div>
         </div>
@@ -45,6 +46,7 @@
                     <div class="panel-body">
                         <h3><small>@Messages("sw.proposal.title") :</small> @newProposal("title").value</h3>
                         <h4><small>@Messages("sw.proposal.talkType") :</small> @Messages(newProposal("talkType").value.getOrElse(""))</h4>
+                        <h4><small>@Messages("sw.proposal.tags") :</small> @newProposal("tags2").value</h4>
                         <br>
                         <h4><small>@Messages("admin.proposals.th.abstract") :</small></h4>
                         <div class="proposal_prev">@Html(htmlSummary)</div>

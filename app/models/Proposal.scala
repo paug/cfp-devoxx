@@ -152,6 +152,7 @@ case class Proposal(id: String,
                     wishlisted: Option[Boolean] = None,
                     videoLink: Option[String] = None,
                     officeHours: Boolean = false,
+                    tags2: Option[String] = None,
                     tags: Option[Seq[Tag]]) {
 
   def escapedTitle: String = title match {
@@ -266,6 +267,7 @@ object Proposal {
     "userGroup" -> optional(boolean), // This is Golden Ticket yes/no
     "videoLink" -> optional(text),
     "officeHours" -> boolean,
+          "tags2" -> optional(text),
     "tags" -> optional(seq(
       mapping(
         "id" -> optional(text),
@@ -300,6 +302,7 @@ object Proposal {
                           userGroup: Option[Boolean],
                           videoLink: Option[String] = None,
                           officeHours: Boolean,
+                          tags2: Option[String],
                           tags: Option[Seq[Tag]] = None): Proposal = {
     Proposal(
       id.getOrElse(generateId()),
@@ -321,6 +324,7 @@ object Proposal {
       wishlisted = None, //deprecated, kept for backward compatibility
       videoLink,
       officeHours,
+      tags2,
       tags
     )
   }
@@ -332,7 +336,7 @@ object Proposal {
   }
 
   def unapplyProposalForm(p: Proposal): Option[(Option[String], String, String, Option[String], List[String], String, String, String, String,
-    Boolean, String, Option[String], Option[Boolean], Option[String], Boolean, Option[Seq[Tag]])] = {
+    Boolean, String, Option[String], Option[Boolean], Option[String], Boolean, Option[String], Option[Seq[Tag]])] = {
     Option((
       Option(p.id),
       p.lang,
@@ -349,6 +353,7 @@ object Proposal {
       p.userGroup,
       p.videoLink,
       p.officeHours,
+      p.tags2,
       p.tags))
   }
 
