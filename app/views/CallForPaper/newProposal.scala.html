@@ -216,6 +216,7 @@
 
     <script type="text/javascript">
             var tagList = [@Html(newProposal("tags2").value.getOrElse("").split(",").map{t => "\"" + t + "\""}.mkString(","))]
+                .filter(e => e != "")
 
             $(document).ready(function ($) {
                 var $sponsorTalkMsg = $('#sponsorTalkMsg');
@@ -261,7 +262,7 @@
 
                 $("#addButton").on("click", e => {
                         var t = $("#addTag")[0].value;
-                        if (tagList.indexOf(t) == -1 && t != "") {
+                        if (tagList.indexOf(t) == -1 && t != "" && tagList.length < 5) {
                             tagList.push(t);
                             updateTags();
                         }
