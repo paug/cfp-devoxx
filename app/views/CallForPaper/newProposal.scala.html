@@ -83,6 +83,35 @@
                 </div>
             </div>
 
+            <input type="hidden" name="tags2" value="" id="tagInput">
+
+            <div class="row cfp-row">
+                <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
+                    <h4>@Messages("tag.help.title")</h4>
+                    <p>@Messages("tag.help.txt")</p>
+                </div>
+                <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12">
+                    <dl>
+                        <dt>
+                            <label for="addTag">Tags</label>
+                        </dt>
+                        <table style="width:100%" id="tagTable" class="table-bordered table-condensed">
+                            <tr>
+                                <td><select id="addTag" class="form-control" style="display:inline-block;width:80%;">
+                                    <option class="blank" value>--- Please select ---</option>
+                                    @Tag.allTags().map {t =>
+                                    <option>@t.value</option>
+                                    }
+                                </select>
+                                </td>
+                                <td>
+                                    <span id="addButton" class="btn btn-primary"><i class="icon-plus"></i></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </dl>
+                </div>
+            </div>
 
             @if(ConferenceDescriptor.current().frLangEnabled) {
                 <div class="row cfp-row">
@@ -108,19 +137,6 @@
                 </div>
             </div>
 
-        <div class="row cfp-row">
-            <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
-                <h4>@Messages("tag.help.title")</h4>
-                <p>@Html(Messages("tag.help.txt"))</p>
-            </div>
-            <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12">
-                <ul id="myTags">
-                    @newProposal("tags2").value.getOrElse("").split(",").map { tag=>
-                    <li>@tag</li>
-                    }
-                </ul>
-            </div>
-        </div>
         <input type="hidden" name="track" value="anddev">
 
         <div class="row cfp-row">
@@ -149,11 +165,12 @@
                     <p>@Messages("demoLevel.help")</p>
                 </div>
                 <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12">
-                @tags.selectI18N(field = newProposal("demoLevel"), options = ProposalType.demoLevels, '_default -> "--- Please select ---", 'class -> "form-control")
+                    @tags.selectI18N(field = newProposal("demoLevel"), options = ProposalType.demoLevels, '_default -> "--- Please select ---", 'class -> "form-control")
                 </div>
             </div>
 
-            @if(ConferenceDescriptor.isGoldenTicketActive) {
+
+        @if(ConferenceDescriptor.isGoldenTicketActive) {
                 <div class="row cfp-row">
                     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                         <h4>@Messages("goldenTicket.help.title")</h4>
@@ -198,6 +215,8 @@
 
 
     <script type="text/javascript">
+            var tagList = [@Html(newProposal("tags2").value.getOrElse("").split(",").map{t => "\"" + t + "\""}.mkString(","))]
+
             $(document).ready(function ($) {
                 var $sponsorTalkMsg = $('#sponsorTalkMsg');
                 var $talkType = $('#talkType');
@@ -240,18 +259,42 @@
                     }
                 });
 
-                $.ajax({
-                    url: "/cfp/proposal/tags/autocomplete",
-                    success: function(e){
-                        $("#myTags").tagit({
-                            availableTags: e,
-                            showAutocompleteOnFocus: true,
-                            tagLimit: 5,
-                            fieldName: "tags2",
-                            singleField: true
-                        });
+                $("#addButton").on("click", e => {
+                        var t = $("#addTag")[0].value;
+                        if (tagList.indexOf(t) == -1 && t != "") {
+                            tagList.push(t);
+                            updateTags();
+                        }
                     }
-                });
+                )
+                updateTags();
             });
+
+            function updateTags() {
+                var container = $("#tagTable")
+                $(".t").remove()
+                var a = [];
+                var i = 0;
+                tagList.forEach(t => {
+                    var style = (i++ % 2) ? "style='background-color:#E2E4FF'" : "";
+                    var tr=$("<tr class='t' " + style + ">");
+                    var td=$("<td>");
+                    td.text(t);
+                    tr.append(td);
+                    td = $("<td><span id=\"trash\" class=\"deleteBtn btn btn-warning\"><i class=\"icon-trash\"></i></span></td>");
+                    tr.append(td);
+
+                    td.on("click", e => {
+                        var index = tagList.indexOf(t);
+                        if (index >= 0 ) {
+                            tagList.splice(index, 1);
+                            updateTags();
+                        }
+                    });
+                    a.push(tr);
+                    $("#tagInput")[0].value = tagList.join(",");
+                })
+                container.prepend(a);
+            }
     </script>
 }

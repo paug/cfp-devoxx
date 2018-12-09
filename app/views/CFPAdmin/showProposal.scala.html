@@ -72,6 +72,10 @@
                                 <td>@proposal.demoLevel.map(d => Messages(d + ".label"))</td>
                             </tr>
                             <tr>
+                                <th class="proposalCol">Tags</th>
+                                <td>@proposal.tags2</td>
+                            </tr>
+                            <tr>
                                 <th class="proposalCol">@Messages("admin.sp.privateMessage")</th>
                                 <td>@Html(proposal.privateMessageAsHtml)</td>
                             </tr>
