@@ -51,16 +51,7 @@
                             @Messages("cfpadmin.totalReviewed",totalReviewed) / @Messages("cfpadmin.totalVoted",totalVoted.getOrElse(0))
                         </div>
                     </div>
-
-                    <i class="icon-filter"></i> @Messages("cfp.filter.on")
-                    @Track.allIDs.map{idTrack=>
-                        @if(track.isDefined && track.get == idTrack) {
-                            <a href="@routes.CFPAdmin.index(page, sort, ascdesc, Option(idTrack))" class="btn btn-default btn-success">@Html(Messages(idTrack + ".label"))</a>
-                        }else {
-                            <a href="@routes.CFPAdmin.index(page, sort, ascdesc, Option(idTrack))" class="btn btn-default btn-sm">@Html(Messages(idTrack+".label"))</a>
-                        }
-                    }
-                - <a href="@routes.CFPAdmin.index(page, sort, ascdesc, None)" class="btn btn-default btn-sm"><i class="icon-remove"></i>@Messages("cfp.filter.off")</a>
+                
 
                     @if(allProposalsForReview.nonEmpty) {
                         <br>
