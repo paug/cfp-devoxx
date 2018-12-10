@@ -1,11 +1,11 @@
-@(proposal: Proposal, comments: List[Comment], msgToCommitte: Form[String])(implicit flash: Flash, lang: Lang, req:RequestHeader)
+@(proposal: Proposal, comments: List[Comment], msgToCommitte: Form[String], title: String)(implicit flash: Flash, lang: Lang, req:RequestHeader)
 
 @main("Comments for proposal " + proposal.id) {
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3><i class="icon-bullhorn"></i> @Messages("comment.proposal")</h3>
+                    <h3><i class="icon-bullhorn"></i> @title</h3>
                 </div>
 
                 <div class="panel-body">

@@ -279,24 +279,27 @@ object CallForPaper extends SecureCFPController {
   def editOtherSpeakers(proposalId: String) = SecuredAction {
     implicit request =>
       val uuid = request.webuser.uuid
-      val maybeProposal = Proposal.findProposal(uuid, proposalId)
+      System.out.println("Edit speaker " + uuid)
+      System.out.println("Edit speaker " + uuid)
+      var maybeProposal = Proposal.findProposal(uuid, proposalId)
       maybeProposal match {
         case Some(proposal) =>
-          if (proposal.mainSpeaker == uuid) {
-            val proposalForm = Proposal.proposalSpeakerForm.fill(proposal.secondarySpeaker, proposal.otherSpeakers)
-            Ok(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(uuid), proposal, proposalForm))
-          } else if (proposal.secondarySpeaker.isDefined && proposal.secondarySpeaker.get == uuid) {
-            // Switch the mainSpeaker and the other Speakers
-            val proposalForm = Proposal.proposalSpeakerForm.fill(Option(proposal.mainSpeaker), proposal.otherSpeakers)
-            Ok(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(uuid), proposal, proposalForm))
-          } else if (proposal.otherSpeakers.contains(uuid)) {
-            // let this speaker as a member of the third list
-            Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> Messages("speaker.other.error"))
-          } else {
-            Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> "Invalid state")
-          }
+          val proposalForm = Proposal.proposalSpeakerForm.fill(proposal.secondarySpeaker, proposal.otherSpeakers)
+          Ok(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(proposal.mainSpeaker), proposal, proposalForm))
         case None =>
-          Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> Messages("invalid.proposal"))
+          if (Webuser.hasAccessToAdmin(uuid)) {
+            val adminProposal = Proposal.findById(proposalId)
+            adminProposal match {
+              case Some(proposal) =>
+                System.out.println("Admin proposal")
+                val proposalForm = Proposal.proposalSpeakerForm.fill(proposal.secondarySpeaker, proposal.otherSpeakers)
+                Ok(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(proposal.mainSpeaker), proposal, proposalForm))
+              case None =>
+                Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> Messages("invalid.proposal"))
+            }
+          } else {
+            Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> Messages("invalid.proposal"))
+          }
       }
   }
 
@@ -305,46 +308,51 @@ object CallForPaper extends SecureCFPController {
   def saveOtherSpeakers(proposalId: String) = SecuredAction {
     implicit request =>
       val uuid = request.webuser.uuid
-      val maybeProposal = Proposal.findProposal(uuid, proposalId)
+      var maybeProposal = Proposal.findProposal(uuid, proposalId)
+      if (maybeProposal == None && Webuser.hasAccessToAdmin(uuid)) {
+        System.out.println("Save as admin")
+        maybeProposal = Proposal.findById(proposalId)
+      }
       maybeProposal match {
         case Some(proposal) =>
+          val mainUUID = proposal.mainSpeaker
           Proposal.proposalSpeakerForm.bindFromRequest.fold(
-            hasErrors => BadRequest(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(uuid), proposal, hasErrors)).flashing("error" -> "Errors in the proposal form, please correct errors"),
+            hasErrors => BadRequest(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(mainUUID), proposal, hasErrors)).flashing("error" -> "Errors in the proposal form, please correct errors"),
             validNewSpeakers => {
               (proposal.secondarySpeaker, validNewSpeakers._1) match {
                 case (None, Some(newSecondarySpeaker)) =>
                   val newSpeaker = Speaker.findByUUID(newSecondarySpeaker)
                   val validMsg = s"Internal notification : Added [${newSpeaker.map(_.cleanName).get}] as a secondary speaker"
                   if (proposal.state != ProposalState.DRAFT) {
-                    ZapActor.actor ! SendBotMessageToCommittee(uuid, proposal, validMsg)
+                    ZapActor.actor ! SendBotMessageToCommittee(mainUUID, proposal, validMsg)
                   }
-                  Event.storeEvent(Event(proposal.id, uuid, validMsg))
-                  Proposal.updateSecondarySpeaker(uuid, proposalId, None, Some(newSecondarySpeaker))
+                  Event.storeEvent(Event(proposal.id, mainUUID, validMsg))
+                  Proposal.updateSecondarySpeaker(mainUUID, proposalId, None, Some(newSecondarySpeaker))
                 case (Some(oldSpeakerUUID), Some(newSecondarySpeaker)) if oldSpeakerUUID != newSecondarySpeaker =>
                   val oldSpeaker = Speaker.findByUUID(oldSpeakerUUID)
                   val newSpeaker = Speaker.findByUUID(newSecondarySpeaker)
                   val validMsg = s"Internal notification : Removed [${oldSpeaker.map(_.cleanName).get}] and added [${newSpeaker.map(_.cleanName).get}] as a secondary speaker"
                   if (proposal.state != ProposalState.DRAFT) {
-                    ZapActor.actor ! SendBotMessageToCommittee(uuid, proposal, validMsg)
+                    ZapActor.actor ! SendBotMessageToCommittee(mainUUID, proposal, validMsg)
                   }
-                  Event.storeEvent(Event(proposal.id, uuid, validMsg))
-                  Proposal.updateSecondarySpeaker(uuid, proposalId, Some(oldSpeakerUUID), Some(newSecondarySpeaker))
+                  Event.storeEvent(Event(proposal.id, mainUUID, validMsg))
+                  Proposal.updateSecondarySpeaker(mainUUID, proposalId, Some(oldSpeakerUUID), Some(newSecondarySpeaker))
                 case (Some(oldSpeakerUUID), None) =>
                   val oldSpeaker = Speaker.findByUUID(oldSpeakerUUID)
                   val validMsg = s"Internal notification : Removed [${oldSpeaker.map(_.cleanName).get}] as a secondary speaker"
                   if (proposal.state != ProposalState.DRAFT) {
-                    ZapActor.actor ! SendBotMessageToCommittee(uuid, proposal, validMsg)
+                    ZapActor.actor ! SendBotMessageToCommittee(mainUUID, proposal, validMsg)
                   }
-                  Event.storeEvent(Event(proposal.id, uuid, validMsg))
-                  Proposal.updateSecondarySpeaker(uuid, proposalId, Some(oldSpeakerUUID), None)
+                  Event.storeEvent(Event(proposal.id, mainUUID, validMsg))
+                  Proposal.updateSecondarySpeaker(mainUUID, proposalId, Some(oldSpeakerUUID), None)
                 case (Some(oldSpeakerUUID), Some(newSecondarySpeaker)) if oldSpeakerUUID == newSecondarySpeaker =>
                 // We kept the 2nd speaker, maybe updated or added a 3rd speaker
                 case (None, None) =>
                 // Nothing special
               }
 
-              Proposal.updateOtherSpeakers(uuid, proposalId, proposal.otherSpeakers, validNewSpeakers._2)
-              Event.storeEvent(Event(proposal.id, uuid, "Updated speakers list for proposal " + StringUtils.abbreviate(proposal.title, 80)))
+              Proposal.updateOtherSpeakers(mainUUID, proposalId, proposal.otherSpeakers, validNewSpeakers._2)
+              Event.storeEvent(Event(proposal.id, mainUUID, "Updated speakers list for proposal " + StringUtils.abbreviate(proposal.title, 80)))
 
               Redirect(routes.CallForPaper.homeForSpeaker()).flashing("success" -> Messages("speakers.updated"))
             }
@@ -409,7 +417,19 @@ object CallForPaper extends SecureCFPController {
       val maybeProposal = Proposal.findProposal(uuid, proposalId)
       maybeProposal match {
         case Some(proposal) =>
-          Ok(views.html.CallForPaper.showCommentForProposal(proposal, Comment.allSpeakerComments(proposal.id), speakerMsg))
+          Ok(views.html.CallForPaper.showCommentForProposal(proposal, Comment.allSpeakerComments(proposal.id), speakerMsg, Messages("comment.proposal")))
+        case None =>
+          Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> Messages("invalid.proposal"))
+      }
+  }
+
+  def showCommentForSpeakers(proposalId: String) = SecuredAction {
+    implicit request =>
+      val uuid = request.webuser.uuid
+      val maybeProposal = Proposal.findProposal(uuid, proposalId)
+      maybeProposal match {
+        case Some(proposal) =>
+          Ok(views.html.CallForPaper.showCommentForProposal(proposal, Comment.allSpeakerComments(proposal.id), speakerMsg, Messages("comment.speakers")))
         case None =>
           Redirect(routes.CallForPaper.homeForSpeaker()).flashing("error" -> Messages("invalid.proposal"))
       }
@@ -423,7 +443,7 @@ object CallForPaper extends SecureCFPController {
         case Some(proposal) =>
           speakerMsg.bindFromRequest.fold(
             hasErrors => {
-              BadRequest(views.html.CallForPaper.showCommentForProposal(proposal, Comment.allSpeakerComments(proposal.id), hasErrors))
+              BadRequest(views.html.CallForPaper.showCommentForProposal(proposal, Comment.allSpeakerComments(proposal.id), hasErrors, Messages("comment.proposal")))
             },
             validMsg => {
               Comment.saveCommentForSpeaker(proposal.id, uuid, validMsg)

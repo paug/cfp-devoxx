@@ -126,7 +126,7 @@
 
                                             <ul>
                                                 <li><a href="@routes.CallForPaper.editProposal(proposal.id)" title="@Messages("table.pres.edit")">@Messages("table.pres.edit")</a></li>
-                                                <li><a href="@routes.CallForPaper.editOtherSpeakers(proposal.id)" title="@Messages("table.speaker.addremove")"> @Messages("table.speaker.addremove")</a></li>
+                                                <li><a href="@routes.CallForPaper.showCommentForSpeakers(proposal.id)" title="@Messages("table.speaker.addremove")"> @Messages("table.speaker.addremove")</a></li>
                                                 @if(proposal.state.code == "draft") {
                                                     <li><a href="@routes.CallForPaper.submitProposal(proposal.id)" title="@Messages("table.pres.edit")">@Messages("table.pres.submit")</a></li>
                                                 }
