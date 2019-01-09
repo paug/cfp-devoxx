@@ -186,7 +186,7 @@ object Authentication extends Controller {
     "twitter" -> optional(text),
     "blog" -> optional(text),
     "avatarUrl" -> optional(text),
-    "qualifications" -> nonEmptyText(maxLength = 750),
+    "qualifications" -> nonEmptyText(maxLength = 380000),
     "linkedin" -> optional(text)
   ))
 

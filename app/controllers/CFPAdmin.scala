@@ -44,7 +44,7 @@ object CFPAdmin extends SecureCFPController {
     "blog2" -> optional(text),
     "firstName" -> text,
     "acceptTermsConditions" -> boolean,
-    "qualifications2" -> nonEmptyText(maxLength = 750),
+    "qualifications2" -> nonEmptyText(maxLength = 380000),
     "gde2" -> optional(text),
     "gdg2" -> optional(text),
     "medium2" -> optional(text),

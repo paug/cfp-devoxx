@@ -90,7 +90,7 @@ object CallForPaper extends SecureCFPController {
   def newSpeakerForExistingWebuser = SecuredAction {
     implicit request =>
       val w = request.webuser
-      val defaultValues = (w.email, w.firstName, w.lastName, StringUtils.abbreviate("...", 750), None, None, None, None, "No experience", None)
+      val defaultValues = (w.email, w.firstName, w.lastName, StringUtils.abbreviate("...", 380000), None, None, None, None, "No experience", None)
       Ok(views.html.Authentication.confirmImport(Authentication.importSpeakerForm.fill(defaultValues)))
   }
 
@@ -105,7 +105,7 @@ object CallForPaper extends SecureCFPController {
     "company" -> optional(text),
     "blog" -> optional(text),
     "firstName" -> nonEmptyText(maxLength = 25),
-    "qualifications" -> nonEmptyText(maxLength = 850), // We set a soft limit in the UX at 750 and a hard limit at 850
+    "qualifications" -> nonEmptyText(maxLength = 380000),
     "phoneNumber" -> optional(text),
     "gde" -> optional(text),
     "gdg" -> optional(text),
