@@ -287,7 +287,7 @@ object CallForPaper extends SecureCFPController {
           val proposalForm = Proposal.proposalSpeakerForm.fill(proposal.secondarySpeaker, proposal.otherSpeakers)
           Ok(views.html.CallForPaper.editOtherSpeaker(Webuser.getName(proposal.mainSpeaker), proposal, proposalForm))
         case None =>
-          if (Webuser.hasAccessToAdmin(uuid)) {
+          if (SecureCFPController.hasAccessToCFPAdmin(request)) {
             val adminProposal = Proposal.findById(proposalId)
             adminProposal match {
               case Some(proposal) =>
@@ -309,7 +309,7 @@ object CallForPaper extends SecureCFPController {
     implicit request =>
       val uuid = request.webuser.uuid
       var maybeProposal = Proposal.findProposal(uuid, proposalId)
-      if (maybeProposal == None && Webuser.hasAccessToAdmin(uuid)) {
+      if (maybeProposal == None && SecureCFPController.hasAccessToCFPAdmin(request)) {
         System.out.println("Save as admin")
         maybeProposal = Proposal.findById(proposalId)
       }
