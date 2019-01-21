@@ -99,7 +99,7 @@
                             <tr>
                                 <td><select id="addTag" class="form-control" style="display:inline-block;width:80%;">
                                     <option class="blank" value>--- Please select ---</option>
-                                    @Tag.allTags().map {t =>
+                                    @Tag.allTags().sortBy(_.value).map {t =>
                                     <option>@t.value</option>
                                     }
                                 </select>
