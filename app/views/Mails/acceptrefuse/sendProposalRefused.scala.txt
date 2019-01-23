@@ -2,34 +2,16 @@
 --------------------------------------------------------------------
 About your submission for @Messages("longYearlyName")
 --------------------------------------------------------------------
-FRENCH (ENGLISH VERSION FOLLOWS)
-
-Bonjour,
-
-Après plusieurs jours de sélection intense, nous avons le regret de vous informer que votre proposition de talk n'a pas été acceptée.
-
-Pour rappel : @proposal.title au format @Messages(proposal.talkType.id).
-
-Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec le code promotionnel cfp-invite. Vous bénéficierez d’un ticket réduit au prix early bird. RDV sur @ConferenceDescriptor.current().conferenceUrls.registration
-
-Plus d'informations sur le programme final très bientôt.
-
-Encore merci pour votre confiance et votre implication.
-
-À bientôt !
-
-L'équipe de sélection
-
-----------------------------------------------------------------------------------------------------------------
-ENGLISH VERSION
+ENGLISH (FRENCH VERSION FOLLOWS)
 
 Hi,
 
-After several days reviewing your submission for @Messages("longYearlyName"), we're sorry to tell you that you didn't make the cut.
+After several days reviewing your submission for @Messages("longYearlyName"), we're sorry to tell you that this talk didn't make the cut:
+@proposal.title, @Messages(proposal.talkType.id).
 
-Proposition title: @proposal.title, @Messages(proposal.talkType.id).
+We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, you will receive early February a discount code for you to use. No hard feelings!
 
-We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, here is a discount code for you to use: cfp-invite. No hard feelings! Registration details: @ConferenceDescriptor.current().conferenceUrls.registration
+Note that if have posted multiple proposals and do not have received any email for the others, it is because their are still in review.
 
 More info on the final schedule very soon.
 
@@ -38,3 +20,23 @@ Thanks again for your trust and dedication.
 See you soon!
 
 The @Messages("longYearlyName") team
+
+----------------------------------------------------------------------------------------------------------------
+FRENCH VERSION
+
+Bonjour,
+
+Après plusieurs jours de sélection intense, nous avons le regret de vous informer que votre proposition de talk suivante n'a pas été acceptée :
+@proposal.title au format @Messages(proposal.talkType.id).
+
+Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec un code promotionnel que vous recevrez début février. Avec ce code, vous bénéficierez d’un ticket réduit au prix early bird.
+
+Notez que si vous avez posté plusieurs propositions et n’avez toujours pas de réponses pour les autres c’est qu'elles sont encore en train d'être revues.
+
+Plus d'informations sur le programme final très bientôt.
+
+Encore merci pour votre confiance et votre implication.
+
+À bientôt !
+
+L'équipe de sélection
