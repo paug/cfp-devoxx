@@ -10,7 +10,7 @@ After several days reviewing your submission for @Messages("longYearlyName"), we
 @proposal.title, @Messages(proposal.talkType.id).
 
 We would like to acknowledge your commitment and dedication and thank you a million times for the effort you put in. 
-If you have posted other proposals and do not have yet received any email for them, it is because they are still being reviewed. In the other case, and as we would still be happy to see you there, you will receive early February a discount code for you to use. No hard feelings! 
+If you have posted other proposals and haven't yet received any email about those yet, it is because they are still being reviewed. In the other case, and as we would still be happy to see you there, you will receive early February a discount code for you to use. No hard feelings! 
 
 More info on the final schedule very soon.
 
