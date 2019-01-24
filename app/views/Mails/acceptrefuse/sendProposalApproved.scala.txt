@@ -23,12 +23,16 @@ About your speaker badge:
 =========================
 Your submission allows you to have a speaker badge which will give you access to the conference as a whole and to the speaker diner. No need to do anything from your side, your badge will be given to you right at the entrance at the beginning of day 1.
 
+Speaker's dinner:
+=========================
+All speakers will be invited to join the speaker's dinner that will take place the night before the conference on Monday 22th evening. More information will followed when we get closer to the event.
+
 Questions?
 ----------------------------------------------------------------------------------------------------------------------
 Please do not respond to this email but rather use the web interface:
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
 
-Note that if have posted multiple proposals and do not have received any email for the others, it is because their are still in review.
+Note that if you have posted other proposals and do not have yet received any email for them, it is because they are still being reviewed.
 
 We're happy to have you with us and wish you all the best for the edition to come.
 
@@ -54,6 +58,10 @@ Vous devrez tout d'abord accepter les conditions générales. Attention ! Vous n
 Votre badge speaker :
 =====================
 Ce type de présentation donne accès à un badge speaker qui vous permettra d'accéder à l'ensemble de la conférence ainsi qu'au diner des speakers. Pas d'inquiétude, vous n'avez rien à faire. Votre badge sera fourni à l'entrée de la conférence.
+
+Dîner des speakers :
+=====================
+Tous les speakers seront invités au Dîner des speakers qui aura lieu la veille au soir : le lundi 22 avril. Nous vous enverrons davantage d'informations à ce sujet à l'approche de la conférence.
 
 Des questions ?
 ----------------------------------------------------------------------------------------------------------------------

@@ -9,9 +9,8 @@ Hi,
 After several days reviewing your submission for @Messages("longYearlyName"), we're sorry to tell you that this talk didn't make the cut:
 @proposal.title, @Messages(proposal.talkType.id).
 
-We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. As we would still be happy to see you there, you will receive early February a discount code for you to use. No hard feelings!
-
-Note that if have posted multiple proposals and do not have received any email for the others, it is because their are still in review.
+We would like to acknowledge your commitment and dedication and thank you a million time for the effort you put in. 
+If you have posted other proposals and do not have yet received any email for them, it is because they are still being reviewed. In the other case, and as we would still be happy to see you there, you will receive early February a discount code for you to use. No hard feelings! 
 
 More info on the final schedule very soon.
 
@@ -29,9 +28,8 @@ Bonjour,
 Après plusieurs jours de sélection intense, nous avons le regret de vous informer que votre proposition de talk suivante n'a pas été acceptée :
 @proposal.title au format @Messages(proposal.talkType.id).
 
-Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence ! En gage de reconnaissance, nous vous proposons de vous inscrire avec un code promotionnel que vous recevrez début février. Avec ce code, vous bénéficierez d’un ticket réduit au prix early bird.
-
-Notez que si vous avez posté plusieurs propositions et n’avez toujours pas de réponses pour les autres c’est qu'elles sont encore en train d'être revues.
+Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence !
+Si vous avez posté plusieurs propositions et n’avez toujours pas de réponses pour les autres c’est qu'elles sont encore en train d'être revues. Le cas échéant, en gage de reconnaissance, nous vous proposons de vous inscrire avec un code promotionnel que vous recevrez début février. Avec ce code, vous bénéficierez d’un ticket réduit au prix early bird.
 
 Plus d'informations sur le programme final très bientôt.
 
