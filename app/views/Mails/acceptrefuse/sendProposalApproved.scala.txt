@@ -19,6 +19,8 @@ Click on this link or copy-paste it in your browser of choice:
 
 You'll first need to accept our terms and conditions. Careful! You only have a few days to do so!
 
+Please note that if the language or the duration of your talk is undetermined (20/40 minutes or en/fr), we will contact you soon to let you know what we expect from your talk according to the schedule balance.
+
 About your speaker badge:
 =========================
 Your submission allows you to have a speaker badge which will give you access to the conference as a whole and to the speaker diner. No need to do anything from your side, your badge will be given to you right at the entrance at the beginning of day 1.
@@ -54,6 +56,8 @@ Il vous suffit de cliquer sur ce lien ou de le copier-coller dans votre navigate
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
 
 Vous devrez tout d'abord accepter les conditions générales. Attention ! Vous ne disposez que de quelques jours !
+
+Veuillez noter que si le langage ou la durée de votre présentation est indéterminé (20/40 minutes ou en/fr), nous vous contacterons rapidement pour vous donner le langage ou la durée que nous attendons en fonction de l'agenda.
 
 Votre badge speaker :
 =====================
