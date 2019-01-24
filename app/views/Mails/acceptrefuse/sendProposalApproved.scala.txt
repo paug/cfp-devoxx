@@ -6,11 +6,9 @@ ENGLISH (FRENCH VERSION FOLLOWS)
 
 Hello,
 
-Your proposal [@proposal.title] for @Messages("longYearlyName") has been accepted!
+Your proposal [@proposal.title] ([@Messages(proposal.talkType.id)]) for @Messages("longYearlyName") has been accepted!
 
 Congratulations!
-
-Proposition title: @proposal.title, of type [@Messages(proposal.talkType.id)].
 
 Here's how to validate your attendance:
 ----------------------------------------------------------------------------------------------------------------------
