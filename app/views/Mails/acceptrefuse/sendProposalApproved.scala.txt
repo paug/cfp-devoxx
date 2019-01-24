@@ -34,7 +34,7 @@ Questions?
 Please do not respond to this email but rather use the web interface:
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
 
-Note that if you have posted other proposals and haven't yet received any email about those yet, it is because they are still being reviewed.
+Note that if you have posted other proposals and haven't received any email about those yet, it is because they are still being reviewed.
 
 We're happy to have you with us and wish you all the best for the edition to come.
 
@@ -57,7 +57,7 @@ Il vous suffit de cliquer sur ce lien ou de le copier-coller dans votre navigate
 
 Vous devrez tout d'abord accepter les conditions générales. Attention ! Vous ne disposez que de quelques jours !
 
-Veuillez noter que si le langage ou la durée de votre présentation est indéterminé (20/40 minutes ou en/fr), nous vous contacterons rapidement pour vous donner le langage ou la durée que nous attendons en fonction de l'agenda.
+Veuillez noter que si la langue ou la durée de votre présentation est indéterminé (20/40 minutes ou en/fr), nous vous contacterons rapidement pour vous donner le langage ou la durée que nous attendons en fonction de l'agenda.
 
 Votre badge speaker :
 =====================
