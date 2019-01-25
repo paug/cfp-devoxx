@@ -29,7 +29,7 @@ Après plusieurs jours de sélection intense, nous avons le regret de vous infor
 @proposal.title au format @Messages(proposal.talkType.id).
 
 Nous vous remercions cependant pour le temps que vous avez consacré à préparer votre sujet et pour tout l'intérêt que vous avez porté à notre conférence !
-Si vous avez posté plusieurs propositions et n’avez toujours pas de réponses pour les autres c’est qu'elles sont encore en train d'être revues. Le cas échéant, en gage de reconnaissance, nous vous proposons de vous inscrire avec un code promotionnel que vous recevrez début février. Avec ce code, vous bénéficierez d’un ticket réduit au prix early bird.
+Si vous avez posté plusieurs propositions et n’avez toujours pas de réponses pour les autres, c’est qu'elles sont encore en train d'être revues. Le cas échéant, en gage de reconnaissance, nous vous proposons de vous inscrire avec un code promotionnel que vous recevrez début février. Avec ce code, vous bénéficierez d’un ticket au prix early bird.
 
 Plus d'informations sur le programme final très bientôt.
 
