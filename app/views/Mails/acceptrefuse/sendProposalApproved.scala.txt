@@ -2,7 +2,45 @@
 --------------------------------------------------------------------
 @Messages("longYearlyName") - Your submission has been accepted!
 --------------------------------------------------------------------
-FRENCH (ENGLISH VERSION FOLLOWS)
+ENGLISH (FRENCH VERSION FOLLOWS)
+
+Hello,
+
+Your proposal [@proposal.title] ([@Messages(proposal.talkType.id)]) for @Messages("longYearlyName") has been accepted!
+
+Congratulations!
+
+Here's how to validate your attendance:
+----------------------------------------------------------------------------------------------------------------------
+Click on this link or copy-paste it in your browser of choice:
+@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
+
+You'll first need to accept our terms and conditions. Careful! You only have a few days to do so!
+
+Please note that if the language or the duration of your talk is undetermined (20/40 minutes or en/fr), we will contact you soon to let you know what we expect from your talk according to the schedule balance.
+
+About your speaker badge:
+=========================
+Your submission allows you to have a speaker badge which will give you access to the conference as a whole and to the speaker diner. No need to do anything from your side, your badge will be given to you right at the entrance at the beginning of day 1.
+
+Speaker's dinner:
+=========================
+All speakers will be invited to join the speaker's dinner that will take place the night before the conference on Monday 22nd evening. More information will followed as we get closer to the event.
+
+Questions?
+----------------------------------------------------------------------------------------------------------------------
+Please do not respond to this email but rather use the web interface:
+@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
+
+Note that if you have posted other proposals and haven't received any email about those yet, it is because they are still being reviewed.
+
+We're happy to have you with us and wish you all the best for the edition to come.
+
+See you very soon!
+
+The @Messages("longYearlyName") team
+----------------------------------------------------------------------------------------------------------------------
+FRENCH VERSION
 
 Bonjour,
 
@@ -17,49 +55,25 @@ Il vous suffit de cliquer sur ce lien ou de le copier-coller dans votre navigate
 
 Vous devrez tout d'abord accepter les conditions générales. Attention ! Vous ne disposez que de quelques jours !
 
+Veuillez noter que si la langue ou la durée de votre présentation est indéterminé (20/40 minutes ou en/fr), nous vous contacterons rapidement pour vous donner le langage ou la durée que nous attendons en fonction de l'agenda.
+
 Votre badge speaker :
 =====================
 Ce type de présentation donne accès à un badge speaker qui vous permettra d'accéder à l'ensemble de la conférence ainsi qu'au diner des speakers. Pas d'inquiétude, vous n'avez rien à faire. Votre badge sera fourni à l'entrée de la conférence.
+
+Dîner des speakers :
+=====================
+Tous les speakers seront invités au Dîner des speakers qui aura lieu la veille au soir : le lundi 22 avril. Nous vous enverrons davantage d'informations à ce sujet à l'approche de la conférence.
 
 Des questions ?
 ----------------------------------------------------------------------------------------------------------------------
 Merci de ne pas répondre à cet e-mail, mais d'utiliser plutôt votre interface d'échange avec le comité :
 @ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
 
+Notez que si vous avez posté plusieurs propositions et n’avez toujours pas de réponses pour les autres c’est qu'elles sont encore en train d'être revues.
+
 Nous sommes heureux de vous avoir à nos côtés et vous souhaitons tout le meilleur pour l'édition à venir.
 
 À très bientôt !
 
 L'équipe de sélection
-----------------------------------------------------------------------------------------------------------------------
-ENGLISH VERSION
-
-Hello,
-
-Your proposal [@proposal.title] for @Messages("longYearlyName") has been accepted!
-
-Congratulations!
-
-Proposition title: @proposal.title, of type [@Messages(proposal.talkType.id)].
-
-Here's how to validate your attendance:
-----------------------------------------------------------------------------------------------------------------------
-Click on this link or copy-paste it in your browser of choice:
-@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.ApproveOrRefuse.showAcceptTerms()
-
-You'll first need to accept our terms and conditions. Careful! You only have a few days to do so!
-
-About your speaker badge:
-=========================
-Your submission allows you to have a speaker badge which will give you access to the conference as a whole and to the speaker diner. No need to do anything from your side, your badge will be given to you right at the entrance at the beginning of day 1.
-
-Questions?
-----------------------------------------------------------------------------------------------------------------------
-Please do not respond to this email but rather use the web interface:
-@ConferenceDescriptor.current().conferenceUrls.cfpURL@routes.CallForPaper.showCommentForProposal(proposal.id)
-
-We're happy to have you with us and wish you all the best for the edition to come.
-
-See you very soon!
-
-The @Messages("longYearlyName") team
