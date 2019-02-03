@@ -653,7 +653,7 @@ object ConferenceDescriptor {
     bugReportRecipient = Play.current.configuration.getString("mail.bugreport.recipient").getOrElse("contact@androidmakers.fr"),
     conferenceUrls = ConferenceUrls(
       faq = "http://androidmakers.fr/faq/",
-      registration = "https://www.eventbrite.com/e/android-makers-1st-edition-tickets-29579435889", //TODO update URL
+      registration = "https://www.eventbrite.co.uk/e/android-makers-2019-tickets-45468692082", //TODO update URL
       confWebsite = "http://androidmakers.fr/",
       cfpHostname = {
         val h=Play.current.configuration.getString("cfp.hostname").getOrElse("cfp.androidmakers.fr")
